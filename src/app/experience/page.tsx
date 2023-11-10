@@ -15,8 +15,8 @@ export default async function Experience() {
       <h2 className="text-3xl mb-14">Work experience</h2>
       <div className="flex flex-col gap-10">
         {experienceData
-          ?.sort((a, b) => a.sortOrder - b.sortOrder)
-          .map((item, index) => {
+          ?.sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+          .map((item: any) => {
             return <ExperienceItem key={item._id} value={item} />;
           })}
 
