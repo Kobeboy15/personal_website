@@ -25,7 +25,7 @@ export default function Home() {
         {handleGreeting()}
       </h2>
       <p className="text-justify text-md line leading-[45px] font-normal">
-        I'm Kobe, a dedicated frontend developer with a love for creating
+        I&apos;m Kobe, a dedicated frontend developer with a love for creating
         stunning websites and problem solving. Join me on a journey where design
         and innovation come together seamlessly in the digital world.
       </p>
