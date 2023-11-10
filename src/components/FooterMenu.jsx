@@ -12,9 +12,11 @@ export default function FooterMenu() {
   }, []);
 
   return (
-    <div className="text-sm flex items-center justify-between max-w-[940px] m-auto py-14">
+    <div className="text-sm flex items-center justify-between max-w-[940px] px-6 m-auto py-14">
       <Link href="/">
-        <h3 className="text-neutral-400">© {currentYear} kobe michael</h3>
+        <h3 className="text-neutral-400 text-xs md:text-sm">
+          © {currentYear} kobe michael
+        </h3>
       </Link>
       <div className="flex items-center gap-5 text-neutral-400">
         <a

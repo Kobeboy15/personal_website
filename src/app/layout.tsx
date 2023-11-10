@@ -18,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={bitter.className}>
+      <body className={`${bitter.className} min-h-screen`}>
         <NavMenu />
-        {children}
+        <div className="max-w-[940px] m-auto my-10 px-6">{children}</div>
         <FooterMenu />
       </body>
     </html>

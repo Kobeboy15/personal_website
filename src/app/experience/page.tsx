@@ -11,7 +11,7 @@ export default async function Experience() {
   const experienceData = await getData();
 
   return (
-    <div className="max-w-[940px] m-auto my-10">
+    <>
       <h2 className="text-3xl mb-14">Work experience</h2>
       <div className="flex flex-col gap-10">
         {experienceData
@@ -19,9 +19,7 @@ export default async function Experience() {
           .map((item: any) => {
             return <ExperienceItem key={item._id} value={item} />;
           })}
-
-        {/* <ExperienceItem /> */}
       </div>
-    </div>
+    </>
   );
 }
