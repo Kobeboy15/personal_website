@@ -17,7 +17,7 @@ export default async function Experience() {
         {experienceData
           ?.sort((a, b) => a.sortOrder - b.sortOrder)
           .map((item, index) => {
-            return <ExperienceItem key={index} value={item} />;
+            return <ExperienceItem key={item._id} value={item} />;
           })}
 
         {/* <ExperienceItem /> */}

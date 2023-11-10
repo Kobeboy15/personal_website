@@ -37,7 +37,7 @@ export default function ExperienceItem({ value }) {
         </p>
         <p className="mt-3 flex flex-wrap gap-x-5 gap-y-3 text-neutral-500">
           {value.technologies.map((skill, index) => {
-            return <span>{skill}</span>;
+            return <span key={index}>{skill}</span>;
           })}
           {/* TS • Next • Nest • Stitches • Mobx • Turbo */}
         </p>
