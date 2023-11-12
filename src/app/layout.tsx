@@ -20,7 +20,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${bitter.className} min-h-screen`}>
         <NavMenu />
-        <div className="max-w-[940px] m-auto my-10 px-6">{children}</div>
+        <div
+          style={{ minHeight: "calc(100vh - 140px - 140px)" }}
+          className="max-w-[940px] m-auto px-6 relative"
+        >
+          {children}
+        </div>
         <FooterMenu />
       </body>
     </html>
