@@ -45,6 +45,19 @@ export default async function About() {
               designs that cater to a client&apos;s want and needs for their
               application. I&apos;m always learning and always hungry for new
               opportunities.
+              <br />
+              <br />
+              You can read more about my biography, experience, skills,
+              education and much more in the PDF attached bellow:
+              <br />
+              <br />
+              <a
+                className="font-medium hover:text-yellow-200"
+                href="/public/KMichael_Resume.pdf"
+                download
+              >
+                My resume (pdf 882kb)
+              </a>
             </p>
           </div>
         </Reveal>

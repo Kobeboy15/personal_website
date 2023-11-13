@@ -33,7 +33,7 @@ export default function ExperienceItem({ value }) {
           <span className="hidden md:block">-</span>
           {value.employer}
         </h4>
-        <p className="text-neutral-400 leading-7 mt-2 font-normal text-xs md:text-sm">
+        <p className="text-neutral-400 leading-7 mt-2 font-normal text-xs md:text-[14px]">
           {value.description}
         </p>
         <p className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-neutral-500 text-xs md:text-sm">
