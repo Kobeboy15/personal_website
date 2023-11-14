@@ -1,6 +1,6 @@
 ![N|Solid](https://github.com/Kobeboy15/personal_website/assets/23691843/ee2901d5-f808-4328-a843-e5c837276a4b)
 # My Personal Website
-This is my personal website I built to showcase my experiences and my interests. Built using [Next.Js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/), [Framer](https://www.framer.com/), and Love ❤️
+This is my personal website I built to showcase my experiences and my interests. Built using [Next.Js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/), [Framer](https://www.framer.com/), and Love ❤️. I used [Sanity](https://www.sanity.io/) as my Content Management System (CMS) to handle my multiple experiences as supposed to just updating a local JSON.
 
 Feel free to clone or fork it for your own personal use.
 
@@ -13,3 +13,5 @@ cd personal_website
 npm install
 npm run dev
 ```
+
+
