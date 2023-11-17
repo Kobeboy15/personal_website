@@ -53,7 +53,7 @@ export default async function About() {
               <br />
               <a
                 className="font-medium hover:text-yellow-200"
-                href="/KMichael_Resume.pdf"
+                href="/KobeMichael_CV.pdf"
                 download
               >
                 My resume (pdf 882kb)
