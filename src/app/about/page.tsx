@@ -56,7 +56,7 @@ export default async function About() {
                 href="/KobeMichael_CV.pdf"
                 download
               >
-                My resume (pdf 882kb)
+                My resume (pdf 668kb)
               </a>
             </p>
           </div>
