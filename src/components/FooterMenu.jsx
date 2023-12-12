@@ -16,18 +16,18 @@ export default function FooterMenu() {
     <div className="text-sm flex items-center justify-between max-w-[940px] px-6 m-auto h-[140px]">
       <Reveal delay={0.9}>
         <Link href="/">
-          <h3 className="text-neutral-400 text-xs md:text-sm">
+          <h3 className="text-xs md:text-sm text-neutral-800 dark:text-neutral-500">
             © {currentYear} kobe michael
           </h3>
         </Link>
       </Reveal>
       <Reveal delay={0.9}>
-        <div className="flex items-center gap-5 text-neutral-400">
+        <div className="flex items-center gap-5">
           <a
             href="https://www.linkedin.com/in/kobe-michael/"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white transition-colors"
+            className="dark:hover:text-white text-neutral-800  dark:text-neutral-500 transition-colors"
           >
             <LinkedIn />
           </a>
@@ -35,7 +35,7 @@ export default function FooterMenu() {
             href="https://github.com/Kobeboy15"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white transition-colors"
+            className="dark:hover:text-white text-neutral-800  dark:text-neutral-500 transition-colors"
           >
             <Github />
           </a>

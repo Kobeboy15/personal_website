@@ -23,10 +23,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div style={{ minHeight: "inherit" }} className="flex items-center">
       <div
         style={{ minHeight: "calc(100vh - 420px)" }}
-        className="flex flex-col justify-center relative"
+        className="flex flex-col justify-center relative dark:text-white"
       >
         <Reveal>
           <h2 className=" text-3xl md:text-[40px] font-semibold md:mb-[42px] mb-6">
@@ -43,10 +43,10 @@ export default function Home() {
           </p>
         </Reveal>
         {!showMore && (
-          <div className="static md:absolute bottom-0 w-full hover:scale-105 transition-all ease-in-out duration-300">
-            <Reveal width="100%" delay={2}>
+          <div className="md:pt-20 static bottom-0 w-full hover:scale-105 transition-all ease-in-out duration-300">
+            <Reveal width="100%" delay={1.3}>
               <Link href="/about">
-                <div className="w-full text-center flex items-end justify-center cursor-pointer hover:text-yellow-200">
+                <div className="w-full text-center text-sm md:text-base flex items-end justify-center cursor-pointer hover:text-yellow-200">
                   <p>Click to learn more</p>
                 </div>
               </Link>
