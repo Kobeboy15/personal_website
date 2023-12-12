@@ -16,11 +16,11 @@ export default async function About() {
     <div className="flex flex-col gap-16">
       <div>
         <Reveal>
-          <h2 className="text-3xl mb-4">about 🧑🏻‍💻</h2>
+          <h2 className="text-3xl mb-4 dark:text-white">about 🧑🏻‍💻</h2>
         </Reveal>
         <Reveal>
           <div className="flex flex-col gap-10">
-            <p className="text-justify font-light leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
+            <p className="text-justify dark:text-white font-light leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
               I&apos;ve always had a creative background for as long as I can
               remember. From dealing with photography and film-making, to
               working on art vectors in Adobe Illustrator. I always had an eye
@@ -56,7 +56,7 @@ export default async function About() {
                 href="/KobeMichael_CV.pdf"
                 download
               >
-                My resume (pdf 668kb)
+                My resume (pdf 684kb)
               </a>
             </p>
           </div>
@@ -64,7 +64,7 @@ export default async function About() {
       </div>
       <div>
         <Reveal>
-          <h2 className="text-3xl mb-14">work experience 💻</h2>
+          <h2 className="text-3xl mb-14 dark:text-white">work experience 💻</h2>
         </Reveal>
         <div className="flex flex-col gap-10 mb-5">
           {experienceData
@@ -80,11 +80,11 @@ export default async function About() {
       </div>
       <div>
         <Reveal delay={0.2}>
-          <h2 className="text-3xl mb-4">contact ✉️</h2>
+          <h2 className="text-3xl mb-4 dark:text-white">contact ✉️</h2>
         </Reveal>
         <div className="flex flex-col gap-10">
           <Reveal delay={0.4}>
-            <p className="text-justify font-light leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
+            <p className="text-justify dark:text-white font-light leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
               I&apos;m actively exploring opportunities to collaborate with
               companies, agencies, and individuals. My goal is to contribute my
               design experience to collectively solve real-business problems.
@@ -96,7 +96,7 @@ export default async function About() {
             </p>
           </Reveal>
           <Reveal delay={0.4}>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 dark:text-white">
               <a
                 href="mailto: kobemichael15@gmail.com"
                 className="hover:text-yellow-200"

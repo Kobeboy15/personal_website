@@ -42,7 +42,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${bitter.className} min-h-screen`}>
+      <body
+        className={`${bitter.className} min-h-screen bg-amber-50 dark:bg-black transition-colors duration-300`}
+      >
         <NavMenu />
         <div
           style={{ minHeight: "calc(100vh - 140px - 140px)" }}
