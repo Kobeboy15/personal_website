@@ -34,7 +34,7 @@ export default function Home() {
           </h2>
         </Reveal>
         <Reveal delay={0.5}>
-          <p className="text-justify leading-[45px] text-sm md:text-[1.25rem] tracking-wide font-light mb-16 md:mb-0">
+          <p className="text-justify leading-[45px] text-sm md:text-[1.25rem] tracking-wide font-normal mb-16 md:mb-0">
             Hello, I&apos;m Kobe, a seasoned professional with over half a
             decade of experience in design and development. You can call me a
             web designer designer, front-end developer, software engineer, or
@@ -46,7 +46,7 @@ export default function Home() {
           <div className="md:pt-20 static bottom-0 w-full hover:scale-105 transition-all ease-in-out duration-300">
             <Reveal width="100%" delay={1.3}>
               <Link href="/about">
-                <div className="w-full text-center text-sm md:text-base flex items-end justify-center cursor-pointer hover:text-yellow-200">
+                <div className="w-full text-center text-sm md:text-base flex items-end justify-center cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-200">
                   <p>Click to learn more</p>
                 </div>
               </Link>

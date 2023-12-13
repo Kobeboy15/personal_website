@@ -48,7 +48,7 @@ export default function NavMenu() {
         >
           {currentTheme === "dark" ? <Sun /> : <Moon size={20} />}
         </button>
-        <div className="dark:text-white flex items-center gap-5 md:gap-11 text-sm md:text-[20px] hover:text-yellow-200 transition-colors">
+        <div className="dark:text-white flex items-center gap-5 md:gap-11 text-sm md:text-[20px] hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors">
           <Link href="/about">
             <p>about</p>
           </Link>

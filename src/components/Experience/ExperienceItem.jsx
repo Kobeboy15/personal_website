@@ -36,7 +36,7 @@ export default function ExperienceItem({ value }) {
         <p className="leading-7 mt-2 font-normal text-xs md:text-[14px] text-neutral-700 dark:text-neutral-400">
           {value.description}
         </p>
-        <p className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-500">
+        <p className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-200">
           {value.technologies.map((skill, index) => {
             return <span key={index}>{skill}</span>;
           })}

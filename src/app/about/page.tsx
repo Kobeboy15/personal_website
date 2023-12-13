@@ -52,7 +52,7 @@ export default async function About() {
               <br />
               <br />
               <a
-                className="font-medium hover:text-yellow-200"
+                className="font-medium hover:text-yellow-500 dark:hover:text-yellow-200"
                 href="/KobeMichael_CV.pdf"
                 download
               >
