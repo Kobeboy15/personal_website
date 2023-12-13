@@ -1,16 +1,24 @@
 import { Reveal } from "@/components/Reveal";
 import ExperienceItem from "../../components/Experience/ExperienceItem";
+import ProjectItem from "../../components/Project/ProjectItem";
 import { externalLink as ExternalLink } from "@/components/Logo";
 import { client } from "@/utils/configSanity";
 
 export default async function About() {
   async function getExperienceData() {
-    const query = `*[_type == "experience" ]`;
-    const data = await client.fetch(query);
+    let query = `*[_type == "experience" ]`;
+    let data = await client.fetch(query);
+    return data;
+  }
+
+  async function getProjectData() {
+    let query = `*[_type == "project" ]`;
+    let data = await client.fetch(query);
     return data;
   }
 
   const experienceData = await getExperienceData();
+  const projectData = await getProjectData();
 
   return (
     <div className="flex flex-col gap-16">
@@ -20,7 +28,7 @@ export default async function About() {
         </Reveal>
         <Reveal>
           <div className="flex flex-col gap-10">
-            <p className="text-justify dark:text-white font-light leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
+            <p className="text-justify dark:text-white font-normal leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
               I&apos;ve always had a creative background for as long as I can
               remember. From dealing with photography and film-making, to
               working on art vectors in Adobe Illustrator. I always had an eye
@@ -79,12 +87,28 @@ export default async function About() {
         </div>
       </div>
       <div>
+        <Reveal>
+          <h2 className="text-3xl mb-8 dark:text-white">projects ✏️</h2>
+        </Reveal>
+        <div className="flex flex-col gap-12">
+          {projectData
+            ?.sort((a: any, b: any) => b.sortOrder - a.sortOrder)
+            .map((item: any, index: number) => {
+              return (
+                // <Reveal key={item._id} delay={1 * index}>
+                <ProjectItem key={item._id} value={item} />
+                // </Reveal>
+              );
+            })}
+        </div>
+      </div>
+      <div>
         <Reveal delay={0.2}>
           <h2 className="text-3xl mb-4 dark:text-white">contact ✉️</h2>
         </Reveal>
         <div className="flex flex-col gap-10">
           <Reveal delay={0.4}>
-            <p className="text-justify dark:text-white font-light leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
+            <p className="text-justify dark:text-white font-normal leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
               I&apos;m actively exploring opportunities to collaborate with
               companies, agencies, and individuals. My goal is to contribute my
               design experience to collectively solve real-business problems.
