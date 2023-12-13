@@ -27,7 +27,6 @@ export default function NavMenu() {
     ) {
       document.documentElement.classList.add("dark");
       setCurrentTheme("dark");
-      document;
     } else {
       document.documentElement.classList.remove("dark");
       setCurrentTheme("light");
