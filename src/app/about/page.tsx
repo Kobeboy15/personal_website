@@ -88,16 +88,16 @@ export default async function About() {
       </div>
       <div>
         <Reveal>
-          <h2 className="text-3xl mb-8 dark:text-white">projects 📝</h2>
+          <h2 className="text-3xl mb-8 dark:text-white">projects ✏️</h2>
         </Reveal>
-        <div>
+        <div className="flex flex-col gap-12">
           {projectData
-            ?.sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+            ?.sort((a: any, b: any) => b.sortOrder - a.sortOrder)
             .map((item: any, index: number) => {
               return (
-                <Reveal key={item._id} delay={1 * index}>
-                  <ProjectItem value={item} />
-                </Reveal>
+                // <Reveal key={item._id} delay={1 * index}>
+                <ProjectItem key={item._id} value={item} />
+                // </Reveal>
               );
             })}
         </div>
