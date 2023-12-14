@@ -29,15 +29,15 @@ export default async function About() {
         <Reveal>
           <div className="flex flex-col gap-10">
             <p className="text-justify dark:text-white font-normal leading-10 tracking-normal md:tracking-wide text-sm md:text-[16px]">
-              I've had a creative background from an early age, exploring
+              I&apos;ve had a creative background from an early age, exploring
               photography, film-making, and art vectors in Adobe Illustrator. My
               interest in design led me to Web Development during high school,
               where I realized the blend of art and complexity in structuring
               content for user-friendly web applications. This sparked my
               passion for becoming a developer. Currently, as a Frontend
               Engineer, I combine technical expertise with a focus on creating
-              captivating designs tailored to clients' needs. Always eager for
-              new opportunities, I'm continuously learning and growing.
+              captivating designs tailored to clients&apos; needs. Always eager
+              for new opportunities, I&apos;m continuously learning and growing.
               <br />
               <br />
               You can read more about my biography, experience, skills,

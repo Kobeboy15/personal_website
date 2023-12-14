@@ -12,8 +12,8 @@ export default function NotFound() {
           <p className="tracking-widest mb-2">Error 404</p>
           <h3 className="text-5xl tracking-wide font-bold">Page not found.</h3>
           <p className=" tracking-wider font-medium">
-            The page you are looking for doesn't exist. You may have mistyped
-            the address or the page may have moved.
+            The page you are looking for doesn&apos;t exist. You may have
+            mistyped the address or the page may have moved.
           </p>
           <div className="mt-14">
             <Link
