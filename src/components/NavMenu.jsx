@@ -54,13 +54,13 @@ export default function NavMenu() {
           >
             <p>about</p>
           </Link>
-          <Link
+          {/* <Link
             aria-disabled={true}
             href="/blog"
             className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors"
           >
             <p>blog</p>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
