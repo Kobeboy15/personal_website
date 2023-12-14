@@ -28,31 +28,16 @@ export default async function About() {
         </Reveal>
         <Reveal>
           <div className="flex flex-col gap-10">
-            <p className="text-justify dark:text-white font-normal leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
-              I&apos;ve always had a creative background for as long as I can
-              remember. From dealing with photography and film-making, to
-              working on art vectors in Adobe Illustrator. I always had an eye
-              for what I found was interesting, and trying to understand what
-              made them interesting in the first place.
-              <br />
-              <br />
-              As I got older, I eventually got my first exposure to Web
-              Development and Design around my junior year of high school. We
-              were tasked to design a personal web portfolio, using HTML and
-              CSS. There I understood that there was a complexity behind all of
-              this, dealing with numbers, percentages, and math, but I also
-              could see there was an art-form with how you structure content and
-              visualize it for a user. Presentation was essential in order for a
-              web application to be usable by many. I immediately got hooked on
-              that concept, and ever since then, I&apos;ve wanted to become a
-              developer as my main job.
-              <br />
-              <br />
-              Currently, I&apos;ve leaned into the position of being a Frontend
-              Engineer, but I also pride myself on creating stunning and unique
-              designs that cater to a client&apos;s want and needs for their
-              application. I&apos;m always learning and always hungry for new
-              opportunities.
+            <p className="text-justify dark:text-white font-normal leading-10 tracking-normal md:tracking-wide text-sm md:text-[16px]">
+              I've had a creative background from an early age, exploring
+              photography, film-making, and art vectors in Adobe Illustrator. My
+              interest in design led me to Web Development during high school,
+              where I realized the blend of art and complexity in structuring
+              content for user-friendly web applications. This sparked my
+              passion for becoming a developer. Currently, as a Frontend
+              Engineer, I combine technical expertise with a focus on creating
+              captivating designs tailored to clients' needs. Always eager for
+              new opportunities, I'm continuously learning and growing.
               <br />
               <br />
               You can read more about my biography, experience, skills,
@@ -108,7 +93,7 @@ export default async function About() {
         </Reveal>
         <div className="flex flex-col gap-10">
           <Reveal delay={0.4}>
-            <p className="text-justify dark:text-white font-normal leading-7 tracking-normal md:leading-10 md:tracking-wide text-sm md:text-base">
+            <p className="text-justify dark:text-white font-normal leading-10 tracking-normal md:tracking-wide text-sm md:text-[16px]">
               I&apos;m actively exploring opportunities to collaborate with
               companies, agencies, and individuals. My goal is to contribute my
               design experience to collectively solve real-business problems.

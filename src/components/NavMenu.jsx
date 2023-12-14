@@ -43,15 +43,24 @@ export default function NavMenu() {
       <div className="flex flex-row-reverse gap-5">
         <button
           onClick={handleTheme}
-          className="dark:text-white w-12 flex justify-center"
+          className="dark:text-white dark:hover:text-yellow-200 w-12 flex justify-center"
         >
           {currentTheme === "dark" ? <Sun /> : <Moon />}
         </button>
-        <div className="dark:text-white flex items-center gap-5 md:gap-11 text-sm md:text-[20px] hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors">
-          <Link href="/about">
+        <div className="dark:text-white flex items-center gap-5 md:gap-11 text-sm md:text-[20px]">
+          <Link
+            href="/about"
+            className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors"
+          >
             <p>about</p>
           </Link>
-          {/* <p>contact</p> */}
+          <Link
+            aria-disabled={true}
+            href="/blog"
+            className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors"
+          >
+            <p>blog</p>
+          </Link>
         </div>
       </div>
     </div>
