@@ -6,14 +6,18 @@ import "./globals.css";
 
 const bitter = Bitter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Kobe Michael",
+const MetaInfo = {
+  title: "Kobe Michael | Web Developer & Web Designer",
   description:
-    "Web design and development expert. Transform challenges into creative solutions.",
+    "🚀 Frontend Developer with 5+ years of experience and a keen eye for crafting visually appealing and user-friendly interfaces. I am passionate about creating delightful web experiences that exceed user expectations.",
+};
+
+export const metadata = {
+  title: MetaInfo.title,
+  description: MetaInfo.description,
   openGraph: {
-    title: "Kobe Michael",
-    description:
-      "Web design and development expert. Transform challenges into creative solutions.",
+    title: MetaInfo.title,
+    description: MetaInfo.description,
     url: "https://www.kobemichael.works/",
     siteName: "Kobe Michael",
     images: [
