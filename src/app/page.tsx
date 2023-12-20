@@ -29,9 +29,9 @@ export default function Home() {
         className="flex flex-col justify-center relative dark:text-white"
       >
         <Reveal>
-          <h2 className=" text-3xl md:text-[40px] font-semibold md:mb-[42px] mb-6">
+          <h1 className=" text-3xl md:text-[40px] font-semibold md:mb-[42px] mb-6">
             {handleGreeting()}
-          </h2>
+          </h1>
         </Reveal>
         <Reveal delay={0.5}>
           <p className="text-justify leading-[45px] text-sm md:text-[1.25rem] tracking-wide font-normal mb-16 md:mb-0">

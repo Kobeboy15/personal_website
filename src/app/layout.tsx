@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bitter.className} min-h-screen bg-amber-50 dark:bg-zinc-900 transition-colors duration-300`}
+        className={`${bitter.className} min-h-screen bg-amber-50 dark:bg-zinc-900 duration-150`}
       >
         <NavMenu />
         <div

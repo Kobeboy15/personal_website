@@ -55,7 +55,7 @@ export default async function About() {
           </div>
         </Reveal>
       </div>
-      <div>
+      <div id="work">
         <Reveal>
           <h2 className="text-3xl mb-14 dark:text-white">work experience 💻</h2>
         </Reveal>
@@ -71,7 +71,7 @@ export default async function About() {
             })}
         </div>
       </div>
-      <div>
+      <div id="projects">
         <Reveal>
           <h2 className="text-3xl mb-8 dark:text-white">projects ✏️</h2>
         </Reveal>
@@ -87,7 +87,7 @@ export default async function About() {
             })}
         </div>
       </div>
-      <div>
+      <div id="contact">
         <Reveal delay={0.2}>
           <h2 className="text-3xl mb-4 dark:text-white">contact ✉️</h2>
         </Reveal>
