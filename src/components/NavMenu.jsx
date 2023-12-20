@@ -53,9 +53,14 @@ export default function NavMenu() {
     },
   ];
 
+  function handleMobileMenu(value) {
+    document.body.style.overflow = !isMenuOpen ? "hidden" : "unset";
+    setIsMenuOpen(value);
+  }
+
   return (
     <div className="flex items-center justify-between max-w-[1180px] m-auto px-6 h-[140px]">
-      <Link onClick={() => setIsMenuOpen(false)} href="/">
+      <Link onClick={() => handleMobileMenu(false)} href="/">
         <h3 className="text-lg md:text-[24px] font-bold dark:text-white">
           kobe michael
         </h3>
@@ -71,7 +76,7 @@ export default function NavMenu() {
         <MobileItems
           routes={MenuItems}
           isMenuOpen={isMenuOpen}
-          setIsMenuOpen={setIsMenuOpen}
+          handleMobileMenu={handleMobileMenu}
         />
       </div>
     </div>
@@ -96,19 +101,19 @@ function DesktopItems({ routes }) {
   );
 }
 
-function MobileItems({ routes, isMenuOpen, setIsMenuOpen }) {
+function MobileItems({ routes, isMenuOpen, handleMobileMenu }) {
   return (
     <div className="md:hidden dark:text-white flex items-center gap-5 md:gap-11 text-sm">
       {isMenuOpen ? (
         <button
-          onClick={() => setIsMenuOpen(false)}
+          onClick={() => handleMobileMenu(false)}
           className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors"
         >
           <Close />
         </button>
       ) : (
         <button
-          onClick={() => setIsMenuOpen(true)}
+          onClick={() => handleMobileMenu(true)}
           className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors"
         >
           <Menu />
@@ -121,7 +126,7 @@ function MobileItems({ routes, isMenuOpen, setIsMenuOpen }) {
               return (
                 <Link
                   key={index}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleMobileMenu(false)}
                   href={item.route}
                   className="hover:text-yellow-500 dark:hover:text-yellow-200"
                 >

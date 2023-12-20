@@ -9,7 +9,7 @@ const bitter = Bitter({ subsets: ["latin"] });
 const MetaInfo = {
   title: "Kobe Michael | Web Developer & Web Designer",
   description:
-    "🚀 Frontend Developer with 5+ years of experience and a keen eye for crafting visually appealing and user-friendly interfaces. I am passionate about creating delightful web experiences that exceed user expectations.",
+    "🚀 Frontend Web Developer and Designer with 5+ years of experience and a keen eye for crafting visually appealing and user-friendly interfaces. I am passionate about creating delightful web experiences that exceed user expectations.",
 };
 
 export const metadata = {
