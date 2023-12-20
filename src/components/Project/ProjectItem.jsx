@@ -6,7 +6,7 @@ export default function ProjectItem({ value }) {
     <div className="md:flex even:flex-row-reverse lg:even:text-justify gap-8 items-center dark:text-white">
       <Reveal>
         <div className="flex-1">
-          <a href={link} alt={link} target="__blank">
+          <a title={name} href={link} alt={link} target="__blank">
             <img src={imageLink} alt={`Link to ${name}`} />
           </a>
         </div>

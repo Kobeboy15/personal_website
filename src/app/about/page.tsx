@@ -45,6 +45,7 @@ export default async function About() {
               <br />
               <br />
               <a
+                title="Kobe Michael's Resume"
                 className="font-medium hover:text-yellow-500 dark:hover:text-yellow-200"
                 href="/KobeMichael_CV.pdf"
                 download
@@ -107,12 +108,14 @@ export default async function About() {
           <Reveal delay={0.4}>
             <div className="flex flex-col gap-6 dark:text-white">
               <a
+                title="kobemichael15@gmail.com"
                 href="mailto: kobemichael15@gmail.com"
                 className="hover:text-yellow-200"
               >
                 <p>kobemichael15@gmail.com</p>
               </a>
               <a
+                title="Kobe Michael's LinkedIn"
                 href="https://www.linkedin.com/in/kobe-michael/"
                 target="_blank"
                 rel="noreferrer"
@@ -126,6 +129,7 @@ export default async function About() {
                 </p>
               </a>
               <a
+                title="Kobe Michael's GitHub"
                 href="https://github.com/Kobeboy15"
                 target="_blank"
                 rel="noreferrer"

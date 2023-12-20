@@ -24,6 +24,7 @@ export default function FooterMenu() {
       <Reveal delay={0.9}>
         <div className="flex items-center gap-5">
           <a
+            title="Kobe Michael's LinkedIn"
             href="https://www.linkedin.com/in/kobe-michael/"
             target="_blank"
             rel="noreferrer"
@@ -32,6 +33,7 @@ export default function FooterMenu() {
             <LinkedIn />
           </a>
           <a
+            title="Kobe Michael's GitHub"
             href="https://github.com/Kobeboy15"
             target="_blank"
             rel="noreferrer"
