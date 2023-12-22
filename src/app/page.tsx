@@ -37,7 +37,7 @@ export default function Home() {
           <h2 className="text-justify leading-[45px] text-sm md:text-[1.25rem] tracking-wide font-normal mb-16 md:mb-0">
             Hello, I&apos;m Kobe, a seasoned professional with over half a
             decade of experience in design and development. You can call me a
-            web designer designer, front-end developer, software engineer, or
+            web designer, front-end developer, software engineer, or
             any title that fits the job. I enjoy working on problems web and
             design related and always look forward to a challenge.
           </h2>
