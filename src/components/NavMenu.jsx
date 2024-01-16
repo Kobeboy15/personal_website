@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Sun, Moon, Menu, Close } from "./Logo";
+import { usePathname } from "next/navigation";
 
 export default function NavMenu() {
   const [currentTheme, setCurrentTheme] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   function handleTheme() {
     if (localStorage.theme === "dark") {
@@ -51,14 +53,6 @@ export default function NavMenu() {
       name: "about",
       route: "/about",
     },
-    // {
-    //   name: "projects",
-    //   route: "/about#projects",
-    // },
-    // {
-    //   name: "contact",
-    //   route: "/about#contact",
-    // },
   ];
 
   function handleMobileMenu(value) {
@@ -92,14 +86,19 @@ export default function NavMenu() {
 }
 
 function DesktopItems({ routes }) {
+  const pathname = usePathname();
   return (
     <div className="hidden dark:text-white md:flex items-center gap-5 md:gap-11 text-sm md:text-[16px]">
       {routes.map((item, index) => {
+        const isActive = pathname.startsWith(item.route);
         return (
           <Link
             key={index}
             href={item.route}
-            className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors"
+            active
+            className={`hover:text-yellow-500 border-dotted dark:hover:text-yellow-200 transition-colors duration-200 py-1 border-b-[3px] ${
+              isActive ? "dark:border-white border-black" : "border-transparent"
+            }`}
           >
             <p>{item.name}</p>
           </Link>
