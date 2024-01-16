@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 export default function NavMenu() {
   const [currentTheme, setCurrentTheme] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   function handleTheme() {
     if (localStorage.theme === "dark") {
@@ -63,14 +62,14 @@ export default function NavMenu() {
   return (
     <div className="flex items-center justify-between max-w-7xl m-auto px-6 h-[140px]">
       <Link onClick={() => handleMobileMenu(false)} href="/">
-        <h3 className="text-lg md:text-[24px] font-bold dark:text-white">
+        <h3 className={`text-lg md:text-[24px] font-bold dark:text-white`}>
           kobe michael
         </h3>
       </Link>
       <div className="flex flex-row-reverse gap-5">
         <button
           onClick={handleTheme}
-          className="dark:text-white dark:hover:text-yellow-200 w-12 flex justify-center"
+          className="dark:text-white dark:hover:text-yellow-200 w-12 flex justify-center fixed top-5 right-5"
         >
           {currentTheme === "dark" ? <Sun /> : <Moon />}
         </button>
