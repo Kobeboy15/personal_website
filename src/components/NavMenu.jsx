@@ -36,30 +36,38 @@ export default function NavMenu() {
 
   const MenuItems = [
     {
-      name: "about",
-      route: "/about",
-    },
-    {
       name: "work",
-      route: "/about#work",
+      route: "/work",
     },
     {
       name: "projects",
-      route: "/about#projects",
+      route: "/projects",
     },
     {
-      name: "contact",
-      route: "/about#contact",
+      name: "blog",
+      route: "/blog",
     },
+    {
+      name: "about",
+      route: "/about",
+    },
+    // {
+    //   name: "projects",
+    //   route: "/about#projects",
+    // },
+    // {
+    //   name: "contact",
+    //   route: "/about#contact",
+    // },
   ];
 
   function handleMobileMenu(value) {
-    document.body.style.overflow = !isMenuOpen ? "hidden" : "unset";
+    document.body.style.overflow = !isMenuOpen && value ? "hidden" : "unset";
     setIsMenuOpen(value);
   }
 
   return (
-    <div className="flex items-center justify-between max-w-[1180px] m-auto px-6 h-[140px]">
+    <div className="flex items-center justify-between max-w-7xl m-auto px-6 h-[140px]">
       <Link onClick={() => handleMobileMenu(false)} href="/">
         <h3 className="text-lg md:text-[24px] font-bold dark:text-white">
           kobe michael
@@ -85,7 +93,7 @@ export default function NavMenu() {
 
 function DesktopItems({ routes }) {
   return (
-    <div className="hidden dark:text-white md:flex items-center gap-5 md:gap-11 text-sm md:text-[20px]">
+    <div className="hidden dark:text-white md:flex items-center gap-5 md:gap-11 text-sm md:text-[16px]">
       {routes.map((item, index) => {
         return (
           <Link

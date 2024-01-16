@@ -13,7 +13,7 @@ export default function FooterMenu() {
   }, []);
 
   return (
-    <div className="text-sm flex items-center justify-between max-w-[940px] px-6 m-auto h-[140px]">
+    <div className="text-sm flex items-center justify-between max-w-7xl px-6 m-auto h-[140px]">
       <Reveal delay={0.9}>
         <Link href="/">
           <h3 className="text-xs md:text-sm text-neutral-800 dark:text-neutral-500">
@@ -30,7 +30,7 @@ export default function FooterMenu() {
             rel="noreferrer"
             className="dark:hover:text-white text-neutral-800  dark:text-neutral-500 transition-colors"
           >
-            <LinkedIn />
+            <LinkedIn size={20} />
           </a>
           <a
             title="Kobe Michael's GitHub"
@@ -39,7 +39,7 @@ export default function FooterMenu() {
             rel="noreferrer"
             className="dark:hover:text-white text-neutral-800  dark:text-neutral-500 transition-colors"
           >
-            <Github />
+            <Github size={20} />
           </a>
         </div>
       </Reveal>
