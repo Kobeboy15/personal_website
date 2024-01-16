@@ -12,13 +12,19 @@ export default async function Work() {
   const experienceData = await getExperienceData();
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center max-w-[940px] mx-auto">
       <div className="flex flex-col justify-center relative dark:text-white mx-auto">
         <div id="work" className="mt-[40px]">
           <Reveal>
-            <h2 className="text-2xl mb-14 dark:text-white font-semibold">
-              Work Experience &nbsp;💻
-            </h2>
+            <div className="mb-14">
+              <h1 className="text-3xl dark:text-white font-semibold mb-2">
+                Work Experience &nbsp;💻
+              </h1>
+              <p>
+                A list of companies and projects that I have been assigned to
+                and have worked on.
+              </p>
+            </div>
           </Reveal>
           <Reveal>
             <div className="flex flex-col gap-7 mb-5">

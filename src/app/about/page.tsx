@@ -1,27 +1,44 @@
 import { Reveal } from "@/components/Reveal";
 import { externalLink as ExternalLink } from "@/components/Logo";
+import { PDFIcon } from "@/components/Logo";
 
 export default async function About() {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center max-w-[940px] mx-auto">
       <div className="flex flex-col justify-center relative dark:text-white mx-auto">
-        <div>
+        <Reveal>
+          <img
+            src="https://images.pexels.com/photos/9519006/pexels-photo-9519006.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="wow"
+            className="mb-6"
+          />
+        </Reveal>
+        <div className="About">
           <Reveal>
-            <h2 className="text-3xl mb-4 dark:text-white">about 🧑🏻‍💻</h2>
+            <h2 className="text-3xl dark:text-white font-semibold mb-4">
+              About 🧑🏻‍💻
+            </h2>
           </Reveal>
           <Reveal>
             <div className="flex flex-col gap-10">
               <p className="text-justify dark:text-white font-normal leading-10 tracking-normal md:tracking-wide text-sm md:text-[16px]">
-                I&apos;ve had a creative background from an early age, exploring
-                photography, film-making, and art vectors in Adobe Illustrator.
-                My interest in design led me to Web Development during high
-                school, where I realized the blend of art and complexity in
-                structuring content for user-friendly web applications. This
-                sparked my passion for becoming a developer. Currently, as a
-                Frontend Engineer, I combine technical expertise with a focus on
-                creating captivating designs tailored to clients&apos; needs.
-                Always eager for new opportunities, I&apos;m continuously
-                learning and growing.
+                I've nurtured a lifelong passion for creativity, exploring
+                realms like film-making, photography, and crafting art vectors
+                in Adobe Illustrator. Constantly seeking avenues to flex my
+                creative muscles, I stumbled upon the dynamic universe of Web
+                Development. Here, I found my love for sculpting intricate
+                shapes, playing with on-screen elements, and mastering the art
+                of layout design. Delving into the intricacies of User
+                Experience and crafting User Interfaces became not just a skill,
+                but a calling.
+                <br />
+                <br />
+                As a Frontend Engineer today, I seamlessly blend technical
+                prowess with a dedicated focus on fashioning designs that
+                captivate and cater to clients' unique needs. My enthusiasm for
+                new opportunities fuels a perpetual cycle of learning and
+                growth, ensuring I stay at the forefront of the ever-evolving
+                landscape of design and development.
                 <br />
                 <br />
                 You can read more about my biography, experience, skills,
@@ -34,15 +51,19 @@ export default async function About() {
                   href="/KobeMichael_CV.pdf"
                   download
                 >
-                  My resume (pdf 684kb)
+                  <span className="flex items-center gap-2">
+                    My resume (pdf 684kb) <PDFIcon />
+                  </span>
                 </a>
               </p>
             </div>
           </Reveal>
         </div>
-        <div id="contact">
+        {/* <div id="contact">
           <Reveal delay={0.2}>
-            <h2 className="text-3xl mb-4 dark:text-white">contact ✉️</h2>
+            <h2 className="text-2xl dark:text-white font-semibold mb-4">
+              Contact ✉️
+            </h2>
           </Reveal>
           <div className="flex flex-col gap-10">
             <Reveal delay={0.4}>
@@ -97,7 +118,7 @@ export default async function About() {
               </div>
             </Reveal>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

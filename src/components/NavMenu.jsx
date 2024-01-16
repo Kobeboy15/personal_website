@@ -44,10 +44,10 @@ export default function NavMenu() {
       name: "projects",
       route: "/projects",
     },
-    {
-      name: "blog",
-      route: "/blog",
-    },
+    // {
+    //   name: "blog",
+    //   route: "/blog",
+    // },
     {
       name: "about",
       route: "/about",
@@ -62,7 +62,9 @@ export default function NavMenu() {
   return (
     <div className="flex items-center justify-between max-w-7xl m-auto px-6 h-[140px]">
       <Link onClick={() => handleMobileMenu(false)} href="/">
-        <h3 className={`text-lg md:text-[24px] font-bold dark:text-white`}>
+        <h3
+          className={`text-lg md:text-[24px] font-bold dark:text-white text-gray-900`}
+        >
           kobe michael
         </h3>
       </Link>

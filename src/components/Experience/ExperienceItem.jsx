@@ -32,8 +32,8 @@ export default function ExperienceItem({ value }) {
       <div className="flex-[1.5] md:flex-[2] dark:text-white">
         <div className="flex justify-between">
           <div className="grid gap-2">
-            <h3 className="text-xl font-bold">{value.employer}</h3>
-            <h4 className="text-base font-light">{value.position}</h4>
+            <h3 className="text-xl font-bold">{value.position}</h3>
+            <h4 className="text-base font-light">{value.employer}</h4>
           </div>
           <p className="dark:text-white tracking-wide">
             {formatDate(value.startDate)}&nbsp;-&nbsp;{" "}

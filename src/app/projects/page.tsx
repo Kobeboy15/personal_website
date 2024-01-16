@@ -12,13 +12,19 @@ export default async function Projects() {
   const projectData = await getProjectData();
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center max-w-[940px] mx-auto">
       <div className="flex flex-col justify-center relative dark:text-white mx-auto">
         <div id="projects" className="mt-[40px]">
           <Reveal>
-            <h2 className="text-2xl mb-14 dark:text-white font-semibold">
-              Projects ✏️
-            </h2>
+            <div className="mb-14">
+              <h2 className="text-3xl mb-2 dark:text-white font-semibold">
+                Projects 🚧
+              </h2>
+              <p>
+                My portfolio of standout projects, from Program Exercises to
+                personal initiatives.
+              </p>
+            </div>
           </Reveal>
           <div className="flex flex-col gap-12">
             {projectData
