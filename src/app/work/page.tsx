@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 import ExperienceItem from "@/components/Experience/ExperienceItem";
 import { Reveal } from "@/components/Reveal";
 import { client } from "@/utils/configSanity";
