@@ -10,27 +10,29 @@ export default function FooterMenu() {
   return (
     <div className="dark:from-zinc-800/90 bg-gradient-to-t to-transparent">
       <div className=" pt-28 mb-24 text-center max-w-lg mx-auto">
-        <div id="contact">
-          <h2 className="text-2xl text-center dark:text-white font-bold mb-4 w-full">
-            Lets stay in touch ✉️
-          </h2>
-          <div className="flex flex-col gap-10">
-            <p className="text-center dark:text-white/80 font-normal tracking-wide leading-6 text-sm">
-              I&apos;m up for collabs with companies and cool folks to tackle
-              real-world challenges together. Let&apos;s combine our skills for
-              awesome results!
-              <br />
-              <br />
-              <a
-                href="mailto: kobemichael15@gmail.com"
-                className="dark:text-white underline"
-              >
-                Send me an email
-              </a>{" "}
-              and I&apos;ll get back to you as soon as I can!
-            </p>
+        <Reveal>
+          <div id="contact">
+            <h2 className="text-2xl text-center dark:text-white font-bold mb-4 w-full">
+              Lets stay in touch ✉️
+            </h2>
+            <div className="flex flex-col gap-10">
+              <p className="text-center dark:text-white/80 font-normal tracking-wide leading-6 text-sm">
+                I&apos;m up for collabs with companies and cool folks to tackle
+                real-world challenges together. Let&apos;s combine our skills
+                for awesome results!
+                <br />
+                <br />
+                <a
+                  href="mailto: kobemichael15@gmail.com"
+                  className="dark:text-white border-b-[1.2px]"
+                >
+                  Send me an email
+                </a>{" "}
+                and I&apos;ll get back to you as soon as I can!
+              </p>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
       <div className="text-sm flex items-center justify-between max-w-7xl px-6 m-auto min-h-[140px]">
         <Reveal delay={0.9}>
