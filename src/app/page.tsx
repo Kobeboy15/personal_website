@@ -1,62 +1,68 @@
-"use client";
-
+import HeroImage from "@/assets/Me.jpg";
 import { Reveal } from "@/components/Reveal";
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
-export default function Home() {
-  const [currentTime, setCurrentTime] = useState<number>(-1);
-  const [showMore, setShowMore] = useState(false);
-
-  function handleGreeting() {
-    if (currentTime < 12) {
-      return "Good Morning. ☀️";
-    } else if (currentTime < 18) {
-      return "Good Afternoon. ⛅";
-    } else {
-      return "Good Evening. 🌙";
-    }
-  }
-
-  useEffect(() => {
-    setCurrentTime(new Date().getHours());
-  }, []);
-
+export default async function Home() {
   return (
-    <div style={{ minHeight: "inherit" }} className="flex items-center">
-      <div
-        style={{ minHeight: "calc(100vh - 420px)" }}
-        className="flex flex-col justify-center relative dark:text-white"
-      >
-        <Reveal>
-          <h1 className=" text-3xl md:text-[40px] font-semibold md:mb-[42px] mb-6">
-            {handleGreeting()}
-          </h1>
-        </Reveal>
-        <Reveal delay={0.5}>
-          <h2 className="text-justify leading-[45px] text-sm md:text-[1.25rem] tracking-wide font-normal mb-16 md:mb-0">
-            Hello, I&apos;m Kobe, a seasoned professional with over half a
-            decade of experience in design and development. You can call me a
-            web designer, front-end developer, software engineer, or
-            any title that fits the job. I enjoy working on problems web and
-            design related and always look forward to a challenge.
-          </h2>
-        </Reveal>
-        {!showMore && (
-          <div className="md:pt-20 static bottom-0 w-full hover:scale-105 transition-all ease-in-out duration-300">
-            <Reveal width="100%" delay={1.3}>
-              <Link href="/about">
-                <div className="w-full text-center text-sm md:text-base flex items-end justify-center cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-200">
-                  <p>Click to learn more</p>
-                </div>
-              </Link>
+    <div className="mx-auto max-w-5xl">
+      <div className="mx-auto flex flex-col md:flex-row items-center gap-y-5">
+        <div className="flex-1">
+          <div className="lg:max-w-lg">
+            <Reveal>
+              <h2 className="text-base font-semibold leading-7 tracking-wide">
+                Hi!👋 &nbsp;My name is
+              </h2>
+            </Reveal>
+            <Reveal>
+              <h1 className="mt-4 text-5xl font-bold">Kobe Michael</h1>
+            </Reveal>
+            <Reveal>
+              <div className="mt-6 text-md text-justify leading-8">
+                <p className="">
+                  Hello, I&apos;m Kobe, a seasoned professional with over half a
+                  decade of experience in web design and development. You can
+                  call me a:
+                </p>
+                <ul className="list-disc my-3 flex flex-col gap-2">
+                  {PositionTitles()}
+                </ul>
+                <p>
+                  I enjoy working on problems web and design related and always
+                  look forward to a challenge. 🚀
+                </p>
+              </div>
             </Reveal>
           </div>
-        )}
+        </div>
+        <Reveal>
+          <div className="p-4">
+            <Image
+              src={HeroImage.src}
+              alt="Product screenshot"
+              className="rounded-xl w-[400px] h-[500px] object-cover shadow-md border-zinc-800 border"
+              width={400}
+              height={500}
+            />
+          </div>
+        </Reveal>
       </div>
-      {/* {showMore && (
-        <div className="flex flex-col justify-center transition-all ease-in"></div>
-      )} */}
     </div>
   );
+}
+
+function PositionTitles() {
+  const positions = [
+    "Web Designer",
+    "UI/UX Engineer",
+    "Frontend Developer",
+    "Software Engineer",
+  ];
+
+  return positions.map((name, idx) => (
+    <li key={`positionTitle${idx}`} className="font-medium pl-2 ml-4">
+      <Reveal delay={0.1 * idx}>
+        <p>{name}</p>
+      </Reveal>
+    </li>
+  ));
 }

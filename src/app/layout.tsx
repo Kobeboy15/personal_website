@@ -4,7 +4,11 @@ import NavMenu from "../components/NavMenu";
 import FooterMenu from "../components/FooterMenu";
 import "./globals.css";
 
-const bitter = Bitter({ subsets: ["latin"] });
+const bitter = Bitter({
+  subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 const MetaInfo = {
   title: "Kobe Michael | Web Developer & Web Designer",
@@ -47,12 +51,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bitter.className} min-h-screen bg-amber-50 dark:bg-zinc-900 duration-150`}
+        className={`${bitter.className} min-h-screen bg-amber-50 dark:bg-zinc-900 text-gray-900 dark:text-white duration-150`}
       >
         <NavMenu />
         <div
           style={{ minHeight: "calc(100vh - 140px - 140px)" }}
-          className="max-w-[940px] m-auto px-6 relative"
+          className="m-auto px-6 pb-24 pt-[40px] relative"
         >
           {children}
         </div>

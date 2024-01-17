@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ExperienceItem({ value }) {
   function formatDate(dateString) {
     const monthAbbreviations = [
@@ -22,18 +24,23 @@ export default function ExperienceItem({ value }) {
   }
 
   return (
-    <div className="flex items-start justify-between text-sm gap-5 lg:gap-0 md:gap-0">
-      <p className="flex-1 pt-1 md:pt-0 text-xs md:text-lg dark:text-white">
-        {formatDate(value.startDate)}&nbsp;-&nbsp;{" "}
-        {value.currentPosition ? "Present" : formatDate(value.endDate)}
-      </p>
+    <Link
+      href={value.url}
+      target="_blank"
+      className="flex items-start justify-between text-sm shadow-md p-6 border transition-colors duration-300 bg-white/40 dark:border-zinc-800 dark:bg-zinc-800/40 dark:hover:border-zinc-600 rounded-sm"
+    >
       <div className="flex-[1.5] md:flex-[2] dark:text-white">
-        <h4 className="text-sm md:text-lg flex flex-col md:flex-row md:gap-2">
-          <span className="font-semibold">{value.position}</span>
-          <span className="hidden md:block">-</span>
-          {value.employer}
-        </h4>
-        <p className="leading-7 mt-2 font-normal text-xs md:text-[14px] text-neutral-700 dark:text-neutral-400">
+        <div className="flex justify-between">
+          <div className="grid gap-2">
+            <h3 className="text-xl font-bold">{value.position}</h3>
+            <h4 className="text-base font-light">{value.employer}</h4>
+          </div>
+          <p className="dark:text-white tracking-wide">
+            {formatDate(value.startDate)}&nbsp;-&nbsp;{" "}
+            {value.currentPosition ? "Present" : formatDate(value.endDate)}
+          </p>
+        </div>
+        <p className="leading-7 mt-2 font-normal text-justify text-xs md:text-[14px] text-neutral-700 dark:text-neutral-400">
           {value.description}
         </p>
         <p className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-200">
@@ -42,6 +49,6 @@ export default function ExperienceItem({ value }) {
           })}
         </p>
       </div>
-    </div>
+    </Link>
   );
 }

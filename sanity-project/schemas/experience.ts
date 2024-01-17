@@ -19,6 +19,11 @@ export default {
       title: 'Company',
     },
     {
+      name: 'url',
+      type: 'string',
+      title: 'Company Website',
+    },
+    {
       name: 'description',
       type: 'text',
       title: 'Description',

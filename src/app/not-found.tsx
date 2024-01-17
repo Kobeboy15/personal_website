@@ -11,11 +11,11 @@ export default function NotFound() {
         <div className="dark:text-white flex flex-col max-w-lg gap-3">
           <p className="tracking-widest">Error 404</p>
           <h3 className="text-5xl tracking-wide font-bold">Page not found.</h3>
-          <p className=" tracking-wider text-sm mt-6">
+          <p className=" tracking-wider text-sm">
             The page you are looking for doesn&apos;t exist.
             <br /> You may have mistyped the address or the page may have moved.
           </p>
-          <div className="mt-14">
+          <div className="">
             <Link
               href="/"
               className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors text-sm"

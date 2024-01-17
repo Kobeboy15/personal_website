@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Sun, Moon, Menu, Close } from "./Logo";
+import { usePathname } from "next/navigation";
 
 export default function NavMenu() {
   const [currentTheme, setCurrentTheme] = useState("");
@@ -36,39 +37,41 @@ export default function NavMenu() {
 
   const MenuItems = [
     {
-      name: "about",
-      route: "/about",
-    },
-    {
       name: "work",
-      route: "/about#work",
+      route: "/work",
     },
     {
       name: "projects",
-      route: "/about#projects",
+      route: "/projects",
     },
+    // {
+    //   name: "blog",
+    //   route: "/blog",
+    // },
     {
-      name: "contact",
-      route: "/about#contact",
+      name: "about",
+      route: "/about",
     },
   ];
 
   function handleMobileMenu(value) {
-    document.body.style.overflow = !isMenuOpen ? "hidden" : "unset";
+    document.body.style.overflow = !isMenuOpen && value ? "hidden" : "unset";
     setIsMenuOpen(value);
   }
 
   return (
-    <div className="flex items-center justify-between max-w-[1180px] m-auto px-6 h-[140px]">
+    <div className="flex items-center justify-between max-w-7xl m-auto px-6 h-[140px]">
       <Link onClick={() => handleMobileMenu(false)} href="/">
-        <h3 className="text-lg md:text-[24px] font-bold dark:text-white">
+        <h3
+          className={`text-lg md:text-[24px] font-bold dark:text-white text-gray-900`}
+        >
           kobe michael
         </h3>
       </Link>
       <div className="flex flex-row-reverse gap-5">
         <button
           onClick={handleTheme}
-          className="dark:text-white dark:hover:text-yellow-200 w-12 flex justify-center"
+          className="dark:text-white dark:hover:text-yellow-200 w-12 flex justify-center fixed top-5 right-5 z-50"
         >
           {currentTheme === "dark" ? <Sun /> : <Moon />}
         </button>
@@ -84,14 +87,18 @@ export default function NavMenu() {
 }
 
 function DesktopItems({ routes }) {
+  const pathname = usePathname();
   return (
-    <div className="hidden dark:text-white md:flex items-center gap-5 md:gap-11 text-sm md:text-[20px]">
+    <div className="hidden dark:text-white md:flex items-center gap-5 md:gap-11 text-sm md:text-[16px]">
       {routes.map((item, index) => {
+        const isActive = pathname.startsWith(item.route);
         return (
           <Link
             key={index}
             href={item.route}
-            className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors"
+            className={`hover:text-yellow-500 border-dotted dark:hover:text-yellow-200 transition-colors duration-200 py-1 border-b-[3px] ${
+              isActive ? "dark:border-white border-black" : "border-transparent"
+            }`}
           >
             <p>{item.name}</p>
           </Link>
