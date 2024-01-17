@@ -23,8 +23,6 @@ const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
 
-  console.log(post);
-
   return (
     <div className="mt-16 max-w-3xl mx-auto">
       <div className="flex flex-col gap-2 w-fit">

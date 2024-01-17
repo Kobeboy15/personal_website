@@ -14,7 +14,7 @@ const PlaceHolderURL =
 export default function PostItem(post: PostItemData) {
   return (
     <Link
-      href={`blog/${post.slug}`}
+      href={post ? `blog/${post.slug}` : ""}
       className="block border-slate-400 shadow-md border w-[700px]"
     >
       <article className="p-6 grid gap-5">
