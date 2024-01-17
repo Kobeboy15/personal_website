@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { Github, LinkedIn, MailIcon } from "./Logo";
 import { Reveal } from "./Reveal";
-import { externalLink as ExternalLink } from "@/components/Logo";
 
 export default function FooterMenu() {
   const currentYear = new Date().getFullYear();
@@ -24,7 +23,7 @@ export default function FooterMenu() {
                 <br />
                 <a
                   href="mailto: kobemichael15@gmail.com"
-                  className="dark:text-white border-b-[1.2px]"
+                  className="dark:text-white border-b-[1.2px] dark:border-white border-gray-900"
                 >
                   Send me an email
                 </a>{" "}
