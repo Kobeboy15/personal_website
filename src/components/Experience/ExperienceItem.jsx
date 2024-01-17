@@ -32,12 +32,12 @@ export default function ExperienceItem({ value }) {
       className="flex items-start justify-between text-sm shadow-md p-6 border transition-colors duration-300 bg-white/40 dark:border-zinc-800 dark:bg-zinc-800/40 dark:hover:border-zinc-600 rounded-sm"
     >
       <div className="flex-[1.5] md:flex-[2] dark:text-white">
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-col-reverse md:flex-row">
           <div className="grid gap-2">
             <h3 className="text-xl font-bold">{value.position}</h3>
             <h4 className="text-base font-light">{value.employer}</h4>
           </div>
-          <p className="dark:text-white tracking-wide">
+          <p className="dark:text-white tracking-wide md:text-right text-left">
             {formatDate(value.startDate)}&nbsp;-&nbsp;{" "}
             {value.currentPosition ? "Present" : formatDate(value.endDate)}
           </p>
@@ -48,7 +48,7 @@ export default function ExperienceItem({ value }) {
         <p className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-200">
           {value &&
             value.technologies.map((skill, index) => {
-              return <span key={index}>{skill}</span>;
+              return <span key={`${skill}${index}`}>#{skill}</span>;
             })}
         </p>
       </div>

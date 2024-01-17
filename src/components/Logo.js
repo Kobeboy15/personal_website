@@ -46,7 +46,7 @@ export function PDFIcon() {
   return <img src={PDFimage.src} alt="PDF Icon" className={`h-[24px]`} />;
 }
 
-export function externalLink({ size = 24 }) {
+export function ExternalLink({ size = 24 }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -4,6 +4,12 @@ export default {
   title: 'projects',
   fields: [
     {
+      name: 'featured',
+      type: 'boolean',
+      title: 'Featured Project',
+      initialValue: false,
+    },
+    {
       title: 'Sort Order Position',
       name: 'sortOrder',
       type: 'number',
@@ -27,6 +33,12 @@ export default {
       name: 'imageLink',
       type: 'string',
       title: 'Link to project image',
+    },
+    {
+      title: 'Technologies',
+      name: 'technologies',
+      type: 'array',
+      of: [{type: 'string'}],
     },
   ],
 }

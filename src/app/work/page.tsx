@@ -15,6 +15,9 @@ export default async function Work() {
   return (
     <div className="flex items-center max-w-[940px] mx-auto">
       <div className="flex flex-col justify-center relative dark:text-white mx-auto">
+        {/* <div>
+          <p>More stuff goes here</p>
+        </div> */}
         <div id="work">
           <Reveal>
             <div className="mb-14">
