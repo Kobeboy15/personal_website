@@ -1,5 +1,6 @@
 import HeroImage from "@/assets/Me.jpg";
 import { Reveal } from "@/components/Reveal";
+import Image from "next/image";
 
 export default async function Home() {
   return (
@@ -18,7 +19,7 @@ export default async function Home() {
             <Reveal>
               <div className="mt-6 text-md text-justify leading-8">
                 <p className="">
-                  Hello, I'm Kobe, a seasoned professional with over half a
+                  Hello, I&apos;m Kobe, a seasoned professional with over half a
                   decade of experience in web design and development. You can
                   call me a:
                 </p>
@@ -35,10 +36,12 @@ export default async function Home() {
         </div>
         <Reveal>
           <div className="p-4">
-            <img
+            <Image
               src={HeroImage.src}
               alt="Product screenshot"
               className="rounded-xl w-[400px] h-[500px] object-cover shadow-md border-zinc-800 border"
+              width={400}
+              height={500}
             />
           </div>
         </Reveal>

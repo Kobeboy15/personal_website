@@ -16,8 +16,8 @@ export default function FooterMenu() {
           </h2>
           <div className="flex flex-col gap-10">
             <p className="text-center dark:text-white/80 font-normal tracking-wide leading-6 text-sm">
-              I'm up for collabs with companies and cool folks to tackle
-              real-world challenges together. Let's combine our skills for
+              I&apos;m up for collabs with companies and cool folks to tackle
+              real-world challenges together. Let&apos;s combine our skills for
               awesome results!
               <br />
               <br />
@@ -27,7 +27,7 @@ export default function FooterMenu() {
               >
                 Send me an email
               </a>{" "}
-              and I'll get back to you as soon as I can!
+              and I&apos;ll get back to you as soon as I can!
             </p>
           </div>
         </div>

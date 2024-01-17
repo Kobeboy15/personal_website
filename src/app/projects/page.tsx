@@ -39,8 +39,8 @@ export default async function Projects() {
           </div>
         </div>
         <div className="text-center leading-8 max-w-md mx-auto pt-24">
-          If you want to see more projects that I've previously worked on, you
-          can check my Github account{" "}
+          If you want to see more projects that I&apos;ve previously worked on,
+          you can check my Github account{" "}
           <a
             href="https://github.com/Kobeboy15?tab=repositories"
             target="_blank"

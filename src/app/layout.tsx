@@ -4,7 +4,11 @@ import NavMenu from "../components/NavMenu";
 import FooterMenu from "../components/FooterMenu";
 import "./globals.css";
 
-const bitter = Bitter({ subsets: ["latin"] });
+const bitter = Bitter({
+  subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 const MetaInfo = {
   title: "Kobe Michael | Web Developer & Web Designer",

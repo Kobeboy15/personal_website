@@ -20,7 +20,7 @@ export default async function About() {
           <Reveal>
             <div className="flex flex-col gap-10">
               <p className="text-justify dark:text-white font-normal leading-10 tracking-normal md:tracking-wide text-sm md:text-[16px]">
-                I've nurtured a lifelong passion for creativity, exploring
+                I&apos;ve nurtured a lifelong passion for creativity, exploring
                 realms like film-making, photography, and crafting art vectors
                 in Adobe Illustrator. Constantly seeking avenues to flex my
                 creative muscles, I stumbled upon the dynamic universe of Web
@@ -33,8 +33,8 @@ export default async function About() {
                 <br />
                 As a Frontend Engineer today, I seamlessly blend technical
                 prowess with a dedicated focus on fashioning designs that
-                captivate and cater to clients' unique needs. My enthusiasm for
-                new opportunities fuels a perpetual cycle of learning and
+                captivate and cater to clients&apos; unique needs. My enthusiasm
+                for new opportunities fuels a perpetual cycle of learning and
                 growth, ensuring I stay at the forefront of the ever-evolving
                 landscape of design and development.
                 <br />
