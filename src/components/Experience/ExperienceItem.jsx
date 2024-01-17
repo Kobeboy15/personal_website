@@ -23,6 +23,8 @@ export default function ExperienceItem({ value }) {
     return result;
   }
 
+  if (!value) return <div>Nothing</div>;
+
   return (
     <Link
       href={value.url}
@@ -44,9 +46,10 @@ export default function ExperienceItem({ value }) {
           {value.description}
         </p>
         <p className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-200">
-          {value.technologies.map((skill, index) => {
-            return <span key={index}>{skill}</span>;
-          })}
+          {value &&
+            value.technologies.map((skill, index) => {
+              return <span key={index}>{skill}</span>;
+            })}
         </p>
       </div>
     </Link>
