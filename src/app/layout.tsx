@@ -6,8 +6,6 @@ import "./globals.css";
 
 const bitter = Bitter({
   subsets: ["latin"],
-  display: "swap",
-  adjustFontFallback: false,
 });
 
 const MetaInfo = {
