@@ -52,7 +52,7 @@ export default function RootLayout({
         <NavMenu />
         <div
           style={{ minHeight: "calc(100vh - 140px - 140px)" }}
-          className="m-auto px-6 relative"
+          className="m-auto px-6 pb-24 pt-[40px] relative"
         >
           {children}
         </div>

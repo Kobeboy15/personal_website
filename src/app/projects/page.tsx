@@ -14,7 +14,7 @@ export default async function Projects() {
   return (
     <div className="flex items-center max-w-[940px] mx-auto">
       <div className="flex flex-col justify-center relative dark:text-white mx-auto">
-        <div id="projects" className="mt-[40px]">
+        <div id="projects" className="pb-20">
           <Reveal>
             <div className="mb-14">
               <h2 className="text-3xl mb-2 dark:text-white font-semibold">
@@ -37,6 +37,18 @@ export default async function Projects() {
                 );
               })}
           </div>
+        </div>
+        <div className="text-center leading-8 max-w-md mx-auto pt-24">
+          If you want to see more projects that I've previously worked on, you
+          can check my Github account{" "}
+          <a
+            href="https://github.com/Kobeboy15?tab=repositories"
+            target="_blank"
+            className="border-b-[1.5px] border-gray-900 dark:border-white font-semibold"
+          >
+            here
+          </a>
+          .
         </div>
       </div>
     </div>

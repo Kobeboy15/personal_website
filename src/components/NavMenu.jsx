@@ -71,7 +71,7 @@ export default function NavMenu() {
       <div className="flex flex-row-reverse gap-5">
         <button
           onClick={handleTheme}
-          className="dark:text-white dark:hover:text-yellow-200 w-12 flex justify-center fixed top-5 right-5"
+          className="dark:text-white dark:hover:text-yellow-200 w-12 flex justify-center fixed top-5 right-5 z-50"
         >
           {currentTheme === "dark" ? <Sun /> : <Moon />}
         </button>
@@ -96,7 +96,6 @@ function DesktopItems({ routes }) {
           <Link
             key={index}
             href={item.route}
-            active
             className={`hover:text-yellow-500 border-dotted dark:hover:text-yellow-200 transition-colors duration-200 py-1 border-b-[3px] ${
               isActive ? "dark:border-white border-black" : "border-transparent"
             }`}

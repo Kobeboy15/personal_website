@@ -14,7 +14,7 @@ export default async function Work() {
   return (
     <div className="flex items-center max-w-[940px] mx-auto">
       <div className="flex flex-col justify-center relative dark:text-white mx-auto">
-        <div id="work" className="mt-[40px]">
+        <div id="work">
           <Reveal>
             <div className="mb-14">
               <h1 className="text-3xl dark:text-white font-semibold mb-2">
