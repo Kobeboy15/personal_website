@@ -28,13 +28,14 @@ export default async function Work() {
           </Reveal>
           <Reveal>
             <div className="flex flex-col gap-7 mb-5">
-              {experienceData
-                ?.sort((a: any, b: any) => a.sortOrder - b.sortOrder)
-                .map((item: any, index: number) => {
-                  return (
-                    <ExperienceItem key={`workExp` + index} value={item} />
-                  );
-                })}
+              {experienceData &&
+                experienceData
+                  ?.sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+                  .map((item: any, index: number) => {
+                    return (
+                      <ExperienceItem key={`workExp` + index} value={item} />
+                    );
+                  })}
             </div>
           </Reveal>
         </div>
