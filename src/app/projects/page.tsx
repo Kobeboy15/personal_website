@@ -1,4 +1,5 @@
 import ProjectItem from "@/components/Project/ProjectItem";
+import ProjectItemSmall from "@/components/Project/ProjectItemSmall";
 import { Reveal } from "@/components/Reveal";
 import { client } from "@/utils/configSanity";
 
@@ -18,7 +19,7 @@ export default async function Projects() {
           <Reveal>
             <div className="mb-14">
               <h2 className="text-3xl mb-2 dark:text-white font-semibold">
-                Projects 🚧
+                Projects 🔨
               </h2>
               <p>
                 My portfolio of standout projects, from Program Exercises to
@@ -26,16 +27,31 @@ export default async function Projects() {
               </p>
             </div>
           </Reveal>
-          <div className="flex flex-col gap-12">
-            {projectData
-              ?.sort((a: any, b: any) => b.sortOrder - a.sortOrder)
-              .map((item: any, index: number) => {
-                return (
-                  // <Reveal key={item._id} delay={1 * index}>
-                  <ProjectItem key={item._id} value={item} />
-                  // </Reveal>
-                );
-              })}
+          <Reveal>
+            <div className="flex flex-col gap-5">
+              {/* {projectData
+                ?.sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+                .map((item: any, index: number) => {
+                  return <ProjectItem key={item._id} value={item} />;
+                })} */}
+              {projectData
+                .filter((item: any) => item.featured)
+                .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+                .map((item: any) => {
+                  return <ProjectItem key={item._id} value={item} />;
+                })}
+            </div>
+          </Reveal>
+          <div className="mt-14">
+            <h2 className="my-4 text-lg font-semibold">Other Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {projectData
+                .filter((item: any) => !item.featured)
+                .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+                .map((item: any) => {
+                  return <ProjectItemSmall key={item._id} value={item} />;
+                })}
+            </div>
           </div>
         </div>
         <div className="text-center leading-8 max-w-md mx-auto pt-24">

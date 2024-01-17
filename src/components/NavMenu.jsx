@@ -45,6 +45,10 @@ export default function NavMenu() {
       route: "/projects",
     },
     // {
+    //   name: "designs",
+    //   route: "/designs",
+    // },
+    // {
     //   name: "blog",
     //   route: "/blog",
     // },

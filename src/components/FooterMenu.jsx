@@ -12,7 +12,7 @@ export default function FooterMenu() {
         <Reveal>
           <div id="contact" className="px-6">
             <h2 className="text-2xl text-center dark:text-white font-bold mb-4 w-full">
-              Lets stay in touch ✉️
+              Lets stay in touch &nbsp;✉️
             </h2>
             <div className="flex flex-col gap-10">
               <p className="text-center dark:text-white/80 font-normal tracking-wide leading-6 text-xs sm:text-sm">
@@ -34,14 +34,14 @@ export default function FooterMenu() {
         </Reveal>
       </div>
       <div className="text-sm flex items-center justify-between max-w-7xl px-6 m-auto min-h-[140px]">
-        <Reveal delay={0.9}>
+        <Reveal delay={0.2}>
           <Link href="/">
             <h3 className="text-xs md:text-sm text-neutral-800 dark:text-neutral-300 font-semibold">
               © {currentYear} kobe michael
             </h3>
           </Link>
         </Reveal>
-        <Reveal delay={0.9}>
+        <Reveal delay={0.2}>
           <div className="flex items-center gap-5">
             <a
               title="kobemichael15@gmail.com"
