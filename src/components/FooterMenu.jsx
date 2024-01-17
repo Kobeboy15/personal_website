@@ -8,14 +8,14 @@ export default function FooterMenu() {
 
   return (
     <div className="dark:from-zinc-800/90 bg-gradient-to-t to-transparent">
-      <div className=" pt-28 mb-24 text-center max-w-lg mx-auto">
+      <div className="pt-28 mb-24 text-center max-w-lg mx-auto">
         <Reveal>
-          <div id="contact">
+          <div id="contact" className="px-6">
             <h2 className="text-2xl text-center dark:text-white font-bold mb-4 w-full">
               Lets stay in touch ✉️
             </h2>
             <div className="flex flex-col gap-10">
-              <p className="text-center dark:text-white/80 font-normal tracking-wide leading-6 text-sm">
+              <p className="text-center dark:text-white/80 font-normal tracking-wide leading-6 text-xs sm:text-sm">
                 I&apos;m up for collabs with companies and cool folks to tackle
                 real-world challenges together. Let&apos;s combine our skills
                 for awesome results!
