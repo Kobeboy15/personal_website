@@ -22,6 +22,7 @@ export default function ProjectItem({ value }) {
           height={0}
           sizes="100vw"
           className="w-full h-full"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-3">

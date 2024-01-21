@@ -44,10 +44,10 @@ export default function NavMenu() {
       name: "projects",
       route: "/projects",
     },
-    // {
-    //   name: "designs",
-    //   route: "/designs",
-    // },
+    {
+      name: "designs",
+      route: "/designs",
+    },
     // {
     //   name: "blog",
     //   route: "/blog",

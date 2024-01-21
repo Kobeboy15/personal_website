@@ -36,6 +36,7 @@ export default async function Home() {
               className="rounded-xl w-[400px] h-[500px] object-cover shadow-md border-zinc-800 border"
               width={400}
               height={500}
+              loading="lazy"
             />
           </div>
         </Reveal>

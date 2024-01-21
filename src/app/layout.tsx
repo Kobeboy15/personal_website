@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
 import { Bitter } from "next/font/google";
 import NavMenu from "../components/NavMenu";
 import FooterMenu from "../components/FooterMenu";
+import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
+import { useEffect, useState } from "react";
 
 const bitter = Bitter({
   subsets: ["latin"],
@@ -53,6 +54,12 @@ export default function RootLayout({
       <body
         className={`${bitter.className} min-h-screen bg-amber-50 dark:bg-zinc-900 text-gray-900 dark:text-white duration-150`}
       >
+        <NextTopLoader
+          height={3}
+          zIndex={9999}
+          color="rgb(253,230,138)"
+          showSpinner={false}
+        />
         <NavMenu />
         <div
           style={{ minHeight: "calc(100vh - 140px - 140px)" }}
