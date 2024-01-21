@@ -30,8 +30,11 @@ export default async function Designs() {
           <Reveal>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-3">
               {designData.map(
-                (image: { imageUrl: string; caption: string }) => (
-                  <DesignItem image={image} />
+                (
+                  image: { imageUrl: string; caption: string },
+                  index: number
+                ) => (
+                  <DesignItem key={`image${index}`} image={image} />
                 )
               )}
             </div>
@@ -39,10 +42,10 @@ export default async function Designs() {
           <Reveal>
             <div className="mt-20 text-justify dark:text-white font-normal leading-10 tracking-normal md:tracking-wide text-sm md:text-[16px]">
               <p>
-                Here are a few designs I've had the opportunity to work on.
-                While I can't share all here on my portfolio due to NDA
-                restrictions, I'd be happy to discuss them with you if you reach
-                out.
+                Here are a few designs I&apos;ve had the opportunity to work on.
+                While I can&apos;t share all here on my portfolio due to NDA
+                restrictions, I&apos;d be happy to discuss them with you if you
+                reach out.
                 <br />
                 <br />
                 You can also explore the high-quality versions of my designs
