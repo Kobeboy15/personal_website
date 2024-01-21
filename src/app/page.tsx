@@ -18,8 +18,7 @@ export default async function Home() {
             <div className="mt-6 grid gap-5 text-sm md:text-md text-justify leading-8">
               <p className="">
                 Hello, I&apos;m Kobe, a seasoned professional with over half a
-                decade of experience in web design and development. You can call
-                me a:
+                decade of experience in web design and development.
               </p>
               <TypeWriterComponent />
               <p>

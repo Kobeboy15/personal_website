@@ -75,7 +75,7 @@ export default function NavMenu() {
       <div className="flex flex-row-reverse gap-5">
         <button
           onClick={handleTheme}
-          className="dark:text-white dark:hover:text-yellow-200 w-12 flex justify-center fixed top-5 right-5 z-50"
+          className="dark:text-white dark:hover:text-yellow-200 flex justify-center fixed top-5 right-0 px-6 z-50"
         >
           {currentTheme === "dark" ? <Sun /> : <Moon />}
         </button>
