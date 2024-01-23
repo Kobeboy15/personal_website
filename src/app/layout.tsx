@@ -3,7 +3,6 @@ import NavMenu from "../components/NavMenu";
 import FooterMenu from "../components/FooterMenu";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
-import { useEffect, useState } from "react";
 
 const bitter = Bitter({
   subsets: ["latin"],

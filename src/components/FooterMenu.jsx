@@ -7,7 +7,7 @@ export default function FooterMenu() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="dark:from-zinc-800/90 bg-gradient-to-t to-transparent">
+    <footer className="dark:from-zinc-800/90 bg-gradient-to-t to-transparent">
       <div className="pt-28 mb-24 text-center max-w-lg mx-auto">
         <Reveal>
           <div id="contact" className="px-6">
@@ -71,6 +71,6 @@ export default function FooterMenu() {
           </div>
         </Reveal>
       </div>
-    </div>
+    </footer>
   );
 }
