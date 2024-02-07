@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 export default function TypeWriterComponent() {
   return (
     <div>
-      <p>You may refer to me as a:</p>
+      <p>You can call me a:</p>
       <span className="text-3xl font-semibold">
         <Typewriter
           options={{
@@ -11,7 +11,7 @@ export default function TypeWriterComponent() {
               "Web Designer",
               "UI/UX Engineer",
               "Frontend Developer",
-              "Software Engineer ",
+              "Software Engineer",
             ],
             delay: "90",
             autoStart: true,

@@ -11,19 +11,23 @@ export default async function Home() {
       <div className="mx-auto flex flex-col md:flex-row items-center gap-y-5">
         <div className="flex-1">
           <div className="lg:max-w-md">
-            <h2 className="text-base font-semibold leading-7 tracking-wide">
+            <h2 className="text-base text-center md:text-left font-semibold leading-7 tracking-wide">
               Hi!👋 &nbsp;My name is
             </h2>
-            <h1 className="mt-4 text-5xl font-bold">Kobe Michael</h1>
-            <div className="mt-6 grid gap-5 text-sm md:text-md text-justify leading-8">
+            <h1 className="mt-4 text-5xl font-bold text-center md:text-left">
+              Kobe Michael
+            </h1>
+            <div className="mt-6 grid gap-5 text-center text-sm md:text-md md:text-justify leading-8 tracking-wide">
               <p className="">
-                Hello, I&apos;m Kobe, a seasoned professional with over half a
-                decade of experience in web design and development.
+                I`m a Web Developer and Web Designer with more than half a
+                decade of experience. I enjoy creating mockups, wireframes,
+                prototypes, designing user experiences and interfaces, and
+                bringing them to life.
               </p>
               <TypeWriterComponent />
-              <p>
+              <p className="tracking-wide">
                 I enjoy working on problems web and design related and always
-                look forward to a challenge. 🚀
+                look forward to a challenge. &nbsp;🚀
               </p>
             </div>
           </div>
