@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Sun, Moon, Menu, Close } from "./Logo";
+import { Sun, Moon, Menu, Close, ChevronRight } from "./Logo";
 import { usePathname } from "next/navigation";
 
 export default function NavMenu() {
@@ -132,16 +132,17 @@ function MobileItems({ routes, isMenuOpen, handleMobileMenu }) {
       )}
       {isMenuOpen && (
         <div className="absolute top-[140px] left-0 px-6 bg-amber-50 dark:bg-zinc-900 duration-150 w-full h-full z-50">
-          <div className="text-lg flex flex-col gap-7">
+          <div className="text-lg flex flex-col gap-10">
             {routes.map((item, index) => {
               return (
                 <Link
                   key={index}
                   onClick={() => handleMobileMenu(false)}
                   href={item.route}
-                  className="hover:text-yellow-500 dark:hover:text-yellow-200"
+                  className="hover:text-yellow-500 dark:hover:text-yellow-200 flex justify-between"
                 >
                   <p>{item.name}</p>
+                  <ChevronRight size={18} />
                 </Link>
               );
             })}

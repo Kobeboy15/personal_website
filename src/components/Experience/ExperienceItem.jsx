@@ -37,7 +37,7 @@ export default function ExperienceItem({ value }) {
             <h3 className="text-xl font-bold">{value.position}</h3>
             <h4 className="text-base font-light">{value.employer}</h4>
           </div>
-          <p className="dark:text-white tracking-wide md:text-right text-left">
+          <p className="dark:text-white tracking-wide md:text-right text-left mb-3 md:mb-0">
             {formatDate(value.startDate)}&nbsp;-&nbsp;{" "}
             {value.currentPosition ? "Present" : formatDate(value.endDate)}
           </p>

@@ -23,7 +23,7 @@ export default function FooterMenu() {
                 <br />
                 <a
                   href="mailto: kobemichael15@gmail.com"
-                  className="dark:text-white border-b-[1.2px] dark:border-white border-gray-900"
+                  className="dark:text-white border-b-[1.2px] hover:text-yellow-500 dark:hover:text-yellow-200 dark:border-white border-gray-900"
                 >
                   Send me an email
                 </a>{" "}
