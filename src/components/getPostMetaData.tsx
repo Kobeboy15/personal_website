@@ -5,6 +5,7 @@ interface PostMetaData {
   title: string;
   date: string;
   subtitle: string;
+  readDuration: string;
   slug: string;
 }
 
@@ -20,6 +21,7 @@ const getPostMetaData = (): PostMetaData[] => {
       title: matterResult.data.title,
       date: matterResult.data.date,
       subtitle: matterResult.data.subtitle,
+      readDuration: matterResult.data.readDuration,
       slug: fileName.replace(".md", ""),
     };
   });

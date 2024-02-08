@@ -1,7 +1,8 @@
 ---
 title: "Getting Started with AWS"
-subtitle: "Create an AWS account and set up CLI/SDK access."
+subtitle: "Create an AWS account and set up CLI/SDK access. This is a long length of text to test how long the description would be handled in the blog component, so Im hoping this will showcase how it'll look like better."
 date: "December 27, 2020"
+readDuration: "6"
 ---
 
 "Cloud computing" plays a vital role in the creation of software products and services. It's also one of the most highly sought-after skills in the tech industry.

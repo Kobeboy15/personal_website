@@ -8,6 +8,7 @@ const bitter = Bitter({
   subsets: ["latin"],
   display: "swap",
   adjustFontFallback: false,
+  preload: true,
 });
 
 const MetaInfo = {
@@ -57,7 +58,7 @@ export default function RootLayout({
         className={`${bitter.className} min-h-screen bg-amber-50 dark:bg-zinc-900 text-gray-900 dark:text-white duration-150`}
       >
         <NextTopLoader
-          height={3}
+          height={2}
           zIndex={9999}
           color="rgb(253,230,138)"
           showSpinner={false}

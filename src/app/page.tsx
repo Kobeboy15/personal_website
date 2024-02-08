@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import Image from "next/image";
 import TypeWriterComponent from "@/components/TypeWriterComponent";
 
-export default async function Home() {
+export default function Home() {
   return (
     <div className="mx-auto max-w-5xl">
       <div className="mx-auto flex flex-col md:flex-row items-center gap-y-5">

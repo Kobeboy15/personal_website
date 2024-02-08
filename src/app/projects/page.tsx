@@ -29,11 +29,6 @@ export default async function Projects() {
           </Reveal>
           <Reveal>
             <div className="flex flex-col gap-5">
-              {/* {projectData
-                ?.sort((a: any, b: any) => a.sortOrder - b.sortOrder)
-                .map((item: any, index: number) => {
-                  return <ProjectItem key={item._id} value={item} />;
-                })} */}
               {projectData
                 .filter((item: any) => item.featured)
                 .sort((a: any, b: any) => a.sortOrder - b.sortOrder)

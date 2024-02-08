@@ -10,9 +10,17 @@ export default function Blog() {
 
   return (
     <div className="flex items-center">
-      <div className="flex flex-col justify-center relative dark:text-white mx-auto">
-        <h1 className="text-2xl text-center">Welcome to my blogs</h1>
-        <div className="grid grid-cols-1 gap-12 my-[60px]">{postPreview}</div>
+      <div className="flex flex-col justify-center max-w-screen-md w-full relative dark:text-white mx-auto">
+        <div className="mb-14">
+          <h2 className="text-3xl mb-2 dark:text-white font-semibold">
+            Blog ✍️
+          </h2>
+          <p>
+            My portfolio of standout projects, from Program Exercises to
+            personal initiatives.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-12">{postPreview}</div>
       </div>
     </div>
   );

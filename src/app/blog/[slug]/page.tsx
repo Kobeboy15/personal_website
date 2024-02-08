@@ -24,7 +24,7 @@ const PostPage = (props: any) => {
   const post = getPostContent(slug);
 
   return (
-    <div className="mt-16 max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto">
       <div className="flex flex-col gap-2 w-fit">
         <h1 className="text-3xl font-bold">{post.data.title}</h1>
         <p className="text-xl font-medium">{post.data.subtitle}</p>
