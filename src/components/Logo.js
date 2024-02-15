@@ -1,4 +1,5 @@
 import PDFimage from "@/assets/pdf.png";
+import WIPIcon from "@/assets/wip.png";
 
 export function LinkedIn({ size = 24 }) {
   return (
@@ -44,6 +45,10 @@ export function MailIcon({ size = 24 }) {
 
 export function PDFIcon() {
   return <img src={PDFimage.src} alt="PDF Icon" className={`h-[24px]`} />;
+}
+
+export function WIP({ className = "" }) {
+  return <img src={WIPIcon.src} alt="Work in progress" className={className} />;
 }
 
 export function ExternalLink({ size = 24 }) {
