@@ -33,7 +33,7 @@ export default function FooterMenu() {
           </div>
         </Reveal>
       </div>
-      <div className="text-sm flex items-center justify-between max-w-7xl px-6 m-auto min-h-[140px]">
+      <div className="text-sm flex items-center justify-between max-w-7xl px-6 m-auto md:min-h-[140px]">
         <Reveal delay={0.2}>
           <Link href="/">
             <h3 className="text-xs md:text-sm text-neutral-800 dark:text-neutral-300 font-semibold">
@@ -41,6 +41,18 @@ export default function FooterMenu() {
             </h3>
           </Link>
         </Reveal>
+        <div className="text-[12px] text-neutral-800/60 dark:text-neutral-300/30 font-light md:block hidden">
+          <p className="tracking-widest">
+            Built with{" "}
+            <a href="https://nextjs.org/" target="_blank">
+              NextJs
+            </a>{" "}
+            and{" "}
+            <a href="https://tailwindcss.com/" target="_blank">
+              TailwindCSS
+            </a>
+          </p>
+        </div>
         <Reveal delay={0.2}>
           <div className="flex items-center gap-5">
             <a
@@ -69,6 +81,20 @@ export default function FooterMenu() {
               <Github size={20} />
             </a>
           </div>
+        </Reveal>
+      </div>
+      <div className="text-[10px] text-neutral-800/60 dark:text-neutral-300/30 font-light flex justify-center md:hidden">
+        <Reveal>
+          <p className="pt-6 pb-3 tracking-widest">
+            Built with{" "}
+            <a href="https://nextjs.org/" target="_blank">
+              NextJs
+            </a>{" "}
+            and{" "}
+            <a href="https://tailwindcss.com/" target="_blank">
+              TailwindCSS
+            </a>
+          </p>
         </Reveal>
       </div>
     </footer>

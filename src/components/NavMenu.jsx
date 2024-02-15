@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Sun, Moon, Menu, Close, ChevronRight } from "./Logo";
+import { Sun, Moon, Menu, Close, ChevronRight, WIP } from "./Logo";
 import { usePathname } from "next/navigation";
 
 export default function NavMenu() {
@@ -36,25 +36,29 @@ export default function NavMenu() {
   }, []);
 
   const MenuItems = [
-    {
-      name: "work",
-      route: "/work",
-    },
-    {
-      name: "projects",
-      route: "/projects",
-    },
-    {
-      name: "designs",
-      route: "/designs",
-    },
     // {
-    //   name: "blog",
-    //   route: "/blog",
+    //   name: "work",
+    //   route: "/work",
     // },
+    // {
+    //   name: "projects",
+    //   route: "/projects",
+    // },
+    // {
+    //   name: "designs",
+    //   route: "/designs",
+    // },
+    {
+      name: "experience",
+      route: "/experience",
+    },
     {
       name: "about",
       route: "/about",
+    },
+    {
+      name: "blog",
+      route: "/blog",
     },
   ];
 
@@ -102,9 +106,20 @@ function DesktopItems({ routes }) {
             href={item.route}
             className={`hover:text-yellow-500 border-dotted dark:hover:text-yellow-200 transition-colors duration-200 py-1 border-b-[3px] ${
               isActive ? "dark:border-white border-black" : "border-transparent"
+            } ${
+              item.name === "blog"
+                ? "line-through opacity-65 cursor-not-allowed pointer-events-none"
+                : ""
             }`}
           >
-            <p>{item.name}</p>
+            <div className="relative">
+              <p>{item.name}</p>
+              {item.name === "blog" && (
+                <div className="absolute dark:invert pt-3 -left-10 -right-4">
+                  <WIP className="" />
+                </div>
+              )}
+            </div>
           </Link>
         );
       })}
@@ -139,9 +154,24 @@ function MobileItems({ routes, isMenuOpen, handleMobileMenu }) {
                   key={index}
                   onClick={() => handleMobileMenu(false)}
                   href={item.route}
-                  className="hover:text-yellow-500 dark:hover:text-yellow-200 flex justify-between"
+                  className={`hover:text-yellow-500 dark:hover:text-yellow-200 flex justify-between ${
+                    item.name === "blog" &&
+                    "opacity-65 cursor-not-allowed pointer-events-none"
+                  }`}
                 >
-                  <p>{item.name}</p>
+                  <p
+                    className={`${
+                      item.name === "blog" &&
+                      "line-through opacity-65 cursor-not-allowed pointer-events-none"
+                    }`}
+                  >
+                    {item.name}
+                  </p>
+                  {item.name === "blog" && (
+                    <small className="decoration-transparent">
+                      Work in progress
+                    </small>
+                  )}
                   <ChevronRight size={18} />
                 </Link>
               );

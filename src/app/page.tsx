@@ -7,7 +7,7 @@ import TypeWriterComponent from "@/components/TypeWriterComponent";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-5xl">
+    <div className="mx-auto max-w-screen-lg">
       <div className="mx-auto flex flex-col md:flex-row items-center gap-y-5">
         <div className="flex-1">
           <div className="lg:max-w-md">

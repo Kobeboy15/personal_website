@@ -3,7 +3,7 @@ import { PDFIcon } from "@/components/Logo";
 
 export default async function About() {
   return (
-    <div className="flex items-center max-w-[940px] mx-auto">
+    <div className="flex items-center max-w-screen-md mx-auto">
       <div className="flex flex-col justify-center relative dark:text-white mx-auto">
         <Reveal>
           <img
@@ -12,14 +12,14 @@ export default async function About() {
           />
         </Reveal>
         <div className="About">
-          <Reveal>
-            <h2 className="text-3xl dark:text-white font-semibold mt-8 mb-4">
-              About 🧑🏻‍💻
+          <Reveal width="100%">
+            <h2 className="text-3xl text-center dark:text-white font-semibold mt-8 mb-4">
+              About Me. 🧑🏻‍💻
             </h2>
           </Reveal>
           <Reveal>
             <div className="flex flex-col gap-10">
-              <p className="text-justify dark:text-white font-normal leading-10 tracking-normal md:tracking-wide text-sm md:text-[16px]">
+              <p className="text-center dark:text-white font-normal leading-10 tracking-normal md:tracking-wide text-sm md:text-[14px]">
                 I&apos;ve nurtured a lifelong passion for creativity, exploring
                 realms like film-making, photography, and crafting art vectors
                 in Adobe Illustrator. Constantly seeking avenues to flex my
@@ -45,7 +45,7 @@ export default async function About() {
                 <br />
                 <a
                   title="Kobe Michael's Resume"
-                  className="font-semibold hover:text-yellow-500 dark:hover:text-yellow-200"
+                  className="font-semibold inline-block hover:text-yellow-500 dark:hover:text-yellow-200"
                   href="/KobeMichael_CV.pdf"
                   download
                 >
