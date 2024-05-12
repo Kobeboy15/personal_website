@@ -1,14 +1,22 @@
-import { Bitter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import NavMenu from "../components/NavMenu";
 import FooterMenu from "../components/FooterMenu";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
+import React from "react";
 
-const bitter = Bitter({
+// const bitter = Bitter({
+//   subsets: ["latin"],
+//   display: "swap",
+//   adjustFontFallback: false,
+//   preload: true,
+// });
+
+const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  adjustFontFallback: false,
-  preload: true,
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 const MetaInfo = {
@@ -54,22 +62,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+        />
+      </head>
       <body
-        className={`${bitter.className} min-h-screen bg-amber-50 dark:bg-zinc-900 text-gray-900 dark:text-white duration-150`}
+        className={`${poppins.className} min-h-screen bg-zinc-50 dark:bg-[#090D1F] text-gray-900 dark:text-white duration-150`}
       >
-        <NextTopLoader
+        {/* <NextTopLoader
           height={2}
           zIndex={9999}
           color="rgb(253,230,138)"
           showSpinner={false}
-        />
+        /> */}
         <NavMenu />
-        <div
-          style={{ minHeight: "calc(100vh - 140px - 140px)" }}
-          className="m-auto px-6 pb-24 pt-[40px] relative"
-        >
-          {children}
-        </div>
+        <React.Fragment>{children}</React.Fragment>
         <FooterMenu />
       </body>
     </html>

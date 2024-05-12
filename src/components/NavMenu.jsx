@@ -2,12 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Sun, Moon, Menu, Close, ChevronRight, WIP } from "./Logo";
-import { usePathname } from "next/navigation";
+import { Sun, Moon } from "./Logo";
 
 export default function NavMenu() {
   const [currentTheme, setCurrentTheme] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleTheme() {
     if (localStorage.theme === "dark") {
@@ -35,150 +33,23 @@ export default function NavMenu() {
     }
   }, []);
 
-  const MenuItems = [
-    // {
-    //   name: "work",
-    //   route: "/work",
-    // },
-    // {
-    //   name: "projects",
-    //   route: "/projects",
-    // },
-    // {
-    //   name: "designs",
-    //   route: "/designs",
-    // },
-    {
-      name: "experience",
-      route: "/experience",
-    },
-    {
-      name: "about",
-      route: "/about",
-    },
-    {
-      name: "blog",
-      route: "/blog",
-    },
-  ];
-
-  function handleMobileMenu(value) {
-    document.body.style.overflow = !isMenuOpen && value ? "hidden" : "unset";
-    setIsMenuOpen(value);
-  }
-
   return (
-    <div className="flex items-center justify-between max-w-7xl m-auto px-6 h-[140px]">
-      <Link onClick={() => handleMobileMenu(false)} href="/">
+    <div className="flex items-center justify-between m-auto px-24 py-[40px] sticky top-0 bg-background-dark z-10 xl:bg-transparent">
+      <Link href="/">
         <h3
-          className={`text-lg md:text-[24px] font-bold dark:text-white text-gray-900`}
+          className={`text-xl font-semibold dark:text-[#AAA7E7] text-gray-900`}
         >
-          kobe michael
+          Kobe Michael
         </h3>
       </Link>
       <div className="flex flex-row-reverse gap-5">
         <button
           onClick={handleTheme}
-          className="dark:text-white dark:hover:text-yellow-200 flex justify-center fixed top-5 right-0 px-6 z-50"
+          className="dark:text-white dark:hover:text-[#AAA7E7] flex justify-center"
         >
           {currentTheme === "dark" ? <Sun /> : <Moon />}
         </button>
-        <DesktopItems routes={MenuItems} />
-        <MobileItems
-          routes={MenuItems}
-          isMenuOpen={isMenuOpen}
-          handleMobileMenu={handleMobileMenu}
-        />
       </div>
-    </div>
-  );
-}
-
-function DesktopItems({ routes }) {
-  const pathname = usePathname();
-  return (
-    <div className="hidden dark:text-white md:flex items-center gap-5 md:gap-11 text-sm md:text-[16px]">
-      {routes.map((item, index) => {
-        const isActive = pathname.startsWith(item.route);
-        return (
-          <Link
-            key={index}
-            href={item.route}
-            className={`hover:text-yellow-500 border-dotted dark:hover:text-yellow-200 transition-colors duration-200 py-1 border-b-[3px] ${
-              isActive ? "dark:border-white border-black" : "border-transparent"
-            } ${
-              item.name === "blog"
-                ? "line-through opacity-65 cursor-not-allowed pointer-events-none"
-                : ""
-            }`}
-          >
-            <div className="relative">
-              <p>{item.name}</p>
-              {item.name === "blog" && (
-                <div className="absolute dark:invert pt-3 -left-10 -right-4">
-                  <WIP className="" />
-                </div>
-              )}
-            </div>
-          </Link>
-        );
-      })}
-    </div>
-  );
-}
-
-function MobileItems({ routes, isMenuOpen, handleMobileMenu }) {
-  return (
-    <div className="md:hidden dark:text-white flex items-center gap-5 md:gap-11 text-sm">
-      {isMenuOpen ? (
-        <button
-          onClick={() => handleMobileMenu(false)}
-          className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors"
-        >
-          <Close />
-        </button>
-      ) : (
-        <button
-          onClick={() => handleMobileMenu(true)}
-          className="hover:text-yellow-500 dark:hover:text-yellow-200 transition-colors"
-        >
-          <Menu />
-        </button>
-      )}
-      {isMenuOpen && (
-        <div className="absolute top-[140px] left-0 px-6 bg-amber-50 dark:bg-zinc-900 duration-150 w-full h-full z-50">
-          <div className="text-lg flex flex-col gap-10">
-            {routes.map((item, index) => {
-              return (
-                <Link
-                  key={index}
-                  onClick={() => handleMobileMenu(false)}
-                  href={item.route}
-                  className={`hover:text-yellow-500 dark:hover:text-yellow-200 flex justify-between ${
-                    item.name === "blog" &&
-                    "opacity-65 cursor-not-allowed pointer-events-none"
-                  }`}
-                >
-                  <p
-                    className={`${
-                      item.name === "blog" &&
-                      "line-through opacity-65 cursor-not-allowed pointer-events-none"
-                    }`}
-                  >
-                    {item.name}
-                  </p>
-                  {item.name === "blog" && (
-                    <small className="decoration-transparent">
-                      Work in progress
-                    </small>
-                  )}
-                  <ChevronRight size={18} />
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

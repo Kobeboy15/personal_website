@@ -9,7 +9,7 @@ export default function ProjectItem({ value }) {
       href={link}
       alt={link}
       target="__blank"
-      className="grid relative items-center grid-cols-1 md:grid-cols-2 gap-10 justify-between text-sm shadow-md p-6 border transition-colors duration-300 bg-white/40 dark:border-zinc-800 dark:bg-zinc-800/40 dark:hover:border-zinc-600 rounded-sm"
+      className="grid relative items-center grid-cols-1 md:grid-cols-2 gap-10 justify-between text-sm shadow-md p-8 transition-colors duration-300 bg-white/40 dark:bg-cardColor rounded-lg"
     >
       <div className="absolute top-0 right-0 p-4 opacity-40">
         <ExternalLink size={20} />
@@ -26,13 +26,23 @@ export default function ProjectItem({ value }) {
         />
       </div>
       <div className="flex flex-col gap-3">
-        <h2 className=" text-3xl font-bold">{name}</h2>
-        <p className="text-sm leading-6  text-neutral-700 text-justify dark:text-neutral-400">
+        <div>
+          <p className="my-0 py-0 mb-1 text-[12px] text-white/40">
+            Featured Project
+          </p>
+          <h2 className=" text-xl font-semibold text-primary">{name}</h2>
+        </div>
+        <p className="text-sm py-0.5 leading-8 text-neutral-700 dark:text-white">
           {description}
         </p>
-        <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-200">
+        <ul className="mt-4 flex flex-wrap gap-x-2 gap-y-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-200">
           {technologies.map((item, index) => (
-            <li key={`item${index}`}>#{item}</li>
+            <li
+              key={`item${index}`}
+              className="text-xs px-3 py-2 bg-primary text-primary-text rounded"
+            >
+              {item}
+            </li>
           ))}
         </ul>
       </div>
