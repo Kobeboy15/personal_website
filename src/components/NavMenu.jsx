@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Sun, Moon } from "./Logo";
 
 export default function NavMenu() {
   const [currentTheme, setCurrentTheme] = useState("");
@@ -34,10 +33,10 @@ export default function NavMenu() {
   }, []);
 
   return (
-    <div className="flex items-center justify-between m-auto px-24 py-[40px] sticky top-0 bg-background-dark z-10 xl:bg-transparent">
+    <div className="flex items-center justify-between m-auto px-24 py-[40px] sticky top-0 shadow-md xl:shadow-none bg-slate-100 dark:bg-background-dark z-10 xl:bg-transparent">
       <Link href="/">
         <h3
-          className={`text-xl font-semibold dark:text-[#AAA7E7] text-gray-900`}
+          className={`text-xl font-semibold dark:text-primary text-primary-text`}
         >
           Kobe Michael
         </h3>
@@ -45,9 +44,13 @@ export default function NavMenu() {
       <div className="flex flex-row-reverse gap-5">
         <button
           onClick={handleTheme}
-          className="dark:text-white dark:hover:text-[#AAA7E7] flex justify-center"
+          className="dark:text-white dark:hover:text-primary flex justify-center text-2xl"
         >
-          {currentTheme === "dark" ? <Sun /> : <Moon />}
+          {currentTheme !== "dark" ? (
+            <i className="uil uil-sun" />
+          ) : (
+            <i className="uil uil-moon" />
+          )}
         </button>
       </div>
     </div>

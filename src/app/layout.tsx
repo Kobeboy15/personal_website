@@ -5,13 +5,6 @@ import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 import React from "react";
 
-// const bitter = Bitter({
-//   subsets: ["latin"],
-//   display: "swap",
-//   adjustFontFallback: false,
-//   preload: true,
-// });
-
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
@@ -61,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link
           rel="stylesheet"
@@ -69,14 +62,15 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.className} min-h-screen bg-zinc-50 dark:bg-[#090D1F] text-gray-900 dark:text-white duration-150`}
+        id="main-page"
+        className={`${poppins.className} min-h-screen bg-slate-100 dark:bg-[#090D1F] text-gray-900 dark:text-white`}
       >
-        {/* <NextTopLoader
+        <NextTopLoader
           height={2}
           zIndex={9999}
-          color="rgb(253,230,138)"
+          color="rgb(170,167,231)"
           showSpinner={false}
-        /> */}
+        />
         <NavMenu />
         <React.Fragment>{children}</React.Fragment>
         <FooterMenu />

@@ -4,7 +4,7 @@ export default function FooterMenu() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="dark:bg-[#AAA7E7] text-[#090D1F]/80">
+    <footer className="bg-primary text-[#090D1F]/80">
       <div className="pt-16 mb-10 text-center mx-auto flex justify-center">
         <Reveal>
           <div id="contact" className="px-6">

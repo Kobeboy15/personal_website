@@ -1,6 +1,12 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function ExperienceItem({ value }) {
+  const [xPos, setXPos] = useState(0);
+  const [yPos, setYPos] = useState(0);
+
   function formatDate(dateString) {
     const monthAbbreviations = [
       "Jan",
@@ -29,7 +35,7 @@ export default function ExperienceItem({ value }) {
     <Link
       href={value.url}
       target="_blank"
-      className={`flex items-start justify-between text-sm px-8 py-8 transition-colors bg-white/40 dark:bg-cardColor rounded-lg`}
+      className={`flex items-start justify-between text-sm px-8 py-8 transition-colors bg-white dark:bg-cardColor rounded-lg shadow-md`}
     >
       <div className="flex-[1.5] md:flex-[2] dark:text-white">
         <div className="flex items-start justify-between flex-col-reverse md:flex-row">

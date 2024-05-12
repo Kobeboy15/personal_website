@@ -9,7 +9,7 @@ export default function ProjectItem({ value }) {
       href={link}
       alt={link}
       target="__blank"
-      className="grid relative items-center grid-cols-1 md:grid-cols-2 gap-10 justify-between text-sm shadow-md p-8 transition-colors duration-300 bg-white/40 dark:bg-cardColor rounded-lg"
+      className="grid relative items-center grid-cols-1 md:grid-cols-2 gap-10 justify-between text-sm shadow-md p-8 transition-colors duration-300 bg-white dark:bg-cardColor rounded-lg"
     >
       <div className="absolute top-0 right-0 p-4 opacity-40">
         <ExternalLink size={20} />

@@ -1,5 +1,6 @@
 import { client } from "@/utils/configSanity";
 import ExperienceItem from "@/components/Experience/ExperienceItem";
+import { Reveal } from "@/components/Reveal";
 
 const ExperienceSection = async () => {
   async function getExperienceData() {
@@ -12,18 +13,24 @@ const ExperienceSection = async () => {
 
   return (
     <section className="px-20 pt-[240px]">
-      <div className="section-header flex flex-col gap-3 justify-center items-center mb-20">
-        <p className="text-sm opacity-50">My experience</p>
-        <h2 className="text-3xl font-medium text-[#AAA7E7]">
-          Skills in Action
-        </h2>
-      </div>
+      <Reveal width="100%">
+        <div className="section-header flex flex-col gap-3 justify-center items-center mb-20">
+          <p className="text-sm opacity-50">My experience</p>
+          <h2 className="text-3xl font-medium text-primary">
+            Skills in Action
+          </h2>
+        </div>
+      </Reveal>
       <div className="grid grid-cols-1 gap-8 items-center max-w-screen-lg mx-auto">
         {experienceData &&
           experienceData
             ?.sort((a, b) => a.sortOrder - b.sortOrder)
             .map((item, index) => {
-              return <ExperienceItem key={`workExp` + index} value={item} />;
+              return (
+                <Reveal delay={0.1 * index}>
+                  <ExperienceItem key={`workExp` + index} value={item} />
+                </Reveal>
+              );
             })}
       </div>
     </section>

@@ -5,11 +5,11 @@ export default function DesignItem({ image }) {
     <a
       href={image.imageUrl}
       target="_blank"
-      className="transition-colors duration-300 bg-white/40 dark:bg-cardColor rounded-lg"
+      className="shadow-md hover:scale-[1.05] transition-transform duration-300 rounded-lg"
     >
       <Image
         src={image.imageUrl}
-        alt={image.caption}
+        alt={image.caption || image.imageUrl}
         width={1920}
         height={1284}
         loading="lazy"

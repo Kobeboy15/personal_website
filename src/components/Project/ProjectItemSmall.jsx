@@ -1,7 +1,7 @@
 export default function ProjectItemSmall({ value }) {
   const { name, description, technologies } = value;
   return (
-    <div className="relative items-center justify-between text-sm p-8 h-full w-full transition-colors duration-300 bg-white/40 dark:bg-cardColor rounded-lg">
+    <div className="relative items-center justify-between text-sm p-8 h-full w-full transition-colors duration-300 bg-white shadow-md dark:bg-cardColor rounded-lg">
       <div className="flex flex-col justify-between h-full">
         <div className="flex flex-col gap-3">
           <h2 className=" text-xl font-semibold text-primary">{name}</h2>
