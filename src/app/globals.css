@@ -7,8 +7,28 @@
   to { opacity: 1; }
 }
 
+@keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+
 #main-page {
   -webkit-animation: fadein 1s ease-in alternate;
   -moz-animation: fadein 1s ease-in alternate;
   animation: fadein 1s ease-in alternate;
+}
+
+.fade-in {
+  -webkit-animation: fadein 0.3s ease-in-out alternate;
+  -moz-animation: fadein 0.3s ease-in-out alternate;
+  animation: fadein 0.3s ease-in-out alternate;
+  opacity: 1;
+}
+
+.fade-out {
+  -webkit-animation: fadeout 0.3s ease-in-out alternate;
+  -moz-animation: fadeout 0.3s ease-in-out alternate;
+  animation: fadeout 0.3s ease-in-out alternate;
+  opacity: 0;
 }
