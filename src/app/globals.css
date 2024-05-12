@@ -14,9 +14,9 @@
 
 
 #main-page {
-  -webkit-animation: fadein 1s ease-in alternate;
-  -moz-animation: fadein 1s ease-in alternate;
-  animation: fadein 1s ease-in alternate;
+  -webkit-animation: fadein 1.2s ease-out alternate;
+  -moz-animation: fadein 1.2s ease-out alternate;
+  animation: fadein 1.2s ease-out alternate;
 }
 
 .fade-in {

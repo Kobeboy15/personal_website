@@ -63,7 +63,7 @@ export default function RootLayout({
       </head>
       <body
         id="main-page"
-        className={`${poppins.className} min-h-screen bg-slate-100 dark:bg-[#090D1F] text-gray-900 dark:text-white`}
+        className={`${poppins.className} min-h-screen bg-slate-100 dark:bg-background-dark text-gray-900 dark:text-white`}
       >
         <NextTopLoader
           height={2}
