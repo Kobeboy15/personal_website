@@ -39,7 +39,7 @@ export default function ExperienceItem({ value }) {
     >
       <div className="flex-[1.5] md:flex-[2] dark:text-white">
         <div className="flex items-start justify-between flex-col-reverse md:flex-row">
-          <div className="grid gap-0.5">
+          <div className="grid md:gap-0.5 gap-2">
             <div>
               <h3 className="text-xl font-semibold text-primary">
                 {value.position}
@@ -54,7 +54,7 @@ export default function ExperienceItem({ value }) {
             {value.currentPosition ? "Present" : formatDate(value.endDate)}
           </p>
         </div>
-        <p className="leading-8 pt-5 pb-2 mt-2 font-normal text-justify text-sm text-neutral-700 dark:text-white">
+        <p className="leading-8 md:pt-5 pt-2 pb-2 mt-2 font-normal lg:text-justify md:text-sm text-xs text-neutral-700 dark:text-white">
           {value.description}
         </p>
         <p className="mt-4 flex flex-wrap gap-x-2 gap-y-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-200">

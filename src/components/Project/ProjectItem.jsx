@@ -9,7 +9,7 @@ export default function ProjectItem({ value }) {
       href={link}
       alt={link}
       target="__blank"
-      className="grid relative items-center grid-cols-1 md:grid-cols-2 gap-10 justify-between text-sm shadow-md p-8 transition-colors bg-white dark:bg-cardColor rounded-lg"
+      className="grid relative items-center grid-cols-1 md:grid-cols-2 lg:gap-10 justify-between text-sm shadow-md p-8 transition-colors bg-white dark:bg-cardColor rounded-lg"
     >
       <div className="absolute top-0 right-0 p-4 opacity-40">
         <ExternalLink size={20} />
@@ -32,7 +32,7 @@ export default function ProjectItem({ value }) {
           </p>
           <h2 className=" text-xl font-semibold text-primary">{name}</h2>
         </div>
-        <p className="text-sm py-0.5 leading-8 text-neutral-700 dark:text-white">
+        <p className="md:text-sm text-xs lg:text-justify py-0.5 leading-8 text-neutral-700 dark:text-white">
           {description}
         </p>
         <ul className="mt-4 flex flex-wrap gap-x-2 gap-y-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-200">

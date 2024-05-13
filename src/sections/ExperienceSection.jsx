@@ -12,7 +12,7 @@ const ExperienceSection = async () => {
   const experienceData = await getExperienceData();
 
   return (
-    <section className="px-20 pt-[240px]">
+    <section className="lg:px-20 md:pt-[80px] pt-32">
       <Reveal width="100%">
         <div className="section-header flex flex-col gap-3 justify-center items-center mb-20">
           <p className="text-sm opacity-50">My experience</p>
@@ -27,8 +27,8 @@ const ExperienceSection = async () => {
             ?.sort((a, b) => a.sortOrder - b.sortOrder)
             .map((item, index) => {
               return (
-                <Reveal delay={0.1 * index}>
-                  <ExperienceItem key={`workExp` + index} value={item} />
+                <Reveal key={`workExp` + index} delay={0.1 * index}>
+                  <ExperienceItem value={item} />
                 </Reveal>
               );
             })}

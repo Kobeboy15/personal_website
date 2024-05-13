@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="pt-[80px] w-full flex flex-col gap-12">
       <div className="flex flex-col gap-3 mx-auto text-center">
         <Reveal width="100%">
-          <p className="text-center">Hello, I'm</p>
+          <p className="text-center">Hello, I`m</p>
         </Reveal>
         <Reveal>
           <h3 className="font-medium text-5xl">Kobe Michael</h3>

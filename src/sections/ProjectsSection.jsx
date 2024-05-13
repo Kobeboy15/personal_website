@@ -13,7 +13,7 @@ const ProjectsSections = async () => {
   const projectData = await getProjectData();
 
   return (
-    <section className="px-20 pt-[240px]">
+    <section className="lg:px-20 md:pt-[240px] pt-32">
       <Reveal width="100%">
         <div className="section-header flex flex-col gap-3 justify-center items-center mb-20">
           <p className="text-sm opacity-50">My projects</p>
@@ -29,20 +29,25 @@ const ProjectsSections = async () => {
             .sort((a, b) => a.sortOrder - b.sortOrder)
             .map((item) => {
               return (
-                <Reveal width="100%">
-                  <ProjectItem key={item._id} value={item} />
+                <Reveal key={item._id} width="100%">
+                  <ProjectItem value={item} />
                 </Reveal>
               );
             })}
         </div>
-        <div className="grid grid-cols-2 gap-8 items-center max-w-screen-lg mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 items-center max-w-screen-lg mx-auto">
           {projectData
             .filter((item) => !item.featured)
             .sort((a, b) => a.sortOrder - b.sortOrder)
             .map((item, index) => {
               return (
-                <Reveal delay={0.1 * index} className="h-full">
-                  <ProjectItemSmall key={item._id} value={item} />
+                <Reveal
+                  key={item._id}
+                  delay={0.1 * index}
+                  child_className="h-full"
+                  className="h-full"
+                >
+                  <ProjectItemSmall value={item} />
                 </Reveal>
               );
             })}

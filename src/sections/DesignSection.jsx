@@ -12,7 +12,7 @@ const DesignSection = async () => {
   const designData = await getDesignData();
 
   return (
-    <section className="px-20 py-[140px]">
+    <section className="lg:px-20 md:py-[240px] py-32">
       <Reveal width="100%">
         <div className="section-header flex flex-col gap-3 justify-center items-center mb-20">
           <p className="text-sm opacity-50">My Designs</p>
@@ -22,7 +22,7 @@ const DesignSection = async () => {
         </div>
       </Reveal>
       <Reveal>
-        <div className="grid grid-cols-3 gap-8 items-center max-w-screen-lg mx-auto">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 items-center max-w-screen-lg mx-auto">
           {designData.map((image, index) => (
             <DesignItem key={`image${index}`} image={image} />
           ))}

@@ -3,7 +3,7 @@ const linkStyles =
 
 const SocialIsland = () => {
   return (
-    <div className="grid gap-3 text-2xl dark:text-primary text-primary-text/70 px-24 fixed left-0 bottom-[30px]">
+    <div className="lg:grid hidden gap-3 text-2xl dark:text-primary text-primary-text/70 lg:px-24 px-8 fixed left-0 bottom-[30px]">
       <a
         href={`https://www.linkedin.com/in/kobe-michael/`}
         className={linkStyles}
@@ -16,7 +16,7 @@ const SocialIsland = () => {
       <a href={`mailto:kobemichael15@gmail.com`} className={linkStyles}>
         <i className="uil uil-at" />
       </a>
-      <div className="mt-3 ml-[4px] w-[32px] h-[1.5px] dark:bg-primary bg-primary-text/50 -rotate-90"></div>
+      <div className="lg:block hidden mt-3 ml-[4px] w-[32px] h-[1.5px] dark:bg-primary bg-primary-text/50 -rotate-90"></div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ import ScrollTop from "../components/ScrollTop";
 
 export default function Home() {
   return (
-    <main className="px-24 max-w-screen-xl mx-auto">
+    <main className="lg:px-24 px-8 max-w-screen-xl mx-auto">
       <SocialIsland />
       <ScrollTop />
       <HeroSection />

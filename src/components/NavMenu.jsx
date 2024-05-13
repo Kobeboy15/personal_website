@@ -33,7 +33,7 @@ export default function NavMenu() {
   }, []);
 
   return (
-    <div className="flex items-center justify-between m-auto px-24 py-[40px] sticky top-0 shadow-md xl:shadow-none bg-slate-100 dark:bg-background-dark z-10 xl:bg-transparent">
+    <div className="flex items-center justify-between m-auto lg:px-24 px-8 lg:py-[40px] py-5 sticky top-0 shadow-md xl:shadow-none bg-slate-100 dark:bg-background-dark z-10 xl:bg-transparent">
       <Link href="/">
         <h3
           className={`text-xl font-semibold dark:text-primary text-primary-text`}

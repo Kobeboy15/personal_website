@@ -21,7 +21,7 @@ const ScrollTop = () => {
   return (
     <div
       id="scroll-up-button"
-      className={`px-24 fixed right-0 bottom-[30px] ${
+      className={`lg:px-24 z-10 px-8 fixed right-0 bottom-[30px] ${
         isVisible ? "fade-in" : "fade-out"
       }`}
     >
@@ -30,7 +30,7 @@ const ScrollTop = () => {
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
-        className="text-3xl text-cardColor bg-primary px-2 py-1 rounded-lg"
+        className="lg:text-3xl text-xl text-cardColor bg-primary px-2 py-1 rounded-lg"
       >
         <i className="uil uil-arrow-up" />
       </button>

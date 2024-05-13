@@ -5,7 +5,7 @@ export default function ProjectItemSmall({ value }) {
       <div className="flex flex-col justify-between h-full">
         <div className="flex flex-col gap-3">
           <h2 className=" text-xl font-semibold text-primary">{name}</h2>
-          <p className="text-sm leading-8 text-neutral-700 dark:text-white">
+          <p className="md:text-sm text-xs lg:text-justify leading-8 text-neutral-700 dark:text-white">
             {description}
           </p>
         </div>
