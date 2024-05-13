@@ -43,7 +43,7 @@ const AboutMe = () => {
                 <p className="text-xs">Awesomeness</p>
               </li>
             </ul>
-            <p className="text-justify md:text-base text:xs leading-8">
+            <p className="text-justify md:text-base text-xs leading-8">
               As a{" "}
               <span className="font-semibold text-primary">
                 Frontend Developer
