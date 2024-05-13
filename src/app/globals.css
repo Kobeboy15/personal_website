@@ -17,6 +17,7 @@
   -webkit-animation: fadein 1.2s ease-out alternate;
   -moz-animation: fadein 1.2s ease-out alternate;
   animation: fadein 1.2s ease-out alternate;
+  opacity: 1;
 }
 
 .fade-in {
