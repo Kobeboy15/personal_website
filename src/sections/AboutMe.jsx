@@ -37,10 +37,10 @@ const AboutMe = () => {
               </li>
               <li className="lg:w-32 lg:h-28 w-24 h-24 dark:bg-cardColor bg-white shadow-md rounded-lg flex flex-col gap-0.5 justify-center items-center">
                 <div className="flex items-center justify-center gap-1 text-primary">
-                  <p className="lg:text-4xl text-[32px] font-semibold">2k</p>
-                  <p className="font-medium">+</p>
+                  <p className="lg:text-4xl text-[32px] font-semibold">26</p>
+                  <p className="font-medium">yrs+</p>
                 </div>
-                <p className="text-xs">Commits</p>
+                <p className="text-xs">Awesomeness</p>
               </li>
             </ul>
             <p className="text-justify leading-8">
