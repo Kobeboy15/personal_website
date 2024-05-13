@@ -13,9 +13,9 @@ const poppins = Poppins({
 });
 
 const MetaInfo = {
-  title: "Kobe Michael | Web Developer & Web Designer",
+  title: "Kobe Michael",
   description:
-    "🚀 Frontend Web Developer and Designer with 6 years of experience and a keen eye for crafting visually appealing and user-friendly interfaces. I am passionate about creating delightful web experiences that exceed user expectations.",
+    "A Web Developer and Designer with 6 years of experience in creating visually stunning and highly functional interfaces. I am dedicated to designing and developing seamless web experiences that not only meet but exceed user expectations, ensuring both aesthetic appeal and optimal performance.",
 };
 
 const SEOImage =
