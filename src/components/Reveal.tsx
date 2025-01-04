@@ -37,7 +37,7 @@ export const Reveal = ({
     >
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 20 },
+          hidden: { opacity: 0, y: 5 },
           visible: { opacity: 1, y: 0 },
         }}
         className={child_className}

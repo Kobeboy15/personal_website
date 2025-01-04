@@ -1,14 +1,9 @@
-import { Poppins } from "next/font/google";
-import NavMenu from "../components/NavMenu";
-import FooterMenu from "../components/FooterMenu";
-import NextTopLoader from "nextjs-toploader";
+import { Outfit } from 'next/font/google';
 import "./globals.css";
 import React from "react";
 
-const poppins = Poppins({
+const outfit = Outfit({
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
@@ -56,24 +51,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </head>
       <body
         id="main-page"
-        className={`${poppins.className} min-h-screen bg-slate-100 dark:bg-background-dark text-gray-900 dark:text-white`}
+        className={`${outfit.className} min-h-screen bg-slate-100 dark:bg-zinc-900 text-gray-900 dark:text-zinc-300 font-extralight tracking-[0.3px]`}
       >
-        <NextTopLoader
-          height={2}
-          zIndex={9999}
-          color="rgb(170,167,231)"
-          showSpinner={false}
-        />
-        <NavMenu />
         <React.Fragment>{children}</React.Fragment>
-        <FooterMenu />
       </body>
     </html>
   );

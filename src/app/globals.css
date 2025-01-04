@@ -2,34 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.blur {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    height: min(96px, 100px);
+    position: sticky;
+    width: calc(100% + 20px + 20px);
+    margin-left: -20px;
+    height: 96px;
+    z-index: 1;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    opacity: 0.95;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0));
 }
 
-@keyframes fadeout {
-  from { opacity: 1; }
-  to { opacity: 0; }
+.blur:first-child {
+    margin-bottom: -96px;
+    top: 0;
 }
 
-
-#main-page {
-  -webkit-animation: fadein 1.2s ease-out alternate;
-  -moz-animation: fadein 1.2s ease-out alternate;
-  animation: fadein 1.2s ease-out alternate;
-  opacity: 1;
-}
-
-.fade-in {
-  -webkit-animation: fadein 0.3s ease-in-out alternate;
-  -moz-animation: fadein 0.3s ease-in-out alternate;
-  animation: fadein 0.3s ease-in-out alternate;
-  opacity: 1;
-}
-
-.fade-out {
-  -webkit-animation: fadeout 0.3s ease-in-out alternate;
-  -moz-animation: fadeout 0.3s ease-in-out alternate;
-  animation: fadeout 0.3s ease-in-out alternate;
-  opacity: 0;
+article {
+    h1 {
+        font-size: 1.75em !important;
+    }
 }

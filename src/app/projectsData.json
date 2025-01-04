@@ -1,0 +1,29 @@
+{
+  "projects": [
+    {
+      "name": "kclamb.xyz",
+      "link": "https://kclamb.xyz/",
+      "short_description": "Portfolio for KC Lamb, a portfolio website heavily inspired by Brittany Chiang's design"
+    },
+    {
+      "name": "box.io",
+      "link": "https://github.com/Kobeboy15/box.io",
+      "short_description": "Simple speed-running-focus type of game. Developed using purely JavaScript, no libraries or frameworks."
+    },
+    {
+      "name": "scrawlr-votes",
+      "link": "https://github.com/Kobeboy15/Scrawlr-Votes?tab=readme-ov-file",
+      "short_description": "Take home project for Scrawlr, to create an upvote list. Using React's Context API with a reducer facilitating data management throughout the application"
+    },
+    {
+      "name": "brightspot-dashboard",
+      "link": "https://github.com/Kobeboy15/Brightspot-dashboard",
+      "short_description": "Take home project for Brightspot, to create a personal dashboard, with a functioning To-do list, and working weather component, utilizing OpenWeather API."
+    },
+    {
+      "name": "supapass-todo-list",
+      "link": "https://github.com/Kobeboy15/SupaProject",
+      "short_description": "Tasked with the building of a small prototype todo list application, using React, with the implementation of a barebones GraphQL Api."
+    }
+  ]
+}

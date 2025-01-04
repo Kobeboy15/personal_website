@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
+  // darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,12 +15,6 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      colors: {
-        "primary": '#AAA7E7',
-        "primary-text": '#090D1F',
-        "cardColor": '#141A26',
-        "background-dark": '#090D1F',
-      }
     },
   },
   plugins: [require("@tailwindcss/typography")],
