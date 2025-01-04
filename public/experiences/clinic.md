@@ -1,4 +1,4 @@
-# IT Support Specialist | Dr. Rossali Pilapil-Lee
+# Working for Dr. Rossali Pilapil-Lee
 
 As an **IT Support Specialist** at the private clinic under **Dr. Rossali Pilapil-Lee**, I work at the intersection of healthcare and technology, ensuring that the clinic’s systems run efficiently to support both the medical team and patient care. I collaborate closely with **Dr. Rossali Pilapil-Lee** and the clinic staff to address technical issues, streamline administrative workflows, and implement tech solutions that improve daily operations.
 

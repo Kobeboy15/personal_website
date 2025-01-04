@@ -1,4 +1,4 @@
-# SheepCRM: Revolutionizing Membership Management
+# What is SheepCRM?
 
 SheepCRM is the UK's leading membership management software, designed to save time, automate administrative tasks, and empower organizations to grow their memberships. With a user-focused, intuitive, and high-performance platform, SheepCRM simplifies operations while fostering community engagement and satisfaction.
 

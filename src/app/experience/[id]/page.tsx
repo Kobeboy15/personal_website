@@ -19,9 +19,10 @@ export default async function Page({ params }: { params: { id: string } }) {
   if (!selectedExperience) {
     return (
       <div>
-        <h1>ID: {params.id}</h1>
+        <h1 className="flex sm:flex-row flex-col-reverse gap-5 items-start sm:items-center font-normal dark:text-white text-lg">{params.id} ???</h1>
         <br />
-        <p>No matching experience found.</p>
+        <p>No matching experience found. 🤷‍♂️</p>
+
       </div>
     );
   }
@@ -44,7 +45,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <div className="flex items-center gap-1">
                   <i
                     title="Current Position"
-                    className="material-symbols-outlined opacity-50 cursor-help"
+                    className="material-symbols-outlined opacity-50 hover:opacity-100 cursor-none duration-1000"
                     style={{ fontSize: '16px' }}
                   >
                     work

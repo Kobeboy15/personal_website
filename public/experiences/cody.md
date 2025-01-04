@@ -1,4 +1,4 @@
-# CODY Web Development: Innovating Team Collaboration & Monitoring Solutions
+# What is CODY Web Development?
 
 CODY Web Development specializes in delivering cutting-edge solutions for employee monitoring, team collaboration, and productivity optimization. By leveraging advanced frontend technologies, the company develops robust tools to meet diverse client needs, particularly in the Japanese market.
 

@@ -77,7 +77,7 @@ export default function IntroSection() {
         <br />
         <Reveal delay={0.9}>
           <p>
-            You can email me at{" "}
+            You can reach me at{" "}
             <span className="border-b border-zinc-500 dark:text-white font-normal dark:hover:border-white transition duration-150">
               <a href="mailto:kobemichael15@gmail.com">
                 kobemichael15@gmail.com
@@ -122,7 +122,7 @@ async function ContentContainer() {
                 <p className="border-b mb-1 leading-5 dark:text-white w-fit border-zinc-500 font-normal dark:hover:border-white transition duration-150">
                   <Link href={`/experience/${item.company.split(" ").join("")}`}>{item.company}</Link>
                 </p>
-                { index === 0 && <i title="Current Position" style={{ fontSize: '16px' }} className="material-symbols-outlined opacity-50 cursor-help">work</i> }
+                { index === 0 && <i title="Current Position" style={{ fontSize: '16px' }} className="material-symbols-outlined opacity-50 hover:opacity-100 cursor-none duration-1000">work</i> }
                 </div>
                 <p className="text-sm leading-6 text-black/70 dark:text-zinc-500 font-light">
                   {item.short_description}

@@ -1,4 +1,4 @@
-# SupaPass: Transforming Digital Content Management
+# What is SupaPass?
 
 SupaPass is an all-in-one platform designed to empower creators, businesses, and organizations to manage, monetize, and share digital content effortlessly. By providing robust tools for content hosting and personalization, SupaPass simplifies the process of building professional-grade web platforms.
 

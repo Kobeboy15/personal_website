@@ -1,4 +1,4 @@
-# Cloud Employee: Outsourced Development for UK-based Companies
+# What is Cloud Employee?
 
 Cloud Employee is a global IT outsourcing company that provides skilled developers for companies around the world, specializing in building remote teams to deliver innovative software solutions. During my time as a **Frontend Developer** at **Cloud Employee**, I worked on two key projects for **SupaPass** and **SheepCRM**, both based in the UK, where I helped implement fixes, deliver new features, and contribute to the development of internal systems.
 

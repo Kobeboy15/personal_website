@@ -1,4 +1,4 @@
-# Channelfix: Innovating Event Management and Live Streaming Solutions
+# What is ChannelFix?
 
 Channelfix (now rebranded as **HQZen**) was an event management platform that allowed users to create and host interactive contests and challenges. The platform emphasized engagement and participation through competitions, allowing users to complete various tasks while tracking their progress.
 
