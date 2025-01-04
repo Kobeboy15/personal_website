@@ -10,7 +10,7 @@ const outfit = Outfit({
 const MetaInfo = {
   title: "Kobe Michael",
   description:
-    "A Web Developer and Designer with 6 years of experience in creating visually stunning and highly functional interfaces. I am dedicated to designing and developing seamless web experiences that not only meet but exceed user expectations, ensuring both aesthetic appeal and optimal performance.",
+    "A Web Developer and Designer of building sleek, user-friendly websites. I love blending creativity and tech to craft web experiences that look great and work even better.",
 };
 
 const SEOImage =

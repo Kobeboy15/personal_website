@@ -25,7 +25,7 @@ export default function IntroSection() {
           <p>
             I previously collaborated with{" "}
             <span className="border-b border-zinc-500 dark:text-white font-light dark:hover:border-white transition duration-150">
-              <a href="https://sheepcrm.co.uk/" target="_blank">
+              <a href="https://sheepcrm.co.uk/" target="_blank" rel="noopener noreferrer">
                 SheepCRM
               </a>
             </span>{" "}
@@ -45,7 +45,7 @@ export default function IntroSection() {
             enhancing my web development expertise and aspiring to become a
             full-stack developer through ongoing studies at{" "}
             <span className="border-b border-zinc-500 dark:text-white font-light dark:hover:border-white transition duration-150">
-              <a href="https://langara.ca/" target="_blank">
+              <a href="https://langara.ca/" target="_blank" rel="noopener noreferrer">
                 Langara College
               </a>
             </span>
@@ -142,7 +142,7 @@ async function ContentContainer() {
               <div key={index}>
                 <div className="flex items-center gap-2">
                 <p className="border-b mb-1 leading-5 dark:text-white w-fit border-zinc-500 font-normal dark:hover:border-white transition duration-150">
-                  <a href={item.link} target="_blank">
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
                     {item.name}
                   </a>
                 </p>
