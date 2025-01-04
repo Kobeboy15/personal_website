@@ -5,7 +5,7 @@ import path from "path";
 
 export default async function Page({ params }: { params: { id: string } }) {
   const experiences = await fs.readFile(
-    process.cwd() + "/src/app/positionsData.json",
+    process.cwd() + "/public/positionsData.json",
     "utf8",
   );
 

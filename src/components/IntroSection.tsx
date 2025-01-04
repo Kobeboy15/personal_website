@@ -92,13 +92,13 @@ export default function IntroSection() {
 
 async function ContentContainer() {
   const experiences = await fs.readFile(
-    process.cwd() + "/src/app/positionsData.json",
+    process.cwd() + "/public/positionsData.json",
     "utf8",
   );
   const dataExp = JSON.parse(experiences);
 
   const projects = await fs.readFile(
-    process.cwd() + "/src/app/projectsData.json",
+    process.cwd() + "/public/projectsData.json",
     "utf8",
   );
   const dataProj = JSON.parse(projects);
