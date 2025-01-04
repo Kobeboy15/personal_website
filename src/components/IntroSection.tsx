@@ -1,6 +1,7 @@
 import { Reveal } from "./Reveal";
 import { promises as fs } from "fs";
 import Link from 'next/link';
+import path from "path";
 
 export default function IntroSection() {
   return (
@@ -91,16 +92,20 @@ export default function IntroSection() {
 }
 
 async function ContentContainer() {
-  const experiences = await fs.readFile(
-    process.cwd() + "/public/positionsData.json",
-    "utf8",
+  const positionsDataPath = path.join(
+    process.cwd(),
+    "public",
+    "positionsData.json"
   );
+  const experiences = await fs.readFile(positionsDataPath, "utf8");
   const dataExp = JSON.parse(experiences);
 
-  const projects = await fs.readFile(
-    process.cwd() + "/public/projectsData.json",
-    "utf8",
+  const projectsDataPath = path.join(
+    process.cwd(),
+    "public",
+    "projectsData.json"
   );
+  const projects = await fs.readFile(projectsDataPath, "utf8");
   const dataProj = JSON.parse(projects);
 
   return (

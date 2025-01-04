@@ -4,10 +4,12 @@ import Markdown from "markdown-to-jsx";
 import path from "path";
 
 export default async function Page({ params }: { params: { id: string } }) {
-  const experiences = await fs.readFile(
-    process.cwd() + "/public/positionsData.json",
-    "utf8",
+  const positionsDataPath = path.join(
+    process.cwd(),
+    "public",
+    "positionsData.json"
   );
+  const experiences = await fs.readFile(positionsDataPath, "utf8");
 
   const dataExp = JSON.parse(experiences);
   const selectedExperience = dataExp.positions.find(
