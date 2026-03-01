@@ -1,11 +1,6 @@
 {
   "projects": [
     {
-      "name": "kclamb.xyz",
-      "link": "https://kclamb.xyz/",
-      "short_description": "Portfolio for KC Lamb, a portfolio website heavily inspired by Brittany Chiang's design"
-    },
-    {
       "name": "box.io",
       "link": "https://github.com/Kobeboy15/box.io",
       "short_description": "Simple speed-running-focus type of game. Developed using purely JavaScript, no libraries or frameworks."
