@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import AmbientBackdrop from "@/three/AmbientBackdrop";
 import BackgroundPattern from "@/components/BackgroundPattern";
 import Preloader from "@/components/Preloader";
+import VersionSwitcher from "@/components/VersionSwitcher";
 
 // Runs before first paint: applies the saved theme (defaults to dark) AND sets
 // the background-color inline so there's no flash before the stylesheet loads.
@@ -85,6 +86,7 @@ export default function RootLayout({
           <AmbientBackdrop />
           <BackgroundPattern />
           <SmoothScrollProvider>{children}</SmoothScrollProvider>
+          <VersionSwitcher />
         </ThemeProvider>
       </body>
     </html>

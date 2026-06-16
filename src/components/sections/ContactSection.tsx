@@ -1,5 +1,6 @@
 import SectionLabel from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
+import MobileVersionArchive from "@/components/MobileVersionArchive";
 
 const SOCIALS = [
   { label: "GitHub", value: "@Kobeboy15", href: "https://github.com/Kobeboy15" },
@@ -20,10 +21,10 @@ export default function ContactSection() {
         <Reveal>
           <p className="eyebrow mb-6">Let&apos;s work together</p>
           <a
-            href="mailto:kobemichael15@gmail.com"
+            href="mailto:me@kobemichael.dev"
             className="block w-full break-words font-sans text-[clamp(1.6rem,6.5vw,5rem)] font-medium leading-[1.02] tracking-[-0.03em] text-ink transition-colors duration-300 hover:text-accent"
           >
-            kobemichael15@gmail.com
+            me@kobemichael.dev
           </a>
         </Reveal>
       </div>
@@ -55,10 +56,11 @@ export default function ContactSection() {
         </div>
       </Reveal>
 
-      <div className="rule mt-24 flex flex-col items-start justify-between gap-2 pt-6 sm:flex-row sm:items-center">
+      <div className="rule mt-24 flex flex-col items-start justify-between gap-4 pt-6 sm:flex-row sm:items-center sm:gap-2">
         <p className="font-mono text-xs text-ink-mute">
           Create with the heart, build with the mind.
         </p>
+        <MobileVersionArchive />
         <p className="font-mono text-xs text-ink-mute">© 2026 Kobe Michael</p>
       </div>
     </section>
