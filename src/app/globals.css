@@ -115,6 +115,51 @@ article h1 {
   font-size: 1.75em !important;
 }
 
+/* Subtle glitch for the hero name, tinted with the site accent (violet in dark
+   mode, blue in light) via --accent. Offsets use em so the split scales
+   proportionally with the (very large) type. The two offsets differ slightly in
+   opacity for depth. Settles clean at 100%. */
+@keyframes hero-glitch {
+  0% {
+    text-shadow: none;
+  }
+  15% {
+    text-shadow:
+      -0.012em 0 rgb(var(--accent) / 0.7),
+      0.012em 0 rgb(var(--accent) / 0.4);
+  }
+  30% {
+    text-shadow:
+      0.012em 0 rgb(var(--accent) / 0.7),
+      -0.012em 0 rgb(var(--accent) / 0.4);
+  }
+  45% {
+    text-shadow:
+      -0.008em 0 rgb(var(--accent) / 0.55),
+      0.008em 0 rgb(var(--accent) / 0.35);
+  }
+  62% {
+    text-shadow:
+      0.006em 0 rgb(var(--accent) / 0.4),
+      -0.006em 0 rgb(var(--accent) / 0.28);
+  }
+  82% {
+    text-shadow:
+      -0.003em 0 rgb(var(--accent) / 0.22),
+      0.003em 0 rgb(var(--accent) / 0.16);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+.hero-name {
+  will-change: text-shadow;
+}
+.hero-name.glitching {
+  animation: hero-glitch 0.3s linear 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
