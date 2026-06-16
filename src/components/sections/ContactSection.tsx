@@ -2,8 +2,12 @@ import SectionLabel from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
 
 const SOCIALS = [
-  { label: "Email", value: "kobemichael15@gmail.com", href: "mailto:kobemichael15@gmail.com" },
   { label: "GitHub", value: "@Kobeboy15", href: "https://github.com/Kobeboy15" },
+  {
+    label: "LinkedIn",
+    value: "kobe-michael",
+    href: "https://www.linkedin.com/in/kobe-michael/",
+  },
   { label: "Résumé", value: "Download CV", href: "/KobeMichael_CV.pdf" },
 ];
 

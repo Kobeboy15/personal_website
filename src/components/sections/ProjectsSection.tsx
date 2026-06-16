@@ -47,6 +47,21 @@ export default function ProjectsSection({
           </Reveal>
         ))}
       </div>
+
+      <Reveal>
+        <div className="mt-10 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-xl text-pretty text-sm leading-relaxed text-ink-soft">
+            Some of my more recent work is covered by NDAs and can&apos;t be
+            shown publicly. Curious to see more of what I&apos;ve built?
+          </p>
+          <a
+            href="#contact"
+            className="link-line shrink-0 font-mono text-sm uppercase tracking-widest text-ink"
+          >
+            Get in touch ↗
+          </a>
+        </div>
+      </Reveal>
     </section>
   );
 }

@@ -3,9 +3,12 @@ import { Reveal } from "@/components/Reveal";
 
 const FOCUS = [
   "Frontend Engineering",
+  "System Design",
+  "AI-Assisted Workflows",
   "UI / UX Design",
   "Design Systems",
   "Accessibility",
+  "Mentorship & Leadership",
 ];
 
 export default function AboutSection() {
@@ -21,18 +24,17 @@ export default function AboutSection() {
               usability and craft meet.
             </p>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-soft">
-              I previously collaborated with{" "}
+              I&apos;m currently a frontend engineer at{" "}
               <a
-                href="https://sheepcrm.co.uk/"
+                href="https://www.yieldguild.games/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-line"
               >
-                SheepCRM
+                Yield Guild Games
               </a>
-              , building their internal event calendar and help centre. I&apos;m
-              now advancing toward full-stack development through ongoing studies
-              at{" "}
+              , building web3 gaming experiences, and recently completed my
+              studies at{" "}
               <a
                 href="https://langara.ca/"
                 target="_blank"
@@ -44,10 +46,12 @@ export default function AboutSection() {
               .
             </p>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
-              I like challenging my creativity by tackling problems that
-              emphasise usability and accessibility — crafting intuitive
-              interfaces and layouts that balance system constraints with
-              high-quality design.
+              Lately I&apos;ve been deepening my craft on two fronts — applying
+              system-design thinking to build more resilient, well-architected
+              products, and weaving AI into my workflow to ship with greater
+              speed, reliability, and quality. I&apos;m drawn to problems that
+              demand both: intuitive, accessible interfaces backed by sound
+              engineering.
             </p>
           </Reveal>
         </div>
