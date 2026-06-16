@@ -31,10 +31,10 @@ export default function HeroSection() {
   return (
     <section
       ref={ref}
-      className="gutter relative flex min-h-[100svh] flex-col justify-end pb-10 pt-32"
+      className="gutter relative flex min-h-[100svh] flex-col pb-10 pt-28"
     >
       {/* top meta row */}
-      <div className="mb-auto grid grid-cols-12 gap-4 pt-6">
+      <div className="grid grid-cols-12 gap-4 pt-2">
         <p data-reveal-fade className="eyebrow col-span-6">
           Portfolio — 2026
         </p>
@@ -46,18 +46,20 @@ export default function HeroSection() {
         </p>
       </div>
 
-      {/* Name — the focal point */}
-      <h1 className="font-sans font-medium leading-[0.86] tracking-[-0.03em] text-ink">
-        <span data-reveal-line className="block overflow-hidden">
-          <span className="block text-[clamp(3.5rem,17vw,28rem)]">Kobe</span>
-        </span>
-        <span data-reveal-line className="block overflow-hidden">
-          <span className="block text-[clamp(3.5rem,17vw,28rem)]">Michael</span>
-        </span>
-      </h1>
+      {/* Name — the focal point, centred in the available height */}
+      <div className="flex flex-1 items-center py-10">
+        <h1 className="font-sans font-medium leading-[0.86] tracking-[-0.03em] text-ink">
+          <span data-reveal-line className="block overflow-hidden">
+            <span className="block text-[clamp(3.5rem,17vw,28rem)]">Kobe</span>
+          </span>
+          <span data-reveal-line className="block overflow-hidden">
+            <span className="block text-[clamp(3.5rem,17vw,28rem)]">Michael</span>
+          </span>
+        </h1>
+      </div>
 
       {/* bottom row: role + intro */}
-      <div className="mt-10 grid grid-cols-12 items-end gap-6">
+      <div className="grid grid-cols-12 items-end gap-6">
         <div data-reveal-fade className="col-span-12 sm:col-span-5">
           <p className="eyebrow mb-3">Software Engineer · Designer</p>
           <p className="max-w-sm text-pretty text-base leading-relaxed text-ink-soft">
