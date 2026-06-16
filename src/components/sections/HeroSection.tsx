@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { useReducedMotion } from "@/lib/useReducedMotion";
+import { HERO_REVEAL_DELAY } from "@/lib/intro";
 
 export default function HeroSection() {
   const ref = useRef<HTMLElement>(null);
@@ -11,12 +12,18 @@ export default function HeroSection() {
   useGSAP(
     () => {
       if (reduced) return; // reduced-motion: skip intro animation
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      // Single in-context timeline. `.from()` applies the hidden start-state
+      // synchronously (before paint, beneath the preloader), then reveals after
+      // a delay timed to the preloader curtain lifting.
+      const tl = gsap.timeline({
+        delay: HERO_REVEAL_DELAY,
+        defaults: { ease: "power3.out" },
+      });
       tl.from("[data-reveal-line] > *", {
         yPercent: 110,
         duration: 1.1,
         stagger: 0.1,
-        delay: 0.15,
       })
         .from(
           "[data-reveal-fade]",

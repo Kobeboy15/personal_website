@@ -5,6 +5,7 @@ import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import AmbientBackdrop from "@/three/AmbientBackdrop";
 import BackgroundPattern from "@/components/BackgroundPattern";
+import Preloader from "@/components/Preloader";
 
 // Runs before first paint: applies the saved theme (defaults to dark) AND sets
 // the background-color inline so there's no flash before the stylesheet loads.
@@ -80,6 +81,7 @@ export default function RootLayout({
         className={`${outfit.className} min-h-screen text-ink font-light antialiased`}
       >
         <ThemeProvider>
+          <Preloader />
           <AmbientBackdrop />
           <BackgroundPattern />
           <SmoothScrollProvider>{children}</SmoothScrollProvider>
