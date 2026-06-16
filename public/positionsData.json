@@ -1,9 +1,18 @@
 {
   "positions": [
     {
+      "id": "YieldGuildGames",
+      "date": "March 2025 - Present",
+      "name": "Frontend Developer",
+      "type": "Contract Full-time",
+      "company": "Yield Guild Games",
+      "short_description": "A web3 gaming ecosystem connecting a global community of players to games, quests, and rewards through the YGG Play platform.",
+      "markdown": "ygg"
+    },
+    {
       "id": "Dr.RossaliPilapil-LeeClinic",
-      "date": "September 2024 - Present",
-      "name": "IT Support Specialist",
+      "date": "September 2024 - March 2025",
+      "name": "Clinical IT Support Specialist",
       "type": "Part-time",
       "company": "Dr. Rossali Pilapil-Lee Clinic",
       "short_description": "Provides healthcare for individuals and families at community-based family practice clinics.",

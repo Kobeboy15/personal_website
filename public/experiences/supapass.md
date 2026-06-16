@@ -1,58 +1,17 @@
-# What is SupaPass?
+Senior frontend engineer on **SupaPass**, an all-in-one platform that lets creators and businesses host, monetize, and share digital content. I owned the **CMS and Website Builder** — the tools customers use to spin up fully customizable web platforms — working directly with the CEO to balance innovation, usability, and scale. *(Delivered as an embedded engineer through [Cloud Employee](/experience/CloudEmployee).)*
 
-SupaPass is an all-in-one platform designed to empower creators, businesses, and organizations to manage, monetize, and share digital content effortlessly. By providing robust tools for content hosting and personalization, SupaPass simplifies the process of building professional-grade web platforms.
+## CMS & website builder
 
----
+- Built scalable frontend solutions with **React, TypeScript, Next.js, and GraphQL**.
+- Translated **Figma** prototypes and direct user feedback into polished, production-ready interfaces.
+- Optimized the CMS and Website Builder to serve **thousands of active users** smoothly.
 
-## Professional Overview
+## Impact
 
-As a Senior Frontend Engineer at SupaPass, I played a pivotal role in managing and enhancing the platform’s **Content Management System (CMS)** and **Website Builder**, enabling users to create highly customizable web platforms for hosting and monetizing their content. Collaborating closely with the CEO and the broader team, I delivered solutions that balanced innovation, usability, and scalability.
+- Drove a **30% improvement in user-experience metrics** through a consulting-led UI revamp.
+- Cut product turnaround time by roughly **three days on average** via a cleaner frontend architecture and tighter workflows.
+- Streamlined feature rollouts and bug fixes on a modern stack, shortening development cycles.
 
-Key contributions included:
+## Stack
 
-- Developing scalable frontend solutions using **React**, **TypeScript**, **Next.js**, and **GraphQL**.
-- Incorporating user feedback and design prototypes created in **Figma** to enhance user interfaces and experiences.
-- Streamlining feature rollouts and bug fixes, optimizing the platform for thousands of users.
-
----
-
-## Key Accomplishments
-
-- **Boosted Productivity:**
-  Improved collaboration workflows and reduced product development turnaround times by an average of three days through optimized frontend architecture and development practices.
-
-- **Enhanced User Experience:**
-  Delivered impactful consulting that revamped the web application’s user interface, achieving a **30% increase in user experience metrics**.
-
-- **Streamlined Feature Rollouts:**
-  Leveraged a modern tech stack to design and implement robust, scalable features, ensuring a seamless experience for end-users while reducing development cycles.
-
-- **Optimized Performance:**
-  Improved the responsiveness and scalability of the CMS and Website Builder to handle thousands of active users efficiently.
-
----
-
-## Tools & Technologies
-
-### Development Tools
-- **ClickUp:** Managed tasks and documentation, ensuring smooth project workflows.
-- **Loom:** Recorded and shared screen captures for fast, effective communication.
-- **Intercom:** Handled user feedback and issues to improve product quality.
-
-### Programming Languages & Frameworks
-- **React**
-- **TypeScript**
-- **Next.js**
-- **GraphQL**
-- **TailwindCSS:** Enhanced development efficiency with a utility-first approach to styling.
-
-### Optimization & Collaboration
-- Search Engine Optimization (SEO)
-- Responsive Design
-- Agile Development Practices
-
----
-
-## Highlights of Contributions
-
-At SupaPass, I balanced technical expertise with creative problem-solving to deliver measurable outcomes that transformed the platform and elevated the user experience. My work directly contributed to the company’s mission to simplify digital content management while empowering users to build and monetize their digital presence.
+React · TypeScript · Next.js · GraphQL · TailwindCSS · Figma · ClickUp · Loom · Intercom
