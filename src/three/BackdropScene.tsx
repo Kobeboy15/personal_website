@@ -59,15 +59,15 @@ const fragment = /* glsl */ `
 
   void main(){
     vec2 uv=vUv; uv.x*=uAspect;
-    float t=uTime*0.02;
-    float n=fbm(uv*1.1+vec2(t,t*0.6))*0.5+0.5;
+    float t=uTime*0.004;
+    float n=fbm(uv*1.0+vec2(t,t*0.6))*0.5+0.5;
 
-    // base tonal drift within the paper range
-    vec3 col=mix(uPaper,uShade,smoothstep(0.4,0.8,n)*0.55);
+    // tonal depth between paper and shade
+    vec3 col=mix(uPaper,uShade,smoothstep(0.2,0.9,n)*0.75);
 
-    // faint accent glow derived from the same field (no extra noise eval)
-    float glow=smoothstep(0.62,1.0,n);
-    col=mix(col,uAccent,glow*0.045);
+    // accent glow derived from the same field
+    float glow=smoothstep(0.55,1.0,n);
+    col=mix(col,uAccent,glow*0.11);
 
     gl_FragColor=vec4(col,1.0);
   }
@@ -100,9 +100,26 @@ declare global {
   }
 }
 
-function Plane() {
+interface Colors {
+  paper: string;
+  shade: string;
+  accent: string;
+}
+
+function Plane({ colors, onReady }: { colors: Colors; onReady?: () => void }) {
   const matRef = useRef<THREE.ShaderMaterial>(null);
-  const { viewport } = useThree();
+  const { viewport, invalidate } = useThree();
+  const rendered = useRef(false);
+
+  // Update palette uniforms whenever the theme changes.
+  useEffect(() => {
+    const m = matRef.current;
+    if (!m) return;
+    m.uniforms.uPaper.value.set(colors.paper);
+    m.uniforms.uShade.value.set(colors.shade);
+    m.uniforms.uAccent.value.set(colors.accent);
+    invalidate();
+  }, [colors, invalidate]);
 
   // Runs once per rendered frame (driven on-demand at ~30fps by Heartbeat).
   useFrame((_, delta) => {
@@ -110,6 +127,11 @@ function Plane() {
     if (!m) return;
     m.uniforms.uTime.value += delta;
     m.uniforms.uAspect.value = viewport.width / viewport.height;
+    // Signal once the first frame has drawn so the parent can fade the canvas in.
+    if (!rendered.current) {
+      rendered.current = true;
+      onReady?.();
+    }
   });
 
   return (
@@ -118,6 +140,12 @@ function Plane() {
       <backdropMaterial ref={matRef} />
     </mesh>
   );
+}
+
+interface SceneProps {
+  dpr?: number;
+  colors: Colors;
+  onReady?: () => void;
 }
 
 /**
@@ -142,7 +170,11 @@ function Heartbeat() {
   return null;
 }
 
-export default function BackdropScene({ dpr = 0.6 }: { dpr?: number }) {
+export default function BackdropScene({
+  dpr = 0.6,
+  colors,
+  onReady,
+}: SceneProps) {
   return (
     <Canvas
       frameloop="demand"
@@ -159,7 +191,7 @@ export default function BackdropScene({ dpr = 0.6 }: { dpr?: number }) {
       camera={{ position: [0, 0, 5], fov: 50 }}
     >
       <Heartbeat />
-      <Plane />
+      <Plane colors={colors} onReady={onReady} />
     </Canvas>
   );
 }

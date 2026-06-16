@@ -3,17 +3,50 @@
 @tailwind utilities;
 
 @layer base {
+  /* Editorial / Swiss light palette (RGB triplets for Tailwind alpha support) */
+  :root {
+    --paper: 246 246 244;
+    --paper-dim: 236 236 232;
+    --ink: 24 24 22;
+    --ink-soft: 86 86 82;
+    --ink-mute: 142 142 138;
+    --line: 220 220 214;
+    --accent: 31 68 255;
+    color-scheme: light;
+  }
+
+  /* Editorial dark — clean neutral near-black, soft white text, cobalt accent */
+  .dark {
+    --paper: 15 15 18;
+    --paper-dim: 28 28 33;
+    --ink: 236 236 239;
+    --ink-soft: 161 162 168;
+    --ink-mute: 108 109 116;
+    --line: 46 46 53;
+    --accent: 110 131 255;
+    color-scheme: dark;
+  }
+
   html {
-    /* Lenis drives scroll — disable native smooth scrolling. */
-    scroll-behavior: auto;
+    scroll-behavior: auto; /* Lenis drives scroll */
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
+  /* Base colour lives on <html> so the fixed -z background layers (gradient +
+     dot grid) paint above it. Body stays transparent. */
+  html {
+    background-color: rgb(var(--paper));
+  }
   html,
   body {
     height: auto;
-    background-color: #f4f2ed;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    body {
+      transition: background-color 0.4s ease;
+    }
   }
 
   .lenis.lenis-smooth {
@@ -24,30 +57,26 @@
   }
 
   ::selection {
-    background: #1f44ff;
-    color: #f4f2ed;
+    background: rgb(var(--accent));
+    color: rgb(var(--paper));
   }
 }
 
 @layer components {
-  /* Page gutter — consistent editorial margins. Scales up on large screens
-     so wide displays use the available width instead of a narrow centered column. */
+  /* Page gutter — scales up on large screens to use available width */
   .gutter {
     @apply mx-auto w-full px-6 sm:px-10 lg:px-16 2xl:px-24;
     max-width: min(100%, 2400px);
   }
 
-  /* Mono eyebrow label, e.g. "(01) — ABOUT" */
   .eyebrow {
     @apply font-mono text-[0.7rem] uppercase tracking-[0.28em] text-ink-mute;
   }
 
-  /* Section heading scale */
   .h-section {
     @apply font-sans text-[clamp(2rem,5vw,3.75rem)] font-medium leading-[0.98] tracking-[-0.02em] text-ink;
   }
 
-  /* Animated inline link */
   .link-line {
     @apply relative inline-block w-fit text-ink transition-colors duration-300 hover:text-accent;
   }
@@ -67,13 +96,21 @@
   .text-pretty {
     text-wrap: pretty;
   }
-  /* Hairline grid line */
   .rule {
     @apply border-t border-line;
   }
+  /* Fine editorial dot grid — adapts to theme via --ink */
+  .bg-dots {
+    background-image: radial-gradient(
+      rgb(var(--ink) / 0.14) 1.2px,
+      transparent 1.4px
+    );
+    background-size: 22px 22px;
+    background-position: center;
+  }
 }
 
-/* Detail-page article typography (carried from v3) */
+/* Detail-page article typography */
 article h1 {
   font-size: 1.75em !important;
 }

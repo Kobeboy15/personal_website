@@ -2,7 +2,13 @@ import { Outfit, JetBrains_Mono } from 'next/font/google';
 import "./globals.css";
 import React from "react";
 import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 import AmbientBackdrop from "@/three/AmbientBackdrop";
+import BackgroundPattern from "@/components/BackgroundPattern";
+
+// Runs before first paint: applies the saved theme (defaults to dark) AND sets
+// the background-color inline so there's no flash before the stylesheet loads.
+const noFlashTheme = `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':true;var r=document.documentElement;r.classList.toggle('dark',d);r.style.backgroundColor=d?'#0F0F12':'#F6F6F4';r.style.colorScheme=d?'dark':'light';}catch(e){var r=document.documentElement;r.classList.add('dark');r.style.backgroundColor='#0F0F12';}})();`;
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -61,13 +67,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${outfit.variable} ${jetbrainsMono.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: noFlashTheme }} />
+      </head>
       <body
         id="main-page"
-        className={`${outfit.className} min-h-screen bg-paper text-ink font-light antialiased`}
+        className={`${outfit.className} min-h-screen text-ink font-light antialiased`}
       >
-        <AmbientBackdrop />
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <ThemeProvider>
+          <AmbientBackdrop />
+          <BackgroundPattern />
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

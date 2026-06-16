@@ -47,7 +47,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       </Reveal>
 
       <Reveal>
-        <div className="prose prose-neutral mt-14 max-w-none prose-headings:font-sans prose-headings:font-medium prose-headings:tracking-tight prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-strong:text-ink">
+        <div className="prose prose-neutral mt-14 max-w-none dark:prose-invert prose-headings:font-sans prose-headings:font-medium prose-headings:tracking-tight prose-p:text-ink-soft prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-strong:text-ink prose-li:text-ink-soft">
           <Markdown>{content}</Markdown>
         </div>
       </Reveal>

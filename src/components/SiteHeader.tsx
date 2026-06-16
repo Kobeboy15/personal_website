@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const LINKS = [
   { label: "About", href: "#about" },
@@ -44,19 +45,22 @@ export default function SiteHeader() {
         >
           Kobe Michael
         </a>
-        <ul className="flex items-center gap-6 sm:gap-8">
-          {LINKS.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                onClick={(e) => onNav(e, l.href)}
-                className="link-line font-mono text-xs uppercase tracking-[0.2em] text-ink-soft"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-6 sm:gap-8">
+          <ul className="hidden items-center gap-6 sm:flex sm:gap-8">
+            {LINKS.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  onClick={(e) => onNav(e, l.href)}
+                  className="link-line font-mono text-xs uppercase tracking-[0.2em] text-ink-soft"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
       </nav>
     </header>
   );

@@ -1,6 +1,9 @@
 import type { Config } from "tailwindcss";
 
+const withAlpha = (v: string) => `rgb(var(${v}) / <alpha-value>)`;
+
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,14 +15,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Editorial / Swiss light palette
-        paper: "#F4F2ED", // warm off-white background
-        "paper-dim": "#EAE7DF", // raised surfaces / hairline fills
-        ink: "#17160F", // near-black primary text
-        "ink-soft": "#54514A", // secondary text
-        "ink-mute": "#908C82", // meta / captions
-        line: "#D8D4CA", // hairline borders
-        accent: "#1F44FF", // single confident accent (electric cobalt)
+        paper: withAlpha("--paper"),
+        "paper-dim": withAlpha("--paper-dim"),
+        ink: withAlpha("--ink"),
+        "ink-soft": withAlpha("--ink-soft"),
+        "ink-mute": withAlpha("--ink-mute"),
+        line: withAlpha("--line"),
+        accent: withAlpha("--accent"),
       },
       fontFamily: {
         sans: ["var(--font-outfit)", "system-ui", "sans-serif"],

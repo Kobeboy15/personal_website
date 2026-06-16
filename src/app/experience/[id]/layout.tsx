@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function ExperienceLayout({
   children,
@@ -15,9 +16,12 @@ export default function ExperienceLayout({
           >
             ← Back
           </Link>
-          <span className="font-mono text-sm font-medium tracking-tight text-ink">
-            Kobe Michael
-          </span>
+          <div className="flex items-center gap-6">
+            <span className="font-mono text-sm font-medium tracking-tight text-ink">
+              Kobe Michael
+            </span>
+            <ThemeToggle />
+          </div>
         </nav>
       </header>
 
