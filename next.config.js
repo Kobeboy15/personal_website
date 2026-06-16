@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Allows running a throwaway build/dev (e.g. for verification) in a separate
+  // directory so it never clobbers the main `.next` of a running dev server.
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   images: {
     remotePatterns: [
       {
