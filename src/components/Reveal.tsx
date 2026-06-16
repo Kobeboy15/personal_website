@@ -1,52 +1,60 @@
 "use client";
 
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { gsap, useGSAP } from "@/lib/gsap";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
-interface Props {
-  children: JSX.Element;
-  width?: "fit-content" | "100%";
+interface RevealProps {
+  children: React.ReactNode;
+  className?: string;
+  /** Stagger children (direct elements) instead of revealing as one block. */
+  stagger?: boolean;
   delay?: number;
-  className?: String;
-  child_className?: string;
+  y?: number;
+  as?: keyof JSX.IntrinsicElements;
 }
 
-export const Reveal = ({
+/**
+ * Editorial scroll reveal: fades + lifts content as it enters the viewport.
+ * Uses GSAP ScrollTrigger; auto-reverts on unmount via useGSAP.
+ */
+export function Reveal({
   children,
-  width = "fit-content",
-  delay = 0,
   className = "",
-  child_className = "",
-}: Props) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  stagger = false,
+  delay = 0,
+  y = 18,
+  as = "div",
+}: RevealProps) {
+  const ref = useRef<HTMLElement>(null);
+  const reduced = useReducedMotion();
 
-  const mainControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView, mainControls]);
-
-  return (
-    <div
-      ref={ref}
-      style={{ width }}
-      className={`relative ${!isInView ? "overflow-hidden" : ""} ${className}`}
-    >
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 5 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        className={child_className}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: delay }}
-      >
-        {children}
-      </motion.div>
-    </div>
+  useGSAP(
+    () => {
+      const el = ref.current;
+      if (!el || reduced) return; // reduced-motion: render content as-is
+      const targets = stagger ? Array.from(el.children) : el;
+      gsap.from(targets, {
+        opacity: 0,
+        y,
+        duration: 0.9,
+        delay,
+        ease: "power3.out",
+        stagger: stagger ? 0.08 : 0,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          once: true,
+        },
+      });
+    },
+    { scope: ref, dependencies: [reduced] },
   );
-};
+
+  const Tag = as as React.ElementType;
+  return (
+    <Tag ref={ref} className={className}>
+      {children}
+    </Tag>
+  );
+}

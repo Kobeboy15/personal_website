@@ -1,29 +1,27 @@
-import FooterSection from "@/components/FooterSection";
-import { Reveal } from "@/components/Reveal";
 import Link from "next/link";
 
-export default function Experience({
+export default function ExperienceLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col justify-between h-screen">
-      <main className="lg:px-24 px-8 max-w-screen-lg w-full mx-auto relative">
-        <div className="blur" />
-        <div className="py-20">
-          <span className="lg:absolute static sta top-0 -left-10 h-full flex items-start">
-            <div className="lg:py-20 pb-12 sticky top-0">
-            <Link href="/" className="font-light flex items-center gap-1">
-              <i style={{ fontSize: '16px' }} className="material-symbols-outlined">arrow_back</i>
-              <p className="">Home</p>
-            </Link>
-            </div>
+    <div className="flex min-h-svh flex-col">
+      <header className="fixed inset-x-0 top-0 z-40 bg-paper/80 backdrop-blur-md">
+        <nav className="gutter flex items-center justify-between py-5">
+          <Link
+            href="/"
+            className="link-line flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-ink-soft"
+          >
+            ← Back
+          </Link>
+          <span className="font-mono text-sm font-medium tracking-tight text-ink">
+            Kobe Michael
           </span>
-          {children}
-        </div>
-      </main>
-      <FooterSection />
+        </nav>
+      </header>
+
+      <main className="gutter flex-1 pb-24 pt-32 lg:pt-40">{children}</main>
     </div>
   );
 }

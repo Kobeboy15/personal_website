@@ -1,77 +1,67 @@
-import { Reveal } from "@/components/Reveal";
-import { promises as fs } from "fs";
+import Link from "next/link";
 import Markdown from "markdown-to-jsx";
-import path from "path";
+import { Reveal } from "@/components/Reveal";
+import { getPositionById, getExperienceMarkdown } from "@/lib/data";
 
 export default async function Page({ params }: { params: { id: string } }) {
-  const positionsDataPath = path.join(
-    process.cwd(),
-    "public",
-    "positionsData.json"
-  );
-  const experiences = await fs.readFile(positionsDataPath, "utf8");
+  const position = await getPositionById(params.id);
 
-  const dataExp = JSON.parse(experiences);
-  const selectedExperience = dataExp.positions.find(
-    (position: { id: string }) => position.id === params.id,
-  );
-
-  if (!selectedExperience) {
+  if (!position) {
     return (
-      <div>
-        <h1 className="flex sm:flex-row flex-col-reverse gap-5 items-start sm:items-center font-normal dark:text-white text-lg">{params.id} ???</h1>
-        <br />
-        <p>No matching experience found. 🤷‍♂️</p>
-
+      <div className="mx-auto max-w-3xl">
+        <p className="eyebrow mb-4">404</p>
+        <h1 className="h-section mb-6">{params.id}?</h1>
+        <p className="text-ink-soft">
+          No matching experience found.{" "}
+          <Link href="/" className="link-line">
+            Return home
+          </Link>
+          .
+        </p>
       </div>
     );
   }
 
-  const markdownFilePath = path.join(
-    process.cwd(),
-    "public/experiences",
-    `${selectedExperience.markdown}.md`,
-  );
-  const sheepcrmContent = await fs.readFile(markdownFilePath, "utf8");
+  const content = await getExperienceMarkdown(position.markdown);
+  const current = position.date.includes("Present");
 
   return (
-    <div>
-      <Reveal delay={0.1} width="100%">
-        <div className="flex justify-between">
-          <div>
-            <h1 className="flex sm:flex-row flex-col-reverse gap-5 items-start sm:items-center font-normal dark:text-white text-lg">
-              {selectedExperience.company}
-              {selectedExperience.date.includes("Present") && (
-                <div className="flex items-center gap-1">
-                  <i
-                    title="Current Position"
-                    className="material-symbols-outlined opacity-50 hover:opacity-100 cursor-none duration-1000"
-                    style={{ fontSize: '16px' }}
-                  >
-                    work
-                  </i>
-                  <p className="opacity-50 text-sm">Current Position</p>
-                </div>
-              )}
-            </h1>
-            <p className="font-light">
-              {selectedExperience.name}, &nbsp;
-              <span className="opacity-60">{selectedExperience.type}</span>
-            </p>
-          </div>
+    <article className="mx-auto max-w-3xl">
+      <Reveal>
+        <div className="rule flex flex-wrap items-center gap-x-4 gap-y-1 pt-4">
+          <span className="eyebrow">{position.type}</span>
+          <span className="eyebrow text-ink-mute">{position.date}</span>
+          {current && (
+            <span className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.28em] text-accent">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Current
+            </span>
+          )}
         </div>
       </Reveal>
-      <br />
-      <Reveal delay={0.2}>
-        <p className="text-sm tracking-wider font-light">
-          {selectedExperience.date}
-        </p>
+
+      <Reveal>
+        <h1 className="mt-8 font-sans text-[clamp(2.5rem,8vw,5rem)] font-medium leading-[0.9] tracking-[-0.03em] text-ink">
+          {position.company}
+        </h1>
+        <p className="mt-4 text-xl text-ink-soft">{position.name}</p>
       </Reveal>
-      <Reveal delay={0.3} width="100%">
-        <article className="min-w-full prose dark:prose-invert pt-6 font-light">
-          <Markdown>{sheepcrmContent}</Markdown>
-        </article>
+
+      <Reveal>
+        <div className="prose prose-neutral mt-14 max-w-none prose-headings:font-sans prose-headings:font-medium prose-headings:tracking-tight prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-strong:text-ink">
+          <Markdown>{content}</Markdown>
+        </div>
       </Reveal>
-    </div>
+
+      <Reveal>
+        <div className="rule mt-20 pt-6">
+          <Link
+            href="/#work"
+            className="link-line font-mono text-xs uppercase tracking-[0.2em] text-ink-soft"
+          >
+            ← All experience
+          </Link>
+        </div>
+      </Reveal>
+    </article>
   );
 }

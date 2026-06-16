@@ -2,32 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-.blur {
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    pointer-events: none;
-    height: min(96px, 100px);
-    position: sticky;
-    width: calc(100% + 20px + 20px);
-    margin-left: -20px;
-    height: 96px;
-    z-index: 1;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    opacity: 0.95;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0));
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0));
+@layer base {
+  html {
+    /* Lenis drives scroll — disable native smooth scrolling. */
+    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  html,
+  body {
+    height: auto;
+    background-color: #f4f2ed;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  ::selection {
+    background: #1f44ff;
+    color: #f4f2ed;
+  }
 }
 
-.blur:first-child {
-    margin-bottom: -96px;
-    top: 0;
+@layer components {
+  /* Page gutter — consistent editorial margins. Scales up on large screens
+     so wide displays use the available width instead of a narrow centered column. */
+  .gutter {
+    @apply mx-auto w-full px-6 sm:px-10 lg:px-16 2xl:px-24;
+    max-width: min(100%, 2400px);
+  }
+
+  /* Mono eyebrow label, e.g. "(01) — ABOUT" */
+  .eyebrow {
+    @apply font-mono text-[0.7rem] uppercase tracking-[0.28em] text-ink-mute;
+  }
+
+  /* Section heading scale */
+  .h-section {
+    @apply font-sans text-[clamp(2rem,5vw,3.75rem)] font-medium leading-[0.98] tracking-[-0.02em] text-ink;
+  }
+
+  /* Animated inline link */
+  .link-line {
+    @apply relative inline-block w-fit text-ink transition-colors duration-300 hover:text-accent;
+  }
+  .link-line::after {
+    content: "";
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-accent transition-transform duration-300 ease-out;
+  }
+  .link-line:hover::after {
+    @apply origin-left scale-x-100;
+  }
 }
 
-article {
-    h1 {
-        font-size: 1.75em !important;
-    }
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  /* Hairline grid line */
+  .rule {
+    @apply border-t border-line;
+  }
+}
+
+/* Detail-page article typography (carried from v3) */
+article h1 {
+  font-size: 1.75em !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

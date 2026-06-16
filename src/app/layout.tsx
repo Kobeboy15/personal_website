@@ -1,10 +1,21 @@
-import { Outfit } from 'next/font/google';
+import { Outfit, JetBrains_Mono } from 'next/font/google';
 import "./globals.css";
 import React from "react";
+import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
+import AmbientBackdrop from "@/three/AmbientBackdrop";
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 const MetaInfo = {
@@ -17,6 +28,7 @@ const SEOImage =
   "https://private-user-images.githubusercontent.com/23691843/330052076-3eb8325d-f9fd-48b0-968c-cc8abe2a55f1.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTU2MDMwNDQsIm5iZiI6MTcxNTYwMjc0NCwicGF0aCI6Ii8yMzY5MTg0My8zMzAwNTIwNzYtM2ViODMyNWQtZjlmZC00OGIwLTk2OGMtY2M4YWJlMmE1NWYxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTEzVDEyMTkwNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTkwMTI4MTVmZDZjYmRlMDJjZjc5ZjIzZjk4Yzc4MWZmMDA5ODUwZjhlYWNiZWYwOTZkMmYwZDk2MTNjYzg0NzkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.OKUFtlNp7xXCwrbajy_lAxzKlT-AdpLu7sCMR7B5Ews";
 
 export const metadata = {
+  metadataBase: new URL("https://www.kobemichael.works"),
   title: MetaInfo.title,
   description: MetaInfo.description,
   openGraph: {
@@ -49,15 +61,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-      </head>
+    <html lang="en" className={`${outfit.variable} ${jetbrainsMono.variable}`}>
       <body
         id="main-page"
-        className={`${outfit.className} min-h-screen bg-slate-100 dark:bg-zinc-900 text-gray-900 dark:text-zinc-300 font-extralight tracking-[0.3px]`}
+        className={`${outfit.className} min-h-screen bg-paper text-ink font-light antialiased`}
       >
-        <React.Fragment>{children}</React.Fragment>
+        <AmbientBackdrop />
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );

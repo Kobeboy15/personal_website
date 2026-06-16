@@ -1,14 +1,27 @@
-import FooterSection from "@/components/FooterSection";
-import IntroSection from "@/components/IntroSection";
+import SiteHeader from "@/components/SiteHeader";
+import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
+import ContactSection from "@/components/sections/ContactSection";
+import { getPositions, getProjects } from "@/lib/data";
 
-export default function Home() {
+export default async function Home() {
+  const [positions, projects] = await Promise.all([
+    getPositions(),
+    getProjects(),
+  ]);
+
   return (
-    <div className="flex flex-col justify-between h-screen">
-      <main className="lg:px-24 px-8 max-w-screen-lg mx-auto">
-        <div className="blur" />
-        <IntroSection />
+    <>
+      <SiteHeader />
+      <main className="relative">
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection positions={positions} />
+        <ProjectsSection projects={projects} />
+        <ContactSection />
       </main>
-      <FooterSection />
-    </div>
+    </>
   );
 }
