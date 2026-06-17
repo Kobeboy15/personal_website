@@ -1,5 +1,6 @@
 import SectionLabel from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
+import ArrowUpRight from "@/components/ArrowUpRight";
 import MobileVersionArchive from "@/components/MobileVersionArchive";
 
 const SOCIALS = [
@@ -45,12 +46,7 @@ export default function ContactSection() {
                   {s.value}
                 </span>
               </span>
-              <span
-                aria-hidden
-                className="text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
-              >
-                ↗
-              </span>
+              <ArrowUpRight className="text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
             </a>
           ))}
         </div>

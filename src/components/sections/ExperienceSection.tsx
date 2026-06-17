@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SectionLabel from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
+import ArrowUpRight from "@/components/ArrowUpRight";
 import type { Position } from "@/lib/data";
 
 export default function ExperienceSection({
@@ -48,12 +49,7 @@ export default function ExperienceSection({
                     <span className="font-mono text-xs text-ink-mute">
                       {p.date}
                     </span>
-                    <span
-                      aria-hidden
-                      className="text-ink-mute transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent"
-                    >
-                      ↗
-                    </span>
+                    <ArrowUpRight className="text-ink-mute transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent" />
                   </div>
                 </div>
               </Link>

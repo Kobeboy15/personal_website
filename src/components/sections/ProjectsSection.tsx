@@ -1,5 +1,6 @@
 import SectionLabel from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
+import ArrowUpRight from "@/components/ArrowUpRight";
 import type { Project } from "@/lib/data";
 
 export default function ProjectsSection({
@@ -28,12 +29,7 @@ export default function ProjectsSection({
                 <span className="font-mono text-xs text-ink-mute">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span
-                  aria-hidden
-                  className="text-ink-mute transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
-                >
-                  ↗
-                </span>
+                <ArrowUpRight className="text-ink-mute transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent" />
               </div>
               <div>
                 <h3 className="text-2xl font-medium tracking-tight text-ink lg:text-3xl">
@@ -58,7 +54,7 @@ export default function ProjectsSection({
             href="#contact"
             className="link-line shrink-0 font-mono text-sm uppercase tracking-widest text-ink"
           >
-            Get in touch ↗
+            Get in touch <ArrowUpRight />
           </a>
         </div>
       </Reveal>

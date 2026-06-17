@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { SITE_VERSIONS } from "@/lib/versions";
+import ArrowUpRight from "@/components/ArrowUpRight";
 
 type LenisLike = { stop?: () => void; start?: () => void };
 
@@ -84,9 +85,7 @@ export default function MobileVersionArchive() {
                     <span className="font-mono text-sm uppercase tracking-[0.2em]">
                       {v.label}
                     </span>
-                    <span aria-hidden className="text-ink-mute">
-                      ↗
-                    </span>
+                    <ArrowUpRight className="text-ink-mute" />
                   </a>
                 </li>
               ))}

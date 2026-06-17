@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SITE_VERSIONS } from "@/lib/versions";
+import ArrowUpRight from "@/components/ArrowUpRight";
 
 /**
  * A quiet corner marker showing the current version (desktop only). Hover or
@@ -33,12 +34,7 @@ export default function VersionSwitcher() {
               className="group/link flex items-center gap-2 font-mono text-sm uppercase tracking-[0.2em] text-ink-soft transition-colors hover:text-accent"
             >
               {v.label}
-              <span
-                aria-hidden
-                className="text-ink-mute transition-all duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 group-hover/link:text-accent"
-              >
-                ↗
-              </span>
+              <ArrowUpRight className="text-ink-mute transition-all duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 group-hover/link:text-accent" />
             </a>
           </li>
         ))}
