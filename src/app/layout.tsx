@@ -1,4 +1,5 @@
 import { Outfit, JetBrains_Mono } from 'next/font/google';
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import React from "react";
 import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
@@ -26,41 +27,101 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_URL = "https://kobemichael.dev";
+
 const MetaInfo = {
-  title: "Kobe Michael",
+  title: "Kobe Michael — Software Engineer & Designer",
   description:
-    "A Web Developer and Designer of building sleek, user-friendly websites. I love blending creativity and tech to craft web experiences that look great and work even better.",
+    "Kobe Michael is a software engineer and designer based in Vancouver, BC, building user-focused web experiences that balance sound engineering with thoughtful, accessible design.",
 };
 
-const SEOImage =
-  "https://private-user-images.githubusercontent.com/23691843/330052076-3eb8325d-f9fd-48b0-968c-cc8abe2a55f1.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTU2MDMwNDQsIm5iZiI6MTcxNTYwMjc0NCwicGF0aCI6Ii8yMzY5MTg0My8zMzAwNTIwNzYtM2ViODMyNWQtZjlmZC00OGIwLTk2OGMtY2M4YWJlMmE1NWYxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTEzVDEyMTkwNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTkwMTI4MTVmZDZjYmRlMDJjZjc5ZjIzZjk4Yzc4MWZmMDA5ODUwZjhlYWNiZWYwOTZkMmYwZDk2MTNjYzg0NzkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.OKUFtlNp7xXCwrbajy_lAxzKlT-AdpLu7sCMR7B5Ews";
-
-export const metadata = {
-  metadataBase: new URL("https://www.kobemichael.works"),
-  title: MetaInfo.title,
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: MetaInfo.title,
+    template: "%s — Kobe Michael",
+  },
   description: MetaInfo.description,
+  applicationName: "Kobe Michael",
+  authors: [{ name: "Kobe Michael", url: SITE_URL }],
+  creator: "Kobe Michael",
+  publisher: "Kobe Michael",
+  keywords: [
+    "Kobe Michael",
+    "software engineer",
+    "frontend developer",
+    "web developer",
+    "UI/UX designer",
+    "design systems",
+    "Vancouver",
+    "portfolio",
+    "React",
+    "Next.js",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     title: MetaInfo.title,
     description: MetaInfo.description,
-    url: "https://www.kobemichael.works/",
+    url: SITE_URL,
     siteName: "Kobe Michael",
-    images: [
-      {
-        url: SEOImage,
-        width: 751,
-        height: 500,
-        alt: "Picture of a cool developer",
-      },
-      {
-        url: SEOImage,
-        width: 1261,
-        height: 840,
-        alt: "Picture of a REALLY cool web developer",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: MetaInfo.title,
+    description: MetaInfo.description,
+  },
+};
+
+export const viewport: Viewport = {
+  colorScheme: "dark light",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0F0F12" },
+    { media: "(prefers-color-scheme: light)", color: "#F6F6F4" },
+  ],
+};
+
+// Person structured data — helps search engines understand who the site is
+// about and powers richer knowledge-panel / rich results.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Kobe Michael",
+  url: SITE_URL,
+  jobTitle: "Software Engineer & Designer",
+  description: MetaInfo.description,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Vancouver",
+    addressRegion: "BC",
+    addressCountry: "CA",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: "Yield Guild Games",
+    url: "https://www.yieldguild.games/",
+  },
+  knowsAbout: [
+    "Frontend Engineering",
+    "System Design",
+    "UI / UX Design",
+    "Design Systems",
+    "Accessibility",
+  ],
 };
 
 export default function RootLayout({
@@ -76,6 +137,10 @@ export default function RootLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: noFlashTheme }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </head>
       <body
         id="main-page"

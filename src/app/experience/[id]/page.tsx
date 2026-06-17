@@ -1,7 +1,42 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
 import { Reveal } from "@/components/Reveal";
 import { getPositionById, getExperienceMarkdown } from "@/lib/data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
+  const position = await getPositionById(params.id);
+
+  if (!position) {
+    return {
+      title: "Experience not found",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const title = `${position.name} · ${position.company}`;
+
+  return {
+    title,
+    description: position.short_description,
+    alternates: { canonical: `/experience/${position.id}` },
+    openGraph: {
+      title: `${title} — Kobe Michael`,
+      description: position.short_description,
+      url: `/experience/${position.id}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} — Kobe Michael`,
+      description: position.short_description,
+    },
+  };
+}
 
 export default async function Page({ params }: { params: { id: string } }) {
   const position = await getPositionById(params.id);

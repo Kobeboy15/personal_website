@@ -19,10 +19,10 @@ export default function AboutSection() {
       <div className="mt-12 grid grid-cols-12 gap-8 lg:gap-12">
         <div className="col-span-12 lg:col-span-8">
           <Reveal stagger>
-            <p className="h-section text-balance">
+            <h2 className="h-section text-balance">
               A passionate web developer and designer crafting interfaces where
               usability and craft meet.
-            </p>
+            </h2>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-soft">
               I&apos;m currently a frontend engineer at{" "}
               <a
