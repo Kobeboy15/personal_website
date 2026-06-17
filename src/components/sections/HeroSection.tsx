@@ -103,10 +103,11 @@ export default function HeroSection() {
       {/* bottom row: role + intro */}
       <div className="grid grid-cols-12 items-end gap-6">
         <div data-reveal-fade className="col-span-12 sm:col-span-5">
-          <p className="eyebrow mb-3">Software Engineer · Designer</p>
+          <p className="eyebrow mb-3">Software Engineer · Designer · AI-Native</p>
           <p className="max-w-sm text-pretty text-base leading-relaxed text-ink-soft">
             I build user-focused web experiences — balancing the functional and
-            the artistic, with a care for detail, usability, and craft.
+            the artistic, with a care for detail, usability, and craft. I think
+            AI-first, pairing with it to design and ship fast.
           </p>
         </div>
         <div
