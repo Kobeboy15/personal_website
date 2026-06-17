@@ -27,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://kobemichael.dev";
+const SITE_URL = "https://www.kobemichael.dev";
 
 const MetaInfo = {
   title: "Kobe Michael — Software Engineer & Designer",
