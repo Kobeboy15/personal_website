@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Kobe Michael — Résumé</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root{
+    --paper:#f6f6f4;
+    --paper-dim:#ecece8;
+    --ink:#181816;
+    --ink-soft:#4a4a46;
+    --ink-mute:#70706b;
+    --line:#cfcfc6;
+    --line-strong:#a2a299;
+    --accent:#1f44ff;
+  }
+
+  @page{ size: Letter; margin: 0; }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{ background:var(--paper); }
+
+  body{
+    font-family:'Outfit', system-ui, sans-serif;
+    color:var(--ink);
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  .page{
+    width:8.5in;
+    margin:0 auto;
+    padding:0.3in 0.62in 0.12in;
+    background:var(--paper);
+  }
+
+  /* ---------- header ---------- */
+  header{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; }
+
+  .name{
+    font-size:33pt;
+    font-weight:600;
+    letter-spacing:-0.03em;
+    line-height:0.92;
+    color:var(--ink);
+  }
+  .name .dot{ color:var(--accent); }
+
+  .role{
+    margin-top:7px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:8pt;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:0.26em;
+    color:var(--ink-mute);
+  }
+
+  .contact{
+    text-align:right;
+    font-family:'JetBrains Mono', monospace;
+    font-size:7.6pt;
+    line-height:1.85;
+    color:var(--ink-soft);
+  }
+  .contact a{ color:var(--ink-soft); text-decoration:none; }
+  .contact .lbl{ color:var(--ink-mute); }
+
+  .rule{ border:0; border-top:1px solid var(--line-strong); margin:11px 0 0; }
+  .rule-soft{ border:0; border-top:1px solid var(--line); }
+
+  /* ---------- summary ---------- */
+  .summary{
+    margin-top:10px;
+    font-size:9.6pt;
+    line-height:1.4;
+    color:var(--ink-soft);
+    max-width:6.9in;
+    font-weight:300;
+  }
+  .summary strong{ color:var(--ink); font-weight:500; }
+
+  /* ---------- section ---------- */
+  section{ margin-top:7px; }
+
+  .sec-head{
+    display:flex; align-items:baseline; gap:10px;
+    margin-bottom:6px;
+  }
+  .sec-idx{
+    font-family:'JetBrains Mono', monospace;
+    font-size:7.5pt; font-weight:500;
+    color:var(--accent);
+  }
+  .sec-title{
+    font-family:'JetBrains Mono', monospace;
+    font-size:8pt; font-weight:500;
+    text-transform:uppercase; letter-spacing:0.26em;
+    color:var(--ink-mute);
+  }
+  .sec-line{ flex:1; height:1px; background:var(--line); align-self:center; }
+
+  /* ---------- experience ---------- */
+  .job{ margin-bottom:3px; }
+  .job-top{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; }
+  .job-title{ font-size:11pt; font-weight:600; letter-spacing:-0.01em; color:var(--ink); }
+  .job-title .co{ font-weight:500; color:var(--accent); }
+  .job-meta{
+    font-family:'JetBrains Mono', monospace;
+    font-size:7.4pt; color:var(--ink-mute);
+    white-space:nowrap;
+    text-transform:uppercase; letter-spacing:0.08em;
+  }
+  .job-sub{
+    font-family:'JetBrains Mono', monospace;
+    font-size:7.2pt; color:var(--ink-mute);
+    margin-top:2px; letter-spacing:0.04em;
+  }
+  ul.bul{ list-style:none; margin-top:4px; }
+  ul.bul li{
+    position:relative;
+    padding-left:13px;
+    font-size:9.2pt;
+    line-height:1.38;
+    color:var(--ink-soft);
+    margin-top:1px;
+  }
+  ul.bul li::before{
+    content:"";
+    position:absolute; left:0; top:0.5em;
+    width:3px; height:3px; border-radius:50%;
+    background:var(--accent);
+  }
+  ul.bul li strong{ color:var(--ink); font-weight:500; }
+
+  /* ---------- lower grid ---------- */
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+
+  .skill-group{ margin-bottom:5px; }
+  .skill-cat{
+    font-family:'JetBrains Mono', monospace;
+    font-size:6.9pt; text-transform:uppercase; letter-spacing:0.16em;
+    color:var(--ink-mute); margin-bottom:3px;
+  }
+  .skill-list{ font-size:9pt; line-height:1.45; color:var(--ink); font-weight:400; }
+
+  .edu-item, .proj-item{ margin-bottom:4px; }
+  .edu-item:last-child, .proj-item:last-child{ margin-bottom:0; }
+  .edu-title, .proj-title{ font-size:9.6pt; font-weight:600; color:var(--ink); letter-spacing:-0.01em; }
+  .proj-title .co{ color:var(--accent); }
+  .edu-sub{
+    font-family:'JetBrains Mono', monospace;
+    font-size:7.2pt; color:var(--ink-mute); margin-top:2px;
+    text-transform:uppercase; letter-spacing:0.06em;
+  }
+  .proj-desc{ font-size:8.8pt; line-height:1.4; color:var(--ink-soft); margin-top:2px; }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <div>
+        <div class="name">Kobe Michael<span class="dot">.</span></div>
+        <div class="role">Frontend Developer &nbsp;/&nbsp; Software Engineer</div>
+      </div>
+      <div class="contact">
+        <div><span class="lbl">↳</span> Vancouver, BC · Canada</div>
+        <div><a href="mailto:me@kobemichael.dev">me@kobemichael.dev</a> · +1 778 877 0605</div>
+        <div><a href="https://kobemichael.dev">kobemichael.dev</a> · <a href="https://github.com/Kobeboy15">github.com/Kobeboy15</a></div>
+        <div><a href="https://www.linkedin.com/in/kobe-michael/">linkedin.com/in/kobe-michael</a></div>
+      </div>
+    </header>
+
+    <hr class="rule" />
+
+    <p class="summary">
+      Senior frontend engineer with <strong>8+ years</strong> building fast, accessible products end to end —
+      currently a core contributor on <strong>Yield Guild Games'</strong> web3 gaming platform. I lean heavily on
+      <strong>AI-assisted workflows</strong> to design, build, and ship with greater speed, reliability, and
+      quality, pairing system-design thinking with modern <strong>React / Next.js / TypeScript</strong>.
+    </p>
+
+    <section>
+      <div class="sec-head">
+        <span class="sec-idx">01</span><span class="sec-title">Experience</span><span class="sec-line"></span>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-title">Frontend Developer · <span class="co">Yield Guild Games</span></div>
+          <div class="job-meta">Mar 2025 — Present</div>
+        </div>
+        <div class="job-sub">Contract, Full-time · Web3 gaming ecosystem (YGG Play)</div>
+        <ul class="bul">
+          <li>Shipped player-facing features and owned internal admin tooling end to end on <strong>YGG Play</strong> — a Next.js / TypeScript monorepo serving a global gaming community.</li>
+          <li>Architected and led a <strong>greenfield internal CMS</strong> from scratch (Next.js, shadcn/ui, typed Supabase + Zod, Clerk auth) across <strong>7 admin entities</strong>, retiring the team's legacy Retool stack.</li>
+          <li>Delivered the <strong>token system end to end</strong> — market-data integrations, live price charts, and transaction flows — plus quests, scheduled activities, and role-based groups.</li>
+          <li>Drove engineering quality with type-safe APIs (<strong>ts-rest</strong>, Prisma), CircleCI + Playwright CI/CD, and <strong>AI-assisted delivery</strong>; mentored a junior engineer who lifted backend test coverage from near-zero to <strong>~70%</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-title">Frontend Developer · <span class="co">SheepCRM</span></div>
+          <div class="job-meta">Feb 2024 — Aug 2024</div>
+        </div>
+        <div class="job-sub">Full-time · UK membership-management platform · via Cloud Employee</div>
+        <ul class="bul">
+          <li>Owned two flagship features for a CRM serving <strong>700+ organizations</strong>: a visual <strong>Calendar Events</strong> manager and a context-aware <strong>Help Launcher</strong> with Intercom and micro-service monitoring.</li>
+          <li>Championed frontend reliability to <strong>95%+ Jest coverage</strong>, cutting post-deployment defects and shipping rapid client-facing hotfixes.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-title">Senior Frontend Developer · <span class="co">SupaPass</span></div>
+          <div class="job-meta">Nov 2021 — Jul 2023</div>
+        </div>
+        <div class="job-sub">Full-time · Content monetization CMS &amp; website builder · via Cloud Employee</div>
+        <ul class="bul">
+          <li>Owned the CMS and Website Builder (<strong>React, TypeScript, Next.js, GraphQL</strong>) used by thousands of creators, partnering directly with the CEO to set product roadmap and UX direction.</li>
+          <li>Lifted UX metrics <strong>30%</strong> through a consulting-led UI revamp and cut release turnaround <strong>~3 days</strong> via a cleaner, scalable frontend architecture.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-title">Frontend Engineer · <span class="co">CODY Web Development</span></div>
+          <div class="job-meta">Sep 2020 — Oct 2021</div>
+        </div>
+        <div class="job-sub">Full-time · Products for Japanese-market clients</div>
+        <ul class="bul">
+          <li>Led the frontend of <strong>ARISE</strong>, an employee-monitoring platform with React + Chart.js dashboards — delivered two weeks early, lifting engagement <strong>25%</strong> and performance <strong>30%</strong>.</li>
+          <li>Built <strong>BizMake's</strong> real-time collaborative whiteboard (Vue.js, SASS) for distributed teams.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-title">UI/UX Designer &amp; Frontend Developer · <span class="co">BPOSeats</span></div>
+          <div class="job-meta">Apr 2019 — Aug 2020</div>
+        </div>
+        <div class="job-sub">Full-time · Seat-leasing &amp; BPO solutions</div>
+        <ul class="bul">
+          <li>Led UX/UI design and frontend delivery (<strong>Figma → Vue.js</strong> SPA), halving design-to-development turnaround <strong>50%</strong> — from two weeks to one.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <span class="sec-idx">02</span><span class="sec-title">Skills</span><span class="sec-line"></span>
+      </div>
+      <div class="grid">
+        <div>
+          <div class="skill-group">
+            <div class="skill-cat">Languages &amp; Frameworks</div>
+            <div class="skill-list">TypeScript · JavaScript · React · Next.js · Vue.js · Nuxt.js · Node.js</div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">UI &amp; Design</div>
+            <div class="skill-list">TailwindCSS · shadcn/ui · SASS · Figma · Design Systems · Accessibility</div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">AI-Assisted Development</div>
+            <div class="skill-list">AI pair-programming · agentic coding workflows · LLM-integrated tooling</div>
+          </div>
+        </div>
+        <div>
+          <div class="skill-group">
+            <div class="skill-cat">Data &amp; State</div>
+            <div class="skill-list">GraphQL · REST · ts-rest · Redux · React Context · Zod · Prisma · PostgreSQL · Supabase</div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">Tooling &amp; Quality</div>
+            <div class="skill-list">Git · CI/CD (CircleCI) · Vercel · Jest · Playwright · Storybook · Webpack · SEO</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid" style="margin-top:6px;">
+      <section style="margin-top:0;">
+        <div class="sec-head">
+          <span class="sec-idx">03</span><span class="sec-title">Education</span><span class="sec-line"></span>
+        </div>
+        <div class="edu-item">
+          <div class="edu-title">Internet &amp; Web Technology</div>
+          <div class="edu-sub">Langara College · Vancouver · 2024 — 2025</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-title">BSc, Computer Science</div>
+          <div class="edu-sub">University of San Carlos · 2015 — 2018</div>
+        </div>
+      </section>
+
+      <section style="margin-top:0;">
+        <div class="sec-head">
+          <span class="sec-idx">04</span><span class="sec-title">Selected Projects</span><span class="sec-line"></span>
+        </div>
+        <div class="proj-item">
+          <div class="proj-title">kobemichael.dev <span class="co">(v4)</span></div>
+          <div class="proj-desc">Editorial portfolio — Next.js, GSAP, Lenis, React Three Fiber.</div>
+        </div>
+        <div class="proj-item">
+          <div class="proj-title">Mini CMS</div>
+          <div class="proj-desc">Real-estate-focused CMS tool — React, TypeScript, TailwindCSS.</div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</body>
+</html>
