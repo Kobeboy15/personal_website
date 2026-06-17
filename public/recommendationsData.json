@@ -1,0 +1,48 @@
+{
+  "recommendations": [
+    {
+      "name": "Ve Sharma",
+      "title": "Senior Engineer",
+      "company": "Microsoft",
+      "relationship": "Direct manager",
+      "date": "Nov 2025",
+      "quote": [
+        "Kobe's greatest asset is his profound hunger for learning and growth and his kindness.",
+        "His curiosity is a driving force that has enabled him to level up his skills at an impressive pace. In the past year, he has immersed himself in frontend best practices, new frameworks, and the complexities of what it means to have \"great frontend\" in Web3, demonstrating a relentless drive for self-improvement that will undoubtedly continue to propel his career forward.",
+        "What truly sets Kobe apart is his deep and genuine empathy, both for his teammates and for the end-user. This quality makes him an exceptional collaborator. I was particularly impressed by his ability to navigate a disagreement on frontend standards, where he led with empathy to help the team find a resolution without creating division. This consideration for others extends directly to his craft — he possesses a keen eye for detail, design, and UX precisely because he is able to put himself in the user's shoes. This is the quality that elevates a good frontend developer to a great one.",
+        "Kobe is an enthusiastic and supportive team player, always willing to lend a hand and contribute to a collaborative environment. His positive, team-first attitude has a tangible impact on morale and makes everyone around him better.",
+        "Kobe would be an outstanding addition to any team, bringing a rare combination of technical curiosity, user-centric empathy, and a fantastic collaborative spirit. I recommend him without hesitation."
+      ]
+    },
+    {
+      "name": "Sven Michael Cooke",
+      "title": "Software Engineer",
+      "company": "Glider Technology",
+      "relationship": "Teammate",
+      "date": "Aug 2023",
+      "quote": [
+        "I had the pleasure of working alongside Kobe at SupaPass where he excelled as a web developer. Collaborating on numerous intricate challenges, his positivity and can-do attitude were extremely refreshing to work with. With exceptional development skills, a knack for design, and an agreeable demeanour, Kobe is an invaluable asset to any organization. A true team player and problem solver, any company to pick him up is lucky to have him!"
+      ]
+    },
+    {
+      "name": "M. G.",
+      "title": "Backend Engineer",
+      "company": "Toggl",
+      "relationship": "Teammate",
+      "date": "Jan 2020",
+      "quote": [
+        "Kobe communicates well with his peers and is welcoming for things he's not good at. This trait of his allows him to patch up his weaknesses, allowing him to grow in knowledge and as a person. He's knowledgeable in his craft and will see to it that his goals are achieved."
+      ]
+    },
+    {
+      "name": "John Vladimir Son",
+      "title": "Game Software Engineer",
+      "company": "Gamigo Group",
+      "relationship": "Teammate",
+      "date": "Oct 2019",
+      "quote": [
+        "Working with Kobe I have learned that hard-work will pay off more than I can ever expect. Kobe is one of the most creative and efficient people I've ever known. This man is a quick learner and is always hungry for knowledge to improve himself and his work every day. Most importantly, this man is as good a team leader as he is a team member."
+      ]
+    }
+  ]
+}
