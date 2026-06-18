@@ -87,16 +87,14 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
       </Reveal>
 
-      <Reveal>
-        <div className="rule mt-20 pt-6">
-          <Link
-            href="/#work"
-            className="link-line font-mono text-xs uppercase tracking-[0.2em] text-ink-soft"
-          >
-            ← All experience
-          </Link>
-        </div>
-      </Reveal>
+      <div className="rule mt-20 pt-6">
+        <Link
+          href="/#work"
+          className="link-line font-mono text-xs uppercase tracking-[0.2em] text-ink-soft"
+        >
+          ← All experience
+        </Link>
+      </div>
     </article>
   );
 }
