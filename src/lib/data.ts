@@ -28,6 +28,7 @@ export interface Post {
   excerpt: string;
   date: string;
   tags?: string[];
+  image?: string;
 }
 
 export interface Recommendation {

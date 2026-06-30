@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
 import { Reveal } from "@/components/Reveal";
@@ -32,11 +33,13 @@ export async function generateMetadata({
       description: post.excerpt,
       url: `/posts/${post.slug}`,
       type: "article",
+      ...(post.image && { images: [{ url: post.image }] }),
     },
     twitter: {
       card: "summary_large_image",
       title: `${post.title} — Kobe Michael`,
       description: post.excerpt,
+      ...(post.image && { images: [post.image] }),
     },
   };
 }
@@ -86,6 +89,20 @@ export default async function Page({ params }: { params: { slug: string } }) {
           <Markdown>{content}</Markdown>
         </div>
       </Reveal>
+
+      {post.image && (
+        <Reveal>
+          <div className="mt-12 overflow-hidden rounded-sm">
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={800}
+              height={500}
+              className="w-full object-cover"
+            />
+          </div>
+        </Reveal>
+      )}
 
       <div className="rule mt-20 pt-6">
         <Link
