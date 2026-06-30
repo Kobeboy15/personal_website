@@ -16,7 +16,7 @@ const SOCIALS = [
 export default function ContactSection() {
   return (
     <section id="contact" className="gutter py-24 lg:py-32">
-      <SectionLabel index="05" title="Contact" />
+      <SectionLabel index="06" title="Contact" />
 
       <div className="mt-12">
         <Reveal>
