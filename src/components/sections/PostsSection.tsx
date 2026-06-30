@@ -6,6 +6,7 @@ import type { Post } from "@/lib/data";
 
 export default function PostsSection({ posts }: { posts: Post[] }) {
   const [featured, ...rest] = posts;
+  const sidebar = rest.slice(0, 2);
 
   return (
     <section id="posts" className="gutter py-24 lg:py-32">
@@ -55,8 +56,8 @@ export default function PostsSection({ posts }: { posts: Post[] }) {
           </Reveal>
         )}
 
-        <div className="flex flex-col gap-px bg-line">
-          {rest.map((post) => (
+        <div className="flex h-full flex-col gap-px bg-line">
+          {sidebar.map((post) => (
             <Reveal key={post.slug}>
               <Link
                 href={`/posts/${post.slug}`}
@@ -81,19 +82,18 @@ export default function PostsSection({ posts }: { posts: Post[] }) {
               </Link>
             </Reveal>
           ))}
+          <Reveal className="flex-1">
+            <div className="flex h-full items-end bg-paper p-7 lg:p-10">
+              <Link
+                href="/posts"
+                className="link-line font-mono text-xs uppercase tracking-[0.2em] text-ink-soft"
+              >
+                All posts →
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </div>
-
-      <Reveal>
-        <div className="mt-8">
-          <Link
-            href="/posts"
-            className="link-line font-mono text-xs uppercase tracking-[0.2em] text-ink-soft"
-          >
-            All posts →
-          </Link>
-        </div>
-      </Reveal>
     </section>
   );
 }
