@@ -17,6 +17,14 @@
       "image": "/posts/images/ai-changing-engineering.jpg"
     },
     {
+      "slug": "finding-purpose",
+      "title": "Finding Purpose in the Small Wins",
+      "excerpt": "I overheard two patients in the waiting room: \"The waiting room is a lot nicer now, huh?\" It might seem like a small moment — but it was a reminder of why I do what I do.",
+      "date": "Jun 2025",
+      "tags": ["GrowthMindset", "UserExperience", "SmallWins"],
+      "image": "/posts/images/finding-purpose.jpg"
+    },
+    {
       "slug": "almost-scammed",
       "title": "Almost Got Scammed — And Didn't Even Know It",
       "excerpt": "I referred a recruiter to a workmate who was job hunting. The \"recruiter\" sent him code to run as part of a \"technical screening.\" His OS flagged it as a threat. He stopped just in time.",
