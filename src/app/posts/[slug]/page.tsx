@@ -66,7 +66,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const content = await getPostMarkdown(post.slug);
 
   return (
-    <article className="mx-auto max-w-2xl">
+    <article className="mx-auto max-w-4xl">
       <Reveal>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-4">
           <span className="eyebrow text-ink-mute">{post.date}</span>
@@ -79,20 +79,45 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </Reveal>
 
       <Reveal>
-        <h1 className="mt-8 font-sans text-[clamp(2rem,6vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.03em] text-ink">
+        <h1 className="mt-8 font-sans text-[clamp(2.5rem,7vw,5rem)] font-medium leading-[0.95] tracking-[-0.03em] text-ink">
           {post.title}
         </h1>
       </Reveal>
 
       <Reveal>
-        <div className="prose prose-neutral mt-14 max-w-none dark:prose-invert prose-p:text-ink-soft prose-p:leading-relaxed prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-strong:text-ink">
+        <div className="prose prose-lg prose-neutral mt-14 max-w-none dark:prose-invert prose-p:text-ink-soft prose-p:text-xl prose-p:leading-[1.7] prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-strong:text-ink">
           <Markdown>{content}</Markdown>
         </div>
       </Reveal>
 
-      {post.image && (
+      {post.images && post.images.length > 0 ? (
         <Reveal>
-          <div className="mt-12 overflow-hidden rounded-sm">
+          <div className="mt-16 grid grid-cols-2 gap-2">
+            <div className="col-span-2 overflow-hidden rounded-sm sm:col-span-1 sm:row-span-2">
+              <Image
+                src={post.images[0]}
+                alt={`${post.title} — photo 1`}
+                width={800}
+                height={800}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            {post.images.slice(1).map((src, i) => (
+              <div key={src} className="overflow-hidden rounded-sm">
+                <Image
+                  src={src}
+                  alt={`${post.title} — photo ${i + 2}`}
+                  width={600}
+                  height={400}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      ) : post.image ? (
+        <Reveal>
+          <div className="mt-16 overflow-hidden rounded-sm">
             <Image
               src={post.image}
               alt={post.title}
@@ -102,7 +127,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             />
           </div>
         </Reveal>
-      )}
+      ) : null}
 
       <div className="rule mt-20 pt-6">
         <Link

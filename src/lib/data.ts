@@ -29,6 +29,7 @@ export interface Post {
   date: string;
   tags?: string[];
   image?: string;
+  images?: string[];
 }
 
 export interface Recommendation {

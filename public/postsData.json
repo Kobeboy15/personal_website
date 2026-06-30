@@ -9,6 +9,19 @@
       "image": "/posts/images/ai-is-a-muscle.jpg"
     },
     {
+      "slug": "ygg-play-summit",
+      "title": "First time at the YGG Play Summit — and wow.",
+      "excerpt": "After nearly a year working remotely, finally meeting the team in person reminded me that behind every pull request and late-night deployment, there are passionate people building with purpose.",
+      "date": "Nov 2025",
+      "tags": ["YGG", "Web3", "Community"],
+      "image": "/posts/images/ygg-summit-1.jpg",
+      "images": [
+        "/posts/images/ygg-summit-1.jpg",
+        "/posts/images/ygg-summit-2.jpg",
+        "/posts/images/ygg-summit-3.jpg"
+      ]
+    },
+    {
       "slug": "ai-changing-engineering",
       "title": "AI isn't replacing engineers. It's changing what makes one valuable.",
       "excerpt": "Our value is becoming less about writing every line of code ourselves and more about understanding the bigger picture — making smart decisions, reviewing what AI produces, and knowing when to trust it.",
