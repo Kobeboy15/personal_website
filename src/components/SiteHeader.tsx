@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const LINKS = [
@@ -8,6 +9,7 @@ const LINKS = [
   { label: "Work", href: "#work" },
   { label: "Projects", href: "#projects" },
   { label: "Praise", href: "#recommendations" },
+  { label: "Writing", href: "#posts" },
   { label: "Contact", href: "#contact" },
 ];
 

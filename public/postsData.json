@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "slug": "ai-is-a-muscle",
+      "title": "AI is a muscle",
+      "excerpt": "Even though AI tools are everywhere now, I still catch myself approaching problems the old way. The biggest unlock isn't learning every feature — it's remembering to ask.",
+      "date": "Jun 30, 2026",
+      "tags": ["AI", "Productivity", "FutureOfWork"]
+    },
+    {
+      "slug": "ai-changing-engineering",
+      "title": "AI isn't replacing engineers. It's changing what makes one valuable.",
+      "excerpt": "Our value is becoming less about writing every line of code ourselves and more about understanding the bigger picture — making smart decisions, reviewing what AI produces, and knowing when to trust it.",
+      "date": "Jun 25, 2026",
+      "tags": ["AI", "SoftwareEngineering", "TechLeadership"]
+    }
+  ]
+}

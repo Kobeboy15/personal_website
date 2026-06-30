@@ -1,12 +1,13 @@
 import type { MetadataRoute } from "next";
-import { getPositions, getProjects } from "@/lib/data";
+import { getPositions, getProjects, getPosts } from "@/lib/data";
 
 const SITE_URL = "https://www.kobemichael.dev";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [positions, projects] = await Promise.all([
+  const [positions, projects, posts] = await Promise.all([
     getPositions(),
     getProjects(),
+    getPosts(),
   ]);
 
   const experiencePages: MetadataRoute.Sitemap = positions.map((position) => ({
@@ -21,13 +22,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  const postPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${SITE_URL}/posts/${post.slug}`,
+    changeFrequency: "yearly",
+    priority: 0.6,
+  }));
+
   return [
     {
       url: SITE_URL,
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: `${SITE_URL}/posts`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     ...projectPages,
     ...experiencePages,
+    ...postPages,
   ];
 }

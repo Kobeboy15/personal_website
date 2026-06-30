@@ -22,6 +22,14 @@ export interface Project {
   link?: string;
 }
 
+export interface Post {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  tags?: string[];
+}
+
 export interface Recommendation {
   name: string;
   title: string;
@@ -87,4 +95,21 @@ export async function getProjectMarkdown(slug: string): Promise<string> {
     path.join(PUBLIC_DIR, "projects", `${slug}.md`),
     "utf8",
   );
+}
+
+export async function getPosts(): Promise<Post[]> {
+  const raw = await fs.readFile(
+    path.join(PUBLIC_DIR, "postsData.json"),
+    "utf8",
+  );
+  return (JSON.parse(raw).posts ?? []) as Post[];
+}
+
+export async function getPostBySlug(slug: string): Promise<Post | undefined> {
+  const posts = await getPosts();
+  return posts.find((p) => p.slug === slug);
+}
+
+export async function getPostMarkdown(slug: string): Promise<string> {
+  return fs.readFile(path.join(PUBLIC_DIR, "posts", `${slug}.md`), "utf8");
 }
