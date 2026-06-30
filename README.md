@@ -4,7 +4,7 @@ My personal portfolio: an editorial, Swiss-inspired site that showcases my
 experience, projects, and interests. This is **v4** — a ground-up redesign
 focused on typography, motion, and craft.
 
-🔗 **Live:** [kobemichael.works](https://www.kobemichael.works/)
+🔗 **Live:** [kobemichael.dev](https://www.kobemichael.dev/)
 
 ![Hero](docs/screenshots/hero.png)
 
@@ -59,7 +59,7 @@ npm run lint    # lint
 
 ```
 src/
-  app/                  # App Router: layout, home page, /experience/[id]
+  app/                  # App Router: layout, home page, /experience/[id], /projects/[id]
   components/           # SiteHeader, Preloader, Reveal, sections/, …
   providers/            # ThemeProvider, SmoothScrollProvider (Lenis)
   three/                # AmbientBackdrop (React Three Fiber)
@@ -68,6 +68,7 @@ public/
   positionsData.json    # work experience metadata
   projectsData.json     # project metadata
   experiences/*.md      # long-form write-up per experience
+  projects/*.md         # long-form case study per project
 docs/screenshots/       # README imagery
 ```
 
@@ -77,7 +78,8 @@ Experience and project content is data-driven — no code changes needed:
 
 - **Add/edit a role:** update [`public/positionsData.json`](public/positionsData.json) and add a matching
   Markdown file in [`public/experiences/`](public/experiences/) (its `markdown` field is the filename).
-- **Add/edit a project:** update [`public/projectsData.json`](public/projectsData.json).
+- **Add/edit a project:** update [`public/projectsData.json`](public/projectsData.json) and add a matching
+  Markdown file in [`public/projects/`](public/projects/) (the filename matches the project's `id` field).
 
 ---
 

@@ -3,7 +3,7 @@ Frontend engineer on **YGG Play**, the web3 gaming platform behind Yield Guild G
 ## Internal CMS & admin tooling
 
 - Architected and built a **greenfield internal CMS from scratch** — Next.js, TypeScript, Tailwind, and shadcn/ui — to replace the team's existing Retool admin tooling.
-- Designed a typed **Supabase data layer** with Zod validation and server actions spanning **7 admin entities**.
+- Designed a typed **Supabase data layer** with Zod validation and server actions spanning **12 entity types across 10 admin CRUD areas**.
 - Implemented authentication via **Clerk and Supabase magic-link**, with allowlist middleware and a roadmap to row-level security.
 - Maintained the Retool leaderboard console — full CRUD over campaigns, metrics, rewards, and rankings.
 

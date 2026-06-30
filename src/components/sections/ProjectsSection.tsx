@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionLabel from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
 import ArrowUpRight from "@/components/ArrowUpRight";
@@ -17,14 +18,9 @@ export default function ProjectsSection({
       </Reveal>
 
       <div className="grid grid-cols-1 gap-px overflow-hidden rounded-sm bg-line sm:grid-cols-2">
-        {projects.map((proj, i) => (
-          <Reveal key={proj.name}>
-            <a
-              href={proj.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex h-full flex-col justify-between gap-10 bg-paper p-7 transition-colors duration-300 hover:bg-paper-dim lg:p-9"
-            >
+        {projects.map((proj, i) => {
+          const inner = (
+            <>
               <div className="flex items-start justify-between">
                 <span className="font-mono text-xs text-ink-mute">
                   {String(i + 1).padStart(2, "0")}
@@ -38,10 +34,44 @@ export default function ProjectsSection({
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-soft">
                   {proj.short_description}
                 </p>
+                {proj.tags && proj.tags.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {proj.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-mute"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
-            </a>
-          </Reveal>
-        ))}
+            </>
+          );
+
+          const className =
+            "group flex h-full flex-col justify-between gap-10 bg-paper p-7 transition-colors duration-300 hover:bg-paper-dim lg:p-9";
+
+          return (
+            <Reveal key={proj.id}>
+              {proj.id ? (
+                <Link href={`/projects/${proj.id}`} className={className}>
+                  {inner}
+                </Link>
+              ) : (
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {inner}
+                </a>
+              )}
+            </Reveal>
+          );
+        })}
       </div>
 
       <Reveal>

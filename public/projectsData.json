@@ -1,24 +1,47 @@
 {
   "projects": [
     {
-      "name": "box.io",
-      "link": "https://github.com/Kobeboy15/box.io",
-      "short_description": "Simple speed-running-focus type of game. Developed using purely JavaScript, no libraries or frameworks."
+      "id": "trading-bot",
+      "name": "Autonomous Trading System",
+      "short_description": "An AI-driven prediction-market trading bot built across three generations — each iteration adding smarter edge detection, portfolio-aware risk, and tighter safety engineering.",
+      "date": "2026",
+      "tags": ["Python", "Claude API", "FastAPI", "SQLite"]
     },
     {
-      "name": "scrawlr-votes",
-      "link": "https://github.com/Kobeboy15/Scrawlr-Votes?tab=readme-ov-file",
-      "short_description": "Take home project for Scrawlr, to create an upvote list. Using React's Context API with a reducer facilitating data management throughout the application"
+      "id": "admin-cms",
+      "name": "Standalone Admin CMS",
+      "short_description": "A solo attempt to build a proper internal CMS from scratch — replacing no-code tools like Retool with a fully typed, custom-built admin built on Next.js 16, Tailwind v4, Supabase, and Clerk.",
+      "date": "2026",
+      "tags": ["Next.js", "TypeScript", "Supabase", "Clerk"]
     },
     {
-      "name": "brightspot-dashboard",
-      "link": "https://github.com/Kobeboy15/Brightspot-dashboard",
-      "short_description": "Take home project for Brightspot, to create a personal dashboard, with a functioning To-do list, and working weather component, utilizing OpenWeather API."
+      "id": "svestate",
+      "name": "ListingKit",
+      "short_description": "An unfinished website built for real estate agents to showcase and manage their property listings — Django REST API backend, React + TypeScript frontend, and an interactive property map.",
+      "date": "2023–2024",
+      "tags": ["Django", "DRF", "React", "TypeScript"],
+      "link": "https://github.com/SvenMC/django_estate_agent"
     },
     {
-      "name": "supapass-todo-list",
-      "link": "https://github.com/Kobeboy15/SupaProject",
-      "short_description": "Tasked with the building of a small prototype todo list application, using React, with the implementation of a barebones GraphQL Api."
+      "id": "fps-game",
+      "name": "Browser FPS Engine",
+      "short_description": "A 14k-line browser-native first-person shooter built on Three.js — proper entity/system architecture, collision detection, and a full Playwright + Vitest test suite.",
+      "date": "2026",
+      "tags": ["TypeScript", "Three.js", "Vite", "Playwright"]
+    },
+    {
+      "id": "speech-ai",
+      "name": "AI Interview Coach",
+      "short_description": "A voice-driven interview practice tool — speak your answers aloud, get them transcribed via Web Speech API, then graded and critiqued in real time by Gemini.",
+      "date": "2024–2025",
+      "tags": ["Next.js", "Web Speech API", "Gemini", "OpenAI"]
+    },
+    {
+      "id": "personal-website",
+      "name": "kobemichael.dev",
+      "short_description": "Three full redesigns over 2.5 years. V4 uses GSAP, React Three Fiber, and Lenis — built to be awwwards-quality without sacrificing readability.",
+      "date": "2023–Present",
+      "tags": ["Next.js", "GSAP", "Three.js", "Tailwind"]
     }
   ]
 }

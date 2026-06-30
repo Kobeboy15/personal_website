@@ -14,9 +14,12 @@ export interface Position {
 }
 
 export interface Project {
+  id: string;
   name: string;
-  link: string;
   short_description: string;
+  date?: string;
+  tags?: string[];
+  link?: string;
 }
 
 export interface Recommendation {
@@ -65,9 +68,23 @@ export async function getPositionById(
   return positions.find((p) => p.id === id);
 }
 
+export async function getProjectById(
+  id: string,
+): Promise<Project | undefined> {
+  const projects = await getProjects();
+  return projects.find((p) => p.id === id);
+}
+
 export async function getExperienceMarkdown(slug: string): Promise<string> {
   return fs.readFile(
     path.join(PUBLIC_DIR, "experiences", `${slug}.md`),
+    "utf8",
+  );
+}
+
+export async function getProjectMarkdown(slug: string): Promise<string> {
+  return fs.readFile(
+    path.join(PUBLIC_DIR, "projects", `${slug}.md`),
     "utf8",
   );
 }
