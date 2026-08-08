@@ -1,48 +1,116 @@
 {
   "posts": [
     {
+      "slug": "linkedin-account-security",
+      "title": "Your LinkedIn account is worth protecting",
+      "excerpt": "Seeing several compromised LinkedIn accounts in a short period was a reminder that our professional profiles hold years of trust, relationships, and opportunity. A few basic security habits can make them much more resilient.",
+      "date": "Aug 8, 2026",
+      "tags": [
+        "CyberSecurity",
+        "LinkedIn",
+        "OnlineSafety"
+      ],
+      "image": "/posts/linkedin-account-security/cover.jpg"
+    },
+    {
+      "slug": "job-search-self-care",
+      "title": "Job searching takes up more than time",
+      "excerpt": "When job searching starts taking over your head, even a small reset can matter. Cleaning my apartment did not fix everything, but it gave me a moment to breathe.",
+      "date": "Aug 2, 2026",
+      "tags": [
+        "JobSearch",
+        "SelfCare",
+        "Resilience"
+      ],
+      "image": "/posts/job-search-self-care/cover.jpg"
+    },
+    {
+      "slug": "job-posting-transparency",
+      "title": "Job seekers are asking for honesty",
+      "excerpt": "If a posting looks like a regular full-time role but leads into a platform, project, or third-party funnel, candidates deserve to know that before they spend time and share information.",
+      "date": "Aug 1, 2026",
+      "tags": [
+        "LinkedInJobs",
+        "JobSearch",
+        "HiringTransparency"
+      ],
+      "image": "/posts/job-posting-transparency/cover.jpg"
+    },
+    {
+      "slug": "platform-based-work-transparency",
+      "title": "Transparency should be the minimum standard",
+      "excerpt": "There is nothing wrong with contract work or freelance platforms when candidates understand what they are joining. The problem is when project-based work is packaged like a regular engineering job.",
+      "date": "Aug 1, 2026",
+      "tags": [
+        "LinkedInJobs",
+        "SoftwareEngineering",
+        "CandidateExperience"
+      ],
+      "image": "/posts/platform-based-work-transparency/cover.jpg"
+    },
+    {
       "slug": "ai-is-a-muscle",
       "title": "AI is a muscle",
       "excerpt": "Even though AI tools are everywhere now, I still catch myself approaching problems the old way. The biggest unlock isn't learning every feature — it's remembering to ask.",
       "date": "Jun 30, 2026",
-      "tags": ["AI", "Productivity", "FutureOfWork"],
-      "image": "/posts/images/ai-is-a-muscle.jpg"
+      "tags": [
+        "AI",
+        "Productivity",
+        "FutureOfWork"
+      ],
+      "image": "/posts/ai-is-a-muscle/cover.jpg"
     },
     {
       "slug": "ai-changing-engineering",
       "title": "AI isn't replacing engineers. It's changing what makes one valuable.",
       "excerpt": "Our value is becoming less about writing every line of code ourselves and more about understanding the bigger picture — making smart decisions, reviewing what AI produces, and knowing when to trust it.",
       "date": "Jun 25, 2026",
-      "tags": ["AI", "SoftwareEngineering", "TechLeadership"],
-      "image": "/posts/images/ai-changing-engineering.jpg"
+      "tags": [
+        "AI",
+        "SoftwareEngineering",
+        "TechLeadership"
+      ],
+      "image": "/posts/ai-changing-engineering/cover.jpg"
     },
     {
       "slug": "finding-purpose",
       "title": "Finding Purpose in the Small Wins",
       "excerpt": "I overheard two patients in the waiting room: \"The waiting room is a lot nicer now, huh?\" It might seem like a small moment — but it was a reminder of why I do what I do.",
       "date": "Jun 2025",
-      "tags": ["GrowthMindset", "UserExperience", "SmallWins"],
-      "image": "/posts/images/finding-purpose.jpg"
+      "tags": [
+        "GrowthMindset",
+        "UserExperience",
+        "SmallWins"
+      ],
+      "image": "/posts/finding-purpose/cover.jpg"
     },
     {
       "slug": "almost-scammed",
       "title": "Almost Got Scammed — And Didn't Even Know It",
       "excerpt": "I referred a recruiter to a workmate who was job hunting. The \"recruiter\" sent him code to run as part of a \"technical screening.\" His OS flagged it as a threat. He stopped just in time.",
       "date": "Aug 2025",
-      "tags": ["CyberSecurity", "CareerAdvice", "ScamAwareness"],
-      "image": "/posts/images/almost-scammed.jpg"
+      "tags": [
+        "CyberSecurity",
+        "CareerAdvice",
+        "ScamAwareness"
+      ],
+      "image": "/posts/almost-scammed/cover.jpg"
     },
     {
       "slug": "ygg-play-summit",
       "title": "First time at the YGG Play Summit — and wow.",
       "excerpt": "After nearly a year working remotely, finally meeting the team in person reminded me that behind every pull request and late-night deployment, there are passionate people building with purpose.",
       "date": "Nov 2025",
-      "tags": ["YGG", "Web3", "Community"],
-      "image": "/posts/images/ygg-summit-1.jpg",
+      "tags": [
+        "YGG",
+        "Web3",
+        "Community"
+      ],
+      "image": "/posts/ygg-play-summit/cover.jpg",
       "images": [
-        "/posts/images/ygg-summit-1.jpg",
-        "/posts/images/ygg-summit-2.jpg",
-        "/posts/images/ygg-summit-3.jpg"
+        "/posts/ygg-play-summit/cover.jpg",
+        "/posts/ygg-play-summit/gallery-1.jpg",
+        "/posts/ygg-play-summit/gallery-2.jpg"
       ]
     }
   ]

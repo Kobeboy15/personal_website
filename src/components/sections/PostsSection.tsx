@@ -16,12 +16,12 @@ export default function PostsSection({ posts }: { posts: Post[] }) {
         <h2 className="h-section mb-12 mt-12">Things I&apos;ve written</h2>
       </Reveal>
 
-      <div className="grid grid-cols-1 items-start gap-px overflow-hidden rounded-sm bg-line lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-px overflow-hidden rounded-sm bg-line lg:grid-cols-2">
         {featured && (
-          <Reveal>
+          <Reveal className="h-full">
             <Link
               href={`/posts/${featured.slug}`}
-              className="group flex flex-col gap-6 bg-paper p-7 transition-colors duration-300 hover:bg-paper-dim lg:p-10"
+              className="group flex h-full flex-col gap-6 bg-paper p-7 transition-colors duration-300 hover:bg-paper-dim lg:p-10"
             >
               {featured.image && (
                 <div className="overflow-hidden rounded-sm">
