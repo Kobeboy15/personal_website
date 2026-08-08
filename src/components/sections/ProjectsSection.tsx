@@ -2,6 +2,7 @@ import Link from "next/link";
 import SectionLabel from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
 import ArrowUpRight from "@/components/ArrowUpRight";
+import ProjectCardMedia from "@/components/ProjectCardMedia";
 import type { Project } from "@/lib/data";
 
 export default function ProjectsSection({
@@ -21,17 +22,22 @@ export default function ProjectsSection({
         {projects.map((proj, i) => {
           const inner = (
             <>
-              <div className="flex items-start justify-between">
+              <ProjectCardMedia
+                cover={proj.cover}
+                tint={proj.tint}
+                coverGain={proj.coverGain}
+              />
+              <div className="relative z-10 flex items-start justify-between">
                 <span className="font-mono text-xs text-ink-mute">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <ArrowUpRight className="text-ink-mute transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent" />
               </div>
-              <div>
+              <div className="relative z-10">
                 <h3 className="text-2xl font-medium tracking-tight text-ink lg:text-3xl">
                   {proj.name}
                 </h3>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-soft">
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-soft lg:max-w-[17rem] xl:max-w-[21rem]">
                   {proj.short_description}
                 </p>
                 {proj.tags && proj.tags.length > 0 && (
@@ -51,7 +57,7 @@ export default function ProjectsSection({
           );
 
           const className =
-            "group flex h-full flex-col justify-between gap-10 bg-paper p-7 transition-colors duration-300 hover:bg-paper-dim lg:p-9";
+            "group relative isolate flex h-full flex-col justify-between gap-10 overflow-hidden bg-paper p-7 transition-colors duration-300 hover:bg-paper-dim lg:p-9";
 
           return (
             <Reveal key={proj.id}>

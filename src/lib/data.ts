@@ -20,6 +20,17 @@ export interface Project {
   date?: string;
   tags?: string[];
   link?: string;
+  /** Screenshot used as the card's corner accent. Omit for a tint-only card. */
+  cover?: string;
+  /** Card accent colour as an RGB triplet, e.g. "230 160 60". */
+  tint?: string;
+  /**
+   * Brightness multiplier that normalises `cover` against the other cards.
+   * Source screenshots span ~9x in mean luminance (a near-black dashboard vs a
+   * daylight photo), so without this the bright ones drown the dark ones.
+   * Defaults to 1.
+   */
+  coverGain?: number;
 }
 
 export interface Post {

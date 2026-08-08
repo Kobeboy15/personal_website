@@ -1,5 +1,7 @@
 Built across three generations over roughly two months — each one a response to what the previous version got wrong. The result is an autonomous agent that scans Polymarket prediction markets, uses Claude as an analyst to detect edge, sizes positions with fractional Kelly criterion, and enforces hard risk controls before touching real money.
 
+![KAIROS dashboard showing capital, P&L, win rate, and open positions for the live Polymarket bot](/projects/trading-bot/dashboard-overview.png "KAIROS — the generation 3 bot's live dashboard, currently running in paper/dry-run mode.")
+
 ## Generation 1 — poly-bot
 
 The first version established the core loop: scrape open markets, rank by expected value, paper-trade the top picks, log outcomes to SQLite. The focus was on getting the data pipeline right and proving the EV-ranking approach had any signal at all. By the time the strategy was retired, the pipeline had logged **2.4 million price ticks** and **389 paper trades across 42 markets** — a real backtesting scale even if the strategy itself underperformed.
@@ -24,7 +26,13 @@ The third version added an AI analyst in the loop. Each market candidate gets pa
 - **Fractional Kelly sizing**: positions sized at ¼ Kelly to reduce variance on uncertain probability estimates
 - **Hard risk controls**: per-trade dollar cap, max concurrent positions, minimum confidence gate, daily loss circuit breaker
 - **Safety-first defaults**: `DRY_RUN=true` out of the box, read-only price client, lazy wallet construction so no keys are loaded unless a live trade is explicitly triggered
-- **Live dashboard**: terminal UI showing open positions, P&L, and the analyst's reasoning per trade
+- **Live dashboard (KAIROS)**: a FastAPI/SQLite browser dashboard showing open positions, cumulative P&L, and every AI decision with its reasoning — reads straight off the bot's own state, so it works even while the bot is stopped
+
+![Go-live readiness checklist tracking sample size, calibration error, concentration, and Brier score against the raw market](/projects/trading-bot/go-live-readiness.png "A gate, not a vibe check — the bot has to beat the market's own forecast accuracy before it's allowed to size up.")
+
+![AI decision log with the model's SKIP/YES call, confidence, and full reasoning for each market it evaluated](/projects/trading-bot/ai-decision-log.png "Every evaluated market gets a call and a paragraph of reasoning — nothing trades without an argued case.")
+
+![Smart-money panel tracking wallets with confirmed on-chain edge, alongside a leaderboard of the most notable tracked wallets](/projects/trading-bot/smart-money.png "A separate signal source — positions get an extra confirm/veto check against wallets with a track record of being right.")
 
 ## Stack
 

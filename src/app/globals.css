@@ -87,6 +87,37 @@
   .link-line:hover::after {
     @apply origin-left scale-x-100;
   }
+
+  /* Mask for the project-card screenshot accent. Narrow two-column cards can't
+     spare a real image column, so below lg the image stays a bottom-right
+     corner bleed; from lg up it becomes a full-height column that dissolves
+     leftward, landing clear of the copy. */
+  .card-media-mask {
+    -webkit-mask-image: radial-gradient(
+      110% 110% at 100% 100%,
+      #000 0%,
+      #000 14%,
+      transparent 68%
+    );
+    mask-image: radial-gradient(
+      110% 110% at 100% 100%,
+      #000 0%,
+      #000 14%,
+      transparent 68%
+    );
+  }
+
+  @media (min-width: 1024px) {
+    .card-media-mask {
+      -webkit-mask-image: linear-gradient(
+        to left,
+        #000 0%,
+        #000 38%,
+        transparent 92%
+      );
+      mask-image: linear-gradient(to left, #000 0%, #000 38%, transparent 92%);
+    }
+  }
 }
 
 @layer utilities {

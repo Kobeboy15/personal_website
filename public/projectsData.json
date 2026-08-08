@@ -5,53 +5,104 @@
       "name": "Autonomous Trading System",
       "short_description": "An AI-driven prediction-market trading bot built across three generations — each iteration adding smarter edge detection, portfolio-aware risk, and tighter safety engineering.",
       "date": "2026",
-      "tags": ["Python", "Claude API", "FastAPI", "SQLite"],
-      "link": "https://github.com/Kobeboy15/polymarket-bot"
+      "tags": [
+        "Python",
+        "Claude API",
+        "FastAPI",
+        "SQLite"
+      ],
+      "link": "https://github.com/Kobeboy15/polymarket-bot",
+      "cover": "/projects/trading-bot/dashboard-overview.png",
+      "tint": "230 160 60",
+      "coverGain": 2.8
     },
     {
       "id": "admin-cms",
       "name": "Standalone Admin CMS",
       "short_description": "A solo attempt to build a proper internal CMS from scratch — replacing no-code tools like Retool with a fully typed, custom-built admin built on Next.js 16, Tailwind v4, Supabase, and Clerk.",
       "date": "2026",
-      "tags": ["Next.js", "TypeScript", "Supabase", "Clerk"]
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Clerk"
+      ],
+      "tint": "110 131 255"
     },
     {
       "id": "svestate",
       "name": "ListingKit",
       "short_description": "An unfinished website built for real estate agents to showcase and manage their property listings — Django REST API backend, React + TypeScript frontend, and an interactive property map.",
       "date": "2023–2024",
-      "tags": ["Django", "DRF", "React", "TypeScript"],
-      "link": "https://github.com/SvenMC/django_estate_agent"
+      "tags": [
+        "Django",
+        "DRF",
+        "React",
+        "TypeScript"
+      ],
+      "link": "https://github.com/SvenMC/django_estate_agent",
+      "cover": "/projects/svestate/home.png",
+      "tint": "52 168 150",
+      "coverGain": 0.7
     },
     {
       "id": "fps-game",
       "name": "Browser FPS Engine",
       "short_description": "A 14k-line browser-native first-person shooter built on Three.js — proper entity/system architecture, collision detection, and a full Playwright + Vitest test suite.",
       "date": "2026",
-      "tags": ["TypeScript", "Three.js", "Vite", "Playwright"],
-      "link": "https://github.com/Kobeboy15/fps-game"
+      "tags": [
+        "TypeScript",
+        "Three.js",
+        "Vite",
+        "Playwright"
+      ],
+      "link": "https://github.com/Kobeboy15/fps-game",
+      "cover": "/projects/fps-game/arena.webp",
+      "tint": "226 88 70",
+      "coverGain": 1.2
     },
     {
       "id": "speech-ai",
       "name": "AI Interview Coach",
       "short_description": "A voice-driven interview practice tool — speak your answers aloud, get them transcribed via Web Speech API, then graded and critiqued in real time by Gemini.",
       "date": "2024–2025",
-      "tags": ["Next.js", "Web Speech API", "Gemini", "OpenAI"]
+      "tags": [
+        "Next.js",
+        "Web Speech API",
+        "Gemini",
+        "OpenAI"
+      ],
+      "tint": "160 110 235"
     },
     {
       "id": "betterday",
       "name": "Betterday",
       "short_description": "A Chrome extension that fills the long, repetitive steps of a Workday job application from a saved profile — plus a GSAP/Three.js marketing site built to match the extension's own design system.",
       "date": "2026",
-      "tags": ["Chrome Extension", "JavaScript", "Next.js", "GSAP", "Three.js"],
-      "link": "https://github.com/Kobeboy15/betterday-extension"
+      "tags": [
+        "Chrome Extension",
+        "JavaScript",
+        "Next.js",
+        "GSAP",
+        "Three.js"
+      ],
+      "link": "https://github.com/Kobeboy15/betterday-extension",
+      "cover": "/projects/betterday/hero.png",
+      "tint": "92 186 106",
+      "coverGain": 2.4
     },
     {
       "id": "personal-website",
       "name": "kobemichael.dev",
       "short_description": "Three full redesigns over 2.5 years. V4 uses GSAP, React Three Fiber, and Lenis — built to be awwwards-quality without sacrificing readability.",
       "date": "2023–Present",
-      "tags": ["Next.js", "GSAP", "Three.js", "Tailwind"]
+      "tags": [
+        "Next.js",
+        "GSAP",
+        "Three.js",
+        "Tailwind"
+      ],
+      "tint": "86 160 200"
     }
   ]
 }

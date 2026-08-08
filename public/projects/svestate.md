@@ -4,6 +4,14 @@ Never shipped, but the implementation got far enough to be a solid full-stack re
 
 The goal was to build something end-to-end: not a frontend that mocks its data, not a backend with no UI, but a fully integrated system where the API design and the UI are built together with a real use case in mind.
 
+![The homepage hero, with a search bar for listing type, location, move-in date, price range, and property type over a photo of terraced houses](/projects/svestate/home.png "The public-facing homepage — listing type, location, date, price, and property type filters over the hero search bar.")
+
+![The properties search page, showing two property cards with photo carousels, price, address, and bed/bath/size stats](/projects/svestate/properties.png "Listings render straight from the DRF API — price, address, and stats pulled from the same serializer across every view.")
+
+![A property detail page with a photo gallery, badges for listing status, and a sticky booking sidebar showing price and availability](/projects/svestate/property-detail.png "The detail page — photo gallery, listing details, and a geocoded map pin further down the page.")
+
+![The Add Property form, split into Property Information, Listing Details, and Additional Information sections, with a live preview card on the left](/projects/svestate/add-property.png "The agent-facing listing form — a live preview card updates on the left as the form on the right is filled in.")
+
 ## Backend
 
 - **Django + Django REST Framework** — ModelViewSets for the core listing endpoints, with filtering, ordering, and cursor-based pagination
