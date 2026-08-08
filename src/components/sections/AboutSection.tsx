@@ -24,7 +24,7 @@ export default function AboutSection() {
               usability and craft meet.
             </h2>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-soft">
-              I&apos;m currently a frontend engineer at{" "}
+              I was most recently a frontend engineer at{" "}
               <a
                 href="https://www.yieldguild.games/"
                 target="_blank"

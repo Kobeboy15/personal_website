@@ -110,11 +110,9 @@ const personJsonLd = {
     addressRegion: "BC",
     addressCountry: "CA",
   },
-  worksFor: {
-    "@type": "Organization",
-    name: "Yield Guild Games",
-    url: "https://www.yieldguild.games/",
-  },
+  // `worksFor` asserts a *current* employer to search engines. The Yield Guild
+  // Games contract ended Aug 2026, so it is omitted rather than stale — restore
+  // this block, pointed at the new organisation, once the next role starts.
   knowsAbout: [
     "Frontend Engineering",
     "System Design",

@@ -1,4 +1,4 @@
-Frontend engineer on **YGG Play**, the web3 gaming platform behind Yield Guild Games — a global ecosystem connecting players to games, quests, and rewards. I'm a primary contributor on the Next.js / TypeScript monorepo, shipping player-facing features and owning the internal admin tooling end to end.
+Frontend engineer on **YGG Play**, the web3 gaming platform behind Yield Guild Games — a global ecosystem connecting players to games, quests, and rewards. I was a primary contributor on the Next.js / TypeScript monorepo, shipping player-facing features and owning the internal admin tooling end to end.
 
 ## Internal CMS & admin tooling
 
