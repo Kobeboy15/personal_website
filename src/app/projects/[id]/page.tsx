@@ -99,6 +99,25 @@ export default async function Page({ params }: { params: { id: string } }) {
                       </span>
                     ),
                 },
+                img: {
+                  component: ({ alt, title, className: _className, ...props }) => (
+                    <span className="not-prose my-10 flex flex-col items-center">
+                      <span className="inline-block overflow-hidden rounded-sm border border-line">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          alt={alt}
+                          {...props}
+                          className="block max-h-[34rem] w-auto max-w-full"
+                        />
+                      </span>
+                      {title && (
+                        <span className="mt-3 block max-w-lg text-center text-sm text-ink-soft">
+                          {title}
+                        </span>
+                      )}
+                    </span>
+                  ),
+                },
               },
             }}
           >

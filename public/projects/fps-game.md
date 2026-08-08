@@ -2,6 +2,14 @@ A browser-native first-person shooter built entirely on Three.js and TypeScript 
 
 The goal was to understand what a game engine actually does by building one. At ~14,700 lines of code across a proper entity/system split, it ended up being the most architecturally deliberate project I've worked on outside of a production codebase.
 
+Source on [GitHub](https://github.com/Kobeboy15/fps-game).
+
+![Facing down a horde in the zombie survival mode, HUD showing wave, score, health, armor and ammo](/projects/fps-game/wave.webp "Wave 4 of the endless-survival mode — pickups, a live HUD, and a horde closing in.")
+
+![Aiming into a tight cluster of zombies at close range](/projects/fps-game/horde.webp "The hit-detection raycasts run against the scene's BVH, so it stays frame-accurate even with a crowd stacked on top of each other.")
+
+![A larger wave spread across the arena at dusk](/projects/fps-game/arena.webp "Enemy count is capped and object-pooled — this is close to the 24-entity soft cap the difficulty scaler ramps toward.")
+
 ## Engine architecture
 
 The core is an entity-component system: entities are plain IDs, components are typed data bags, and systems query for entities that have the components they care about each tick. This keeps logic decoupled — the collision system doesn't know about rendering, the AI system doesn't know about physics — and makes the tick loop composable.

@@ -5,7 +5,8 @@
       "name": "Autonomous Trading System",
       "short_description": "An AI-driven prediction-market trading bot built across three generations — each iteration adding smarter edge detection, portfolio-aware risk, and tighter safety engineering.",
       "date": "2026",
-      "tags": ["Python", "Claude API", "FastAPI", "SQLite"]
+      "tags": ["Python", "Claude API", "FastAPI", "SQLite"],
+      "link": "https://github.com/Kobeboy15/polymarket-bot"
     },
     {
       "id": "admin-cms",
@@ -27,7 +28,8 @@
       "name": "Browser FPS Engine",
       "short_description": "A 14k-line browser-native first-person shooter built on Three.js — proper entity/system architecture, collision detection, and a full Playwright + Vitest test suite.",
       "date": "2026",
-      "tags": ["TypeScript", "Three.js", "Vite", "Playwright"]
+      "tags": ["TypeScript", "Three.js", "Vite", "Playwright"],
+      "link": "https://github.com/Kobeboy15/fps-game"
     },
     {
       "id": "speech-ai",
@@ -35,6 +37,14 @@
       "short_description": "A voice-driven interview practice tool — speak your answers aloud, get them transcribed via Web Speech API, then graded and critiqued in real time by Gemini.",
       "date": "2024–2025",
       "tags": ["Next.js", "Web Speech API", "Gemini", "OpenAI"]
+    },
+    {
+      "id": "betterday",
+      "name": "Betterday",
+      "short_description": "A Chrome extension that fills the long, repetitive steps of a Workday job application from a saved profile — plus a GSAP/Three.js marketing site built to match the extension's own design system.",
+      "date": "2026",
+      "tags": ["Chrome Extension", "JavaScript", "Next.js", "GSAP", "Three.js"],
+      "link": "https://github.com/Kobeboy15/betterday-extension"
     },
     {
       "id": "personal-website",
