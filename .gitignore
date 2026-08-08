@@ -36,5 +36,29 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# cover letters (local only)
-/resume/cover-letters/
+# per-company application folders — tailored resumes & cover letters (local only)
+/resume/*/
+
+# raw screenshots used to source site assets — never serve these, they capture
+# browser chrome, session state, and third parties' names and photos
+/source-assets/
+
+# playwright-mcp browser session output — console logs and page snapshots
+/.playwright-mcp/
+
+# job-application autofill data — contains home address and phone number
+/resume/workday.json
+
+# machine-specific Claude Code permission grants (settings.json stays shared)
+.claude/settings.local.json
+
+# raw career source material for the resume-tailoring pipeline (local only)
+/resume/EXPERIENCE.md
+/resume/WorkHistory.md
+
+# generated CV — contains phone and email, keep local
+/resume/resume.html
+
+# local agent config — skills, commands, and MCP server definitions
+/.claude/
+/.mcp.json
